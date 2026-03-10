@@ -33,7 +33,7 @@ body {
    ============================================ */
 .badge {
     background: #1d1a1a;
-    color: #51ff00;
+    color: #93d500;
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     font-size: 0.72rem;
@@ -161,7 +161,7 @@ body {
    ============================================ */
 .btn-main {
     background: #1a1a1a;
-    color: #c8e600;
+    color: #93d500;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 0.97rem;
@@ -471,7 +471,7 @@ body {
 .btn-enviar {
     width: 100%;
     background: #1a1a1a;
-    color: #c8e600;
+    color: #93d500;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1rem;
