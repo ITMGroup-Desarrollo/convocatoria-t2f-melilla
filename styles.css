@@ -41,6 +41,8 @@ body {
     text-align: center;
     padding: 8px 0;
     margin-top: 40px;
+    position: relative;
+    z-index: 10;
 }
 
 
@@ -74,7 +76,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.9;
-    z-index: 2;
+    z-index: 0;
     transform: rotate(-180deg);
     pointer-events: none;
 }
@@ -125,11 +127,14 @@ body {
 }
 
 .hero-logos img {
-    height: 37px;
+    height: 50px;
     object-fit: contain;
     filter: brightness(0) invert(1);
 }
 
+.logo-ttf {
+    filter: none !important;
+}
 
 /* ============================================
    4. SECCIÓN BLANCA CON TEXTURA
