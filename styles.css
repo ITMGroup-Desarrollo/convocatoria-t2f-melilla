@@ -78,11 +78,11 @@ body {
 }
 
 .hero-logo-title {
-    width: 200px;
+    width: 150px;
     object-fit: contain;
     filter: none;
     margin-top: auto;
-    margin-bottom: 250px;
+    margin-bottom: 260px;
 }
 
 .hero-logos {
@@ -100,22 +100,30 @@ body {
 
 
 /* ============================================
-   4. SECCIÓN BLANCA
+   4. SECCIÓN BLANCA CON TEXTURA
    ============================================ */
 .section-white {
-    background: #fff;
+    position: relative;
+    background-color: #fff;
     padding: 30px 24px 32px;
     text-align: center;
 }
 
-.section-white p {
-    font-size: 0.97rem;
-    color: #222;
-    line-height: 1.7;
-    margin-bottom: 22px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.section-white::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('./imagenes/textura/TTF_textura.png');
+    background-repeat: repeat;
+    background-size: 100px;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.section-white p,
+.section-white a {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -176,12 +184,53 @@ body {
 /* ============================================
    6. CARDS
    ============================================ */
+/* Textura en cards */
 .cards-wrap {
-    background: #efefef;
+    position: relative;
+    background-color: #efefef;
     padding: 16px 16px 20px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.cards-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('./imagenes/textura/TTF_textura.png');
+    background-repeat: repeat;
+    background-size: 100px;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.cards-wrap .card {
+    position: relative;
+    z-index: 1;
+}
+
+/* Textura en formulario */
+.section-form {
+    position: relative;
+    background-color: #f0f0f0;
+    padding: 30px 16px 36px;
+}
+
+.section-form::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('./imagenes/textura/TTF_textura.png');
+    background-repeat: repeat;
+    background-size: 100px;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.section-form .form-card {
+    position: relative;
+    z-index: 1;
 }
 
 .card {
