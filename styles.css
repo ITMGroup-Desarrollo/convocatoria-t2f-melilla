@@ -47,6 +47,38 @@ body {
 /* ============================================
    3. HERO
    ============================================ */
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    left: -15vw;
+    bottom: -9vw;
+    background-image: url('./imagenes/textura/huellita.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 40vw;
+    height: 35vw;
+    right: -10vw;
+    top: -9vw;
+    background-image: url('./imagenes/textura/huellita.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    z-index: 2;
+    transform: rotate(-180deg);
+    pointer-events: none;
+}
+
 .hero {
     position: relative;
     width: 100%;
@@ -93,7 +125,7 @@ body {
 }
 
 .hero-logos img {
-    height: 34px;
+    height: 37px;
     object-fit: contain;
     filter: brightness(0) invert(1);
 }
