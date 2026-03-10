@@ -29,55 +29,18 @@ body {
 
 
 /* ============================================
-   1. HEADER AZUL
-   ============================================ */
-.header-bar {
-    background: linear-gradient(120deg, #1a237e 0%, #1565c0 100%);
-    height: 60px;
-    position: relative;
-    overflow: hidden;
-}
-
-.header-bar .spiral {
-    position: absolute;
-    border-radius: 50%;
-    border: 2.5px solid rgba(255, 255, 255, 0.18);
-}
-
-.header-bar .s1 {
-    width: 110px;
-    height: 110px;
-    right: -22px;
-    top: -40px;
-}
-
-.header-bar .s2 {
-    width: 75px;
-    height: 75px;
-    right: 8px;
-    top: -25px;
-}
-
-.header-bar .s3 {
-    width: 44px;
-    height: 44px;
-    right: 32px;
-    top: -8px;
-}
-
-
-/* ============================================
    2. BADGE
    ============================================ */
 .badge {
-    background: #000000;
+    background: #1d1a1a;
     color: #51ff00;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     font-size: 0.72rem;
     letter-spacing: 0.2em;
     text-align: center;
     padding: 8px 0;
+    margin-top: 40px;
 }
 
 
@@ -87,16 +50,20 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 470px;
     overflow: hidden;
     background: #1565c0;
 }
 
-.hero img {
+.hero>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.hero-top {
+    width: 100%;
 }
 
 .hero-overlay {
@@ -106,43 +73,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding-bottom: 36px;
 }
 
-.hero-melilla {
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3.8rem;
-    font-weight: 900;
-    line-height: 1;
-    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
-    margin-bottom: 200px;
-
-}
-
-.hero-comparte {
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-}
-
-.hero-melilla {
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3.8rem;
-    font-weight: 900;
-    line-height: 1;
-    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+.hero-logo-title {
+    width: 200px;
+    object-fit: contain;
+    filter: none;
+    margin-top: auto;
+    margin-bottom: 250px;
 }
 
 .hero-logos {
     display: flex;
     align-items: center;
     gap: 18px;
-    margin-top: 18px;
+    margin-top: 0;
 }
 
 .hero-logos img {
@@ -500,22 +447,12 @@ body {
     text-align: center;
 }
 
-.footer-comparte {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 0.7rem;
-    color: #fff;
-    letter-spacing: 0.06em;
-    margin-bottom: 1px;
-}
-
-.footer-melilla {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 2.1rem;
-    color: #fff;
-    line-height: 1;
-    margin-bottom: 10px;
+.footer-logo-title {
+    width: 150px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    margin: 0 auto 12px auto;
+    display: block;
 }
 
 .footer-copy {

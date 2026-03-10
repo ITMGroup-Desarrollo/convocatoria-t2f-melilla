@@ -35,30 +35,26 @@
 
     <div class="page-wrapper">
 
-        <!-- ① HEADER AZUL -->
-        <div class="header-bar">
-            <div class="spiral s1"></div>
-            <div class="spiral s2"></div>
-            <div class="spiral s3"></div>
-        </div>
-
-        <!-- ② BADGE -->
-        <div class="badge">CONVOCATORIA ABIERTA</div>
-
-        <!-- ③ HERO -->
+        <!-- HERO COMPLETO -->
         <div class="hero">
-            <!-- 📁 /images/hero-melilla.jpg -->
             <img src="./imagenes/melilla_principal.jpg" alt="Melilla" onerror="this.style.display='none'" />
             <div class="hero-overlay">
-                <p class="hero-comparte">Comparte</p>
-                <h1 class="hero-melilla">Melilla</h1>
+
+                <!--badge dentro del hero -->
+                <div class="hero-top">
+                    <div class="badge">CONVOCATORIA ABIERTA</div>
+                </div>
+
+                <!-- Comparte Melilla -->
+                <img src="./imagenes/logos/ComparteMelilla.svg" alt="Comparte Melilla" class="hero-logo-title" />
+
+                <!-- Logos abajo -->
                 <div class="hero-logos">
-                    <!-- 📁 /images/logo-ticket-fun.png -->
                     <img src="./imagenes/logos/TTF_Logo.svg" alt="Ticket to Fun" onerror="this.style.display='none'" />
-                    <!-- 📁 /images/logo-genera.png -->
                     <img src="./imagenes/logos/GeneraLogo.svg" alt="Fundación Genera ITM"
                         onerror="this.style.display='none'" />
                 </div>
+
             </div>
         </div>
 
@@ -201,8 +197,7 @@
 
         <!-- ⑪ FOOTER -->
         <div class="footer">
-            <p class="footer-comparte">Comparte</p>
-            <p class="footer-melilla">Melilla</p>
+            <img src="./imagenes/logos/ComparteMelilla.svg" alt="Comparte Melilla" class="footer-logo-title" />
             <p class="footer-copy">© 2026 Comparte Melilla. Todos los derechos reservados.</p>
             <div class="footer-logos">
                 <img src="./imagenes/logos/TTF_Logo.svg" alt="Ticket to Fun" onerror="this.style.display='none'" />
@@ -212,7 +207,7 @@
 
     </div>
 
-    <!-- JavaScript propio -->
+    <!-- JavaScript -->
     <script src="./main.js"></script>
 
 </body>
