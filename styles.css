@@ -575,6 +575,10 @@ body {
    ============================================ */
 @media (min-width: 768px) {
 
+    .section-about .cta {
+        white-space: nowrap;
+    }
+
     /* Hero */
     .hero {
         height: 560px;
