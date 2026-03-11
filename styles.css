@@ -692,4 +692,18 @@ body {
     .footer-logos img {
         height: 38px;
     }
+
+    .section-white {
+        padding: 60px 40px;
+        text-align: center;
+    }
+
+    .section-white p {
+        max-width: 400px;
+        /* ← ajusta hasta que quede en 3 líneas */
+        font-size: 1.1rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
+    }
 }
