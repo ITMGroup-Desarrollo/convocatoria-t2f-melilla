@@ -129,7 +129,7 @@ body {
 .hero-logos img {
     height: 50px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); */
 }
 
 .logo-ttf {
@@ -513,17 +513,19 @@ body {
 }
 
 .btn-enviar {
-    width: 100%;
+    width: auto;
     background: #1a1a1a;
     color: #93d500;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1rem;
-    padding: 14px;
+    padding: 14px 60px;
     border-radius: 9999px;
     border: none;
     cursor: pointer;
     transition: opacity 0.2s;
+    display: block;
+    margin: 0 auto;
 }
 
 .btn-enviar:hover {
@@ -564,7 +566,7 @@ body {
 .footer-logos img {
     height: 28px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); */
 }
 
 
