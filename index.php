@@ -104,7 +104,23 @@
                             inscripción.</p>
                     </div>
                     <form id="melillaForm" method="POST" action="submit.php" class="space-y-6">
+                        <!-- 0 Emprendedor/empresa -->
+                        <div class="flex flex-col gap-3">
+                            <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                                Are you an entrepreneur or a company?  / ¿Eres un emprendedor o una empresa?
+                            </label>
 
+                            <label class="flex gap-2">
+                                <input type="radio" name="entity" value="emprendedor">
+                                <span class="dark:text-white">entrepreneur / emprendedor</span>
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="radio" name="entity" value="empresa">
+                                <span class="dark:text-white">company / empresa</span>
+                            </label>
+
+                        </div>
                         <!-- 1 Company Name -->
                         <div class="flex flex-col gap-2">
                             <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
@@ -165,12 +181,12 @@
                         </div>
 
 
-                        <!-- 7 WhatsApp -->
+                        <!-- 7 phone -->
                         <div class="flex flex-col gap-2">
                             <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                                WhatsApp
+                                Phone / teléfono
                             </label>
-                            <input type="tel" name="whatsapp" placeholder="+34..."
+                            <input type="tel" name="phone" placeholder="+34..."
                                 class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white">
                         </div>
 
