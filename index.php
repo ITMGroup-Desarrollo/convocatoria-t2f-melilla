@@ -1,109 +1,168 @@
 <!DOCTYPE html>
-
-<html class="light" lang="es">
+<html lang="es">
 
 <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparte Melilla</title>
+
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script id="tailwind-config">
+    <script>
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
-                    colors: {
-                        "primary": "#144bb8",
-                        "secondary": "#ec4899",
-                        "background-light": "#f6f6f8",
-                        "background-dark": "#111621",
-                    },
+                    colors: { primary: "#144bb8" },
                     fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"]
+                        heading: ["Montserrat", "sans-serif"],
+                        body: ["Open Sans", "sans-serif"],
                     },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
                 },
             },
         }
     </script>
-    <style>
-        body {
-            font-family: "Space Grotesk", sans-serif;
-        }
-    </style>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet" />
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
-    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
-        <!-- 1. Header: Hero Section -->
-        <header class="relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
-            <!-- Background "Video" Placeholder using Gradient and Overlay -->
-            <div class="absolute inset-0 z-0 bg-slate-900"
-                data-alt="High-tech entrepreneurial digital motion background">
-                <div class="absolute inset-0 opacity-40 bg-gradient-to-br from-primary via-slate-900 to-secondary">
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- HERO COMPLETO -->
+        <div class="hero">
+
+            <img src="./imagenes/melilla_principal.jpg" alt="Melilla" onerror="this.style.display='none'" />
+            <div class="hero-overlay">
+
+                <!--badge dentro del hero -->
+                <div class="hero-top">
+                    <div class="badge">CONVOCATORIA ABIERTA</div>
                 </div>
-                <div class="absolute inset-0 bg-black/40"></div>
-                <!-- Abstract tech pattern placeholder -->
-                <div class="absolute inset-0 opacity-20"
-                    style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 40px 40px;">
+
+                <!-- Comparte Melilla -->
+                <img src="./imagenes/logos/ComparteMelilla.svg" alt="Comparte Melilla" class="hero-logo-title" />
+
+                <!-- Logos bajos -->
+                <div class="hero-logos">
+                    <img src="./imagenes/logos/TTF_Logo3.png" alt="Ticket to Fun" class="logo-ttf"
+                        onerror="this.style.display='none'" />
+                    <img src="./imagenes/logos/GeneraLogo.svg" alt="Fundación Genera ITM"
+                        onerror="this.style.display='none'" />
+
+
                 </div>
+
             </div>
-            <div class="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl">
-                <div class="mb-6 flex items-center gap-3 text-white">
-                    <span class="text-xl font-bold tracking-tight">Tickettofun</span>
-                </div>
-                <h1 class="text-white text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-6">
-                    Convocatoria <span class="text-secondary">Melilla 2026</span>
-                </h1>
-                <p class="text-slate-200 text-lg md:text-xl font-light max-w-2xl leading-relaxed">
-                    Impulsando la próxima Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eaque
-                    voluptatibus voluptas, error dicta repellendus quia odio voluptate sit aliquam omnis eveniet
-                    dignissimos similique, blanditiis provident ullam necessitatibus iste quo.
+        </div>
+
+        <!-- ④ SECCIÓN BLANCA -->
+        <div class="section-white">
+            <p>
+                Forma parte de la red de emprendedores que comparten las experiencias turísticas, culturales y
+                gastronómicas que Melilla tiene para el mundo.
+            </p><br>
+            <a href="#formulario" class="btn-main">Descarga la convocatoria</a>
+        </div>
+
+        <!-- ⑤ SECCIÓN MORADA -->
+        <div class="section-purple">
+            <p>¿Eres un guía turístico con experiencia o tienes una tour operadora en funcionamiento?</p>
+            <p>¿Te gustaría profesionalizar una actividad cultural, gastronómica, artesanal o de naturaleza?</p>
+            <p>¿Te gustaría causar un impacto positivo en la comunidad y compartir con cruceristas las maravillas de
+                tu
+                ciudad?</p>
+            <p class="title-oportunidad">¡Esta convocatoria<br>es tu oportunidad!</p>
+            <a href="#formulario" class="btn-main">Participa</a>
+        </div>
+
+        <!--  CARDS -->
+        <div class="cards-wrap">
+
+            <div class="card">
+                <!-- 📁 /images/cultura.jpg -->
+                <img src="./imagenes/footer/melilla_baile.jpg" alt="Comparte cultura"
+                    onerror="this.style.display='none'" />
+                <span class="card-label">Comparte cultura</span>
+            </div>
+
+            <div class="card">
+                <!-- 📁 /images/comunidad.jpg -->
+                <img src="./imagenes/footer/te-moruno2.jpg" alt="Comparte comunidad"
+                    onerror="this.style.display='none'" />
+                <span class="card-label">Comparte comunidad</span>
+            </div>
+
+            <div class="card">
+                <!-- 📁 /images/melilla-faro.jpg -->
+                <img src="./imagenes/footer/faro_melilla.jpg" alt="Comparte Melilla"
+                    onerror="this.style.display='none'" />
+                <span class="card-label">Comparte Melilla</span>
+            </div>
+
+        </div>
+
+        <!--  CÓMO PARTICIPAR -->
+        <div class="section-how">
+            <div class="section-how-inner">
+                <h2>Como participar</h2>
+                <ol>
+                    <li>Conoce el proyecto, descarga y lee atentamente la convocatoria.</li>
+                    <li>Regístrate e ingresa la información solicitada en el formulario correspondiente, donde
+                        deberás
+                        adjuntar la ficha de tu propuesta.</li>
+                </ol>
+                <p class="note">
+                    Ticket to Fun y Fundación Genera ITM, revisarán todas las propuestas. Si la tuya es
+                    preseleccionada,
+                    te contactaremos para conocernos mejor y profundizar en los detalles.
                 </p>
-                <div class="mt-10 animate-bounce">
-                    <span class="material-symbols-outlined text-white text-3xl">keyboard_double_arrow_down</span>
+                <div class="btn-wrap">
+                    <a href="#" class="btn-main">
+                        Descarga la convocatoria
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                            stroke="#c8e600" stroke-width="3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
                 </div>
             </div>
-        </header>
-        <!-- 2. Summary & Download -->
-        <section class="py-20 px-6 bg-white dark:bg-slate-900">
-            <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
-                <div class="inline-flex items-center justify-center p-3 rounded-full bg-primary/10 text-primary mb-6">
-                    <span class="material-symbols-outlined text-3xl">info</span>
-                </div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900 dark:text-white">Únete a la nueva era del
-                    emprendimiento</h2>
-                <p class="text-slate-600 dark:text-slate-400 text-lg mb-10 leading-relaxed">
-                    Tickettofun Melilla 2026 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eos
-                    quidem placeat dignissimos iusto nobis nostrum quas molestiae molestias. Pariatur animi rem enim
-                    veritatis eos qui temporibus modi fugiat earum.
-                </p>
-                <button
-                    class="group relative flex items-center gap-3 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-primary/25">
-                    <span class="material-symbols-outlined">picture_as_pdf</span>
-                    <span>Descargar PDF de la Convocatoria</span>
-                    <span
-                        class="absolute -top-2 -right-2 bg-secondary text-[10px] px-2 py-1 rounded-full uppercase tracking-wider">Nuevo</span>
-                </button>
+        </div>
+
+        <!-- ⑧ FOTO PAREJA -->
+        <div class="photo-pareja">
+            <!-- 📁 /images/pareja.jpg -->
+            <img src="./imagenes/imagen-12.jpg" alt="Viajeros en Melilla" onerror="this.style.display='none'" />
+        </div>
+
+        <!-- ⑨ SOBRE NOSOTROS -->
+        <div class="section-about">
+            <div class="section-about-inner">
+                <p>Somos <strong>Ticket to Fun</strong>, tour operadora con más de 20 años diseñando y operando
+                    experiencias turísticas alrededor del mundo.</p>
+                <p>Nuestra misión es unir fuerzas con las experiencias locales y las autoridades para que el destino
+                    crezca de forma profesional y sostenible.</p>
+                <p>Esta convocatoria, es en colaboración con <strong>Fundación Genera</strong>, una organización sin
+                    fines de lucro que busca el desarrollo del turismo sostenible a través de la prosperidad
+                    económica
+                    de la comunidad de Melilla.</p>
+                <p class="cta">No te quedes sin participar<br>en esta iniciativa</p>
             </div>
-        </section>
-        <!-- 3. Registration Form -->
-        <section class="py-20 px-6 bg-background-light dark:bg-background-dark">
-            <div class="max-w-2xl mx-auto">
-                <div
-                    class="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl p-8 md:p-12 border border-slate-100 dark:border-slate-700 transition-all hover:shadow-primary/5">
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Registro de Aspirantes</h3>
-                        <p class="text-slate-500 dark:text-slate-400">Completa el formulario para iniciar tu proceso de
-                            inscripción.</p>
-                    </div>
-                    <form id="melillaForm" method="POST" action="submit.php" class="space-y-6">
+        </div>
+
+        <!-- ⑩ FORMULARIO -->
+        <div id="formulario" class="section-form">
+            <div class="form-card">
+                <h3>Registro de Aspirantes</h3>
+                <p class="form-subtitle">Completa el formulario para iniciar tu proceso de inscripción.</p>
+
+                <form id="melillaForm" method="POST" action="submit.php" class="space-y-6">
                         <!-- 0 Emprendedor/empresa -->
                         <div class="flex flex-col gap-3">
                             <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
@@ -380,55 +439,24 @@
                         </button>
 
                     </form>
-                </div>
             </div>
-        </section>
-        <!-- 4. Footer -->
-        <footer class="mt-auto py-16 px-6 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
-            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center gap-8">
-                <div class="flex flex-col items-center gap-6">
-                    <div class="flex items-center gap-3">
-                        <span class="font-bold text-xl text-slate-900 dark:text-white">Tickettofun Melilla 2026</span>
-                    </div>
-                    <p class="text-slate-500 max-w-md text-center text-sm mb-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet hic delectus officia placeat autem
-                        sunt fugit voluptatum architecto, sed nulla quis natus inventore nemo dignissimos est aut fugiat
-                        explicabo facere?
-                    </p>
-                    <div class="flex items-center gap-8">
-                        <a class="text-slate-400 hover:text-primary transition-all transform hover:scale-110" href="#"
-                            title="LinkedIn">
-                            <svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a class="text-slate-400 hover:text-secondary transition-all transform hover:scale-110" href="#"
-                            title="Instagram">
-                            <svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a class="text-slate-400 hover:text-primary transition-all transform hover:scale-110" href="#"
-                            title="Facebook">
-                            <svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
-                                <path
-                                    d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                    <p
-                        class="text-sm text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-8 w-full text-center">
-                        © 2026 Tickettofun Melilla. Todos los derechos reservados.
-                    </p>
-                </div>
+        </div>
+
+        <!-- ⑪ FOOTER -->
+        <div class="footer">
+            <img src="./imagenes/logos/ComparteMelilla.svg" alt="Comparte Melilla" class="footer-logo-title" />
+            <p class="footer-copy">© 2026 Comparte Melilla. Todos los derechos reservados.</p>
+            <div class="footer-logos">
+                <img src="./imagenes/logos/TTF_Logo.svg" alt="Ticket to Fun" onerror="this.style.display='none'" />
+                <img src="./imagenes/logos/GeneraLogo.svg" alt="Genera ITM" onerror="this.style.display='none'" />
             </div>
-        </footer>
+        </div>
+
     </div>
+
+    <!-- JavaScript -->
+    <script src="./main.js"></script>
+
 </body>
 
 </html>

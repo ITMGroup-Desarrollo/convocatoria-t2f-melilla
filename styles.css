@@ -1,0 +1,675 @@
+/* ============================================
+   COMPARTE MELILLA — Estilos principales
+   ============================================ */
+
+/* ── Reset y base ── */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #e8e8e8;
+}
+
+/* ── Wrapper ── */
+.page-wrapper {
+    width: 100%;
+    background: #fff;
+    min-height: 100vh;
+}
+
+.inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+/* ============================================
+   2. BADGE
+   ============================================ */
+.badge {
+    background: #1d1a1a;
+    color: #93d500;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-align: center;
+    padding: 8px 0;
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+
+/* ============================================
+   3. HERO
+   ============================================ */
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    left: -15vw;
+    bottom: -9vw;
+    background-image: url('./imagenes/textura/huellita.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 40vw;
+    height: 35vw;
+    right: -10vw;
+    top: -9vw;
+    background-image: url('./imagenes/textura/huellita.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    z-index: 0;
+    transform: rotate(-180deg);
+    pointer-events: none;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 470px;
+    overflow: hidden;
+    background: #1565c0;
+}
+
+.hero>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-top {
+    width: 100%;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 30%, rgba(0, 0, 0, 0.45) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 36px;
+}
+
+.hero-logo-title {
+    width: 150px;
+    object-fit: contain;
+    filter: none;
+    margin-top: auto;
+    margin-bottom: 260px;
+}
+
+.hero-logos {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 0;
+}
+
+.hero-logos img {
+    height: 50px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.logo-ttf {
+    filter: none !important;
+}
+
+/* ============================================
+   4. SECCIÓN BLANCA CON TEXTURA
+   ============================================ */
+.section-white {
+    position: relative;
+    background-color: #fff;
+    padding: 30px 24px 32px;
+    text-align: center;
+}
+
+.section-white::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('./imagenes/textura/TTF_textura.png');
+    background-repeat: repeat;
+    background-size: 100px;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.section-white p,
+.section-white a {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ============================================
+   5. SECCIÓN MORADA
+   ============================================ */
+.section-purple {
+    background: #c9a3dc;
+    padding: 28px 24px 30px;
+    text-align: center;
+}
+
+.section-purple p {
+    font-size: 0.93rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-purple .title-oportunidad {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin: 14px 0 20px;
+    line-height: 1.3;
+}
+
+
+/* ============================================
+   BOTÓN PRINCIPAL
+   ============================================ */
+.btn-main {
+    background: #1a1a1a;
+    color: #93d500;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.97rem;
+    border-radius: 9999px;
+    padding: 13px 34px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.btn-main:hover {
+    opacity: 0.82;
+}
+
+
+/* ============================================
+   6. CARDS
+   ============================================ */
+/* Textura en cards */
+.cards-wrap {
+    position: relative;
+    background-color: #efefef;
+    padding: 16px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cards-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('./imagenes/textura/TTF_textura.png');
+    background-repeat: repeat;
+    background-size: 100px;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.cards-wrap .card {
+    position: relative;
+    z-index: 1;
+}
+
+/* Textura en formulario */
+.section-form {
+    position: relative;
+    background-color: #f0f0f0;
+    padding: 30px 16px 36px;
+}
+
+.section-form::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('./imagenes/textura/TTF_textura.png');
+    background-repeat: repeat;
+    background-size: 100px;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.section-form .form-card {
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    height: 210px;
+    background: #888;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-label {
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ============================================
+   7. CÓMO PARTICIPAR
+   ============================================ */
+.section-how {
+    background: #fff;
+    padding: 30px 24px;
+}
+
+.section-how-inner {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.section-how h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.35rem;
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+}
+
+.section-how ol {
+    list-style: decimal;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section-how ol li {
+    font-size: 0.93rem;
+    color: #222;
+    line-height: 1.65;
+}
+
+.section-how .note {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.87rem;
+    color: #1a1a1a;
+    text-align: center;
+    margin-top: 18px;
+    line-height: 1.6;
+}
+
+.section-how .btn-wrap {
+    text-align: center;
+    margin-top: 22px;
+}
+
+
+/* ============================================
+   8. FOTO PAREJA
+   ============================================ */
+.photo-pareja {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background: #ccc;
+}
+
+.photo-pareja img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ============================================
+   9. SOBRE NOSOTROS
+   ============================================ */
+.section-about {
+    background: #1a1a1a;
+    padding: 34px 26px;
+    text-align: center;
+}
+
+.section-about-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section-about p {
+    color: #cecece;
+    font-size: 0.93rem;
+    line-height: 1.75;
+    margin-bottom: 13px;
+}
+
+.section-about p strong {
+    color: #fff;
+}
+
+.section-about .cta {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: #fff;
+    margin-top: 22px;
+    line-height: 1.3;
+    display: block;
+}
+
+
+/* ============================================
+   10. FORMULARIO
+   ============================================ */
+.section-form {
+    background: #f0f0f0;
+    padding: 30px 16px 36px;
+}
+
+.form-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.09);
+    padding: 24px 18px 28px;
+    border: 1px solid #e8e8e8;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.form-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.form-subtitle {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 22px;
+    line-height: 1.5;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 0.87rem;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: #333;
+    background: #fff;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    transition: border-color 0.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #144bb8;
+    box-shadow: 0 0 0 3px rgba(20, 75, 184, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.form-check input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #144bb8;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.form-check label {
+    font-size: 0.87rem;
+    color: #333;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.form-check label a {
+    color: #144bb8;
+    text-decoration: underline;
+}
+
+.btn-enviar {
+    width: 100%;
+    background: #1a1a1a;
+    color: #93d500;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-enviar:hover {
+    opacity: 0.83;
+}
+
+
+/* ============================================
+   11. FOOTER
+   ============================================ */
+.footer {
+    background: #b98fd4;
+    padding: 30px 20px 28px;
+    text-align: center;
+}
+
+.footer-logo-title {
+    width: 150px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    margin: 0 auto 12px auto;
+    display: block;
+}
+
+.footer-copy {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 16px;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+.footer-logos img {
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+
+/* ============================================
+   RESPONSIVE — DESKTOP (768px+)
+   ============================================ */
+@media (min-width: 768px) {
+
+    /* Hero */
+    .hero {
+        height: 560px;
+    }
+
+    .hero-melilla {
+        font-size: 6rem;
+    }
+
+    .hero-comparte {
+        font-size: 1.3rem;
+    }
+
+    .hero-logos img {
+        height: 48px;
+    }
+
+    /* Sección blanca */
+    .section-white {
+        padding: 50px 40px;
+    }
+
+    .section-white p {
+        font-size: 1.1rem;
+        margin-bottom: 28px;
+    }
+
+    /* Sección morada */
+    .section-purple {
+        padding: 50px 40px;
+    }
+
+    .section-purple p {
+        font-size: 1.05rem;
+    }
+
+    .section-purple .title-oportunidad {
+        font-size: 1.6rem;
+    }
+
+    /* Cards en fila */
+    .cards-wrap {
+        flex-direction: row;
+        padding: 28px 40px 32px;
+        gap: 18px;
+    }
+
+    .card {
+        flex: 1;
+        height: 260px;
+    }
+
+    /* Cómo participar */
+    .section-how {
+        padding: 50px 40px;
+    }
+
+    .section-how h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-how ol li {
+        font-size: 1.05rem;
+    }
+
+    /* Foto pareja */
+    .photo-pareja {
+        height: 380px;
+    }
+
+    /* Sobre nosotros */
+    .section-about {
+        padding: 60px 40px;
+    }
+
+    .section-about p {
+        font-size: 1.05rem;
+    }
+
+    .section-about .cta {
+        font-size: 1.7rem;
+    }
+
+    /* Formulario */
+    .section-form {
+        padding: 50px 40px 60px;
+    }
+
+    .form-card {
+        padding: 36px 40px 40px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 50px 40px 44px;
+    }
+
+    .footer-melilla {
+        font-size: 3rem;
+    }
+
+    .footer-logos img {
+        height: 38px;
+    }
+}
