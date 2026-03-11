@@ -129,7 +129,7 @@ body {
 .hero-logos img {
     height: 50px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); */
 }
 
 .logo-ttf {
@@ -183,13 +183,14 @@ body {
     margin-right: auto;
 }
 
-.section-purple .title-oportunidad {
+.title-oportunidad {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 1.2rem;
     color: #1a1a1a;
     margin: 14px 0 20px;
     line-height: 1.3;
+    text-align: center;
 }
 
 
@@ -310,6 +311,7 @@ body {
 .section-how-inner {
     max-width: 620px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .section-how h2 {
@@ -319,6 +321,7 @@ body {
     text-align: center;
     color: #1a1a1a;
     margin-bottom: 18px;
+    text-align: center;
 }
 
 .section-how ol {
@@ -327,12 +330,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    text-align: center;
 }
 
 .section-how ol li {
     font-size: 0.93rem;
     color: #222;
     line-height: 1.65;
+    text-align: center;
 }
 
 .section-how .note {
@@ -508,17 +513,19 @@ body {
 }
 
 .btn-enviar {
-    width: 100%;
+    width: auto;
     background: #1a1a1a;
     color: #93d500;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1rem;
-    padding: 14px;
+    padding: 14px 60px;
     border-radius: 9999px;
     border: none;
     cursor: pointer;
     transition: opacity 0.2s;
+    display: block;
+    margin: 0 auto;
 }
 
 .btn-enviar:hover {
@@ -559,7 +566,7 @@ body {
 .footer-logos img {
     height: 28px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); */
 }
 
 
@@ -568,21 +575,49 @@ body {
    ============================================ */
 @media (min-width: 768px) {
 
+    .section-about .cta {
+        white-space: nowrap;
+    }
+
     /* Hero */
     .hero {
         height: 560px;
     }
 
-    .hero-melilla {
-        font-size: 6rem;
+    .hero-overlay {
+        justify-content: flex-start;
+        padding-bottom: 36px;
     }
 
-    .hero-comparte {
-        font-size: 1.3rem;
+    .badge {
+        margin-top: 0;
+    }
+
+    .hero-logo-title {
+        width: 280px !important;
+        margin-top: 30px !important;
+        margin-bottom: auto !important;
     }
 
     .hero-logos img {
-        height: 48px;
+        height: 60px;
+    }
+
+    .logo-ttf {
+        height: 60px !important;
+    }
+
+    /* Huella izquierda pequeña */
+    .hero::before {
+        width: 15vw;
+        height: 15vw;
+        left: -3vw;
+        bottom: -2vw;
+    }
+
+    /* Quitar huella derecha */
+    .hero::after {
+        display: none;
     }
 
     /* Sección blanca */
@@ -604,8 +639,8 @@ body {
         font-size: 1.05rem;
     }
 
-    .section-purple .title-oportunidad {
-        font-size: 1.6rem;
+    .title-oportunidad br {
+        display: none;
     }
 
     /* Cards en fila */
@@ -631,6 +666,7 @@ body {
 
     .section-how ol li {
         font-size: 1.05rem;
+
     }
 
     /* Foto pareja */
@@ -665,11 +701,41 @@ body {
         padding: 50px 40px 44px;
     }
 
-    .footer-melilla {
-        font-size: 3rem;
-    }
-
     .footer-logos img {
         height: 38px;
+    }
+
+    .section-white {
+        padding: 60px 40px;
+        text-align: center;
+    }
+
+    .section-white p {
+        max-width: 400px;
+        /* ← ajusta hasta que quede en 3 líneas */
+        font-size: 1.1rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
+    }
+
+    @media (min-width: 768px) {
+        .section-how-inner {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-how ol {
+            display: inline-block;
+            text-align: left;
+            padding-left: 18px;
+            text-align: center;
+        }
+
+        .section-how .note {
+            text-align: center;
+        }
+
     }
 }

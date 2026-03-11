@@ -51,9 +51,9 @@
 
                 <!-- Logos bajos -->
                 <div class="hero-logos">
-                    <img src="./imagenes/logos/TTF_Logo3.png" alt="Ticket to Fun" class="logo-ttf"
+                    <img src="./imagenes/logos/TTF_Logo2.svg" alt="Ticket to Fun" class="logo-ttf"
                         onerror="this.style.display='none'" />
-                    <img src="./imagenes/logos/GeneraLogo.svg" alt="Fundación Genera ITM"
+                    <img src="./imagenes/logos/GeneraLogo2.svg" alt="Fundación Genera ITM"
                         onerror="this.style.display='none'" />
 
 
@@ -66,9 +66,9 @@
         <div class="section-white">
             <p>
                 Forma parte de la red de emprendedores que comparten las experiencias turísticas, culturales y
-                gastronómicas que Melilla tiene para el mundo.
+                gastronómicas que Melilla tiene para compartir.
             </p><br>
-            <a href="#formulario" class="btn-main">Descarga la convocatoria</a>
+            <a href="#formulario" class="btn-main">Registra tu proyecto</a>
         </div>
 
         <!-- ⑤ SECCIÓN MORADA -->
@@ -78,7 +78,7 @@
             <p>¿Te gustaría causar un impacto positivo en la comunidad y compartir con cruceristas las maravillas de
                 tu
                 ciudad?</p>
-            <p class="title-oportunidad">¡Esta convocatoria<br>es tu oportunidad!</p>
+            <p class="title-oportunidad">¡Esta convocatoria <br>es tu oportunidad!</p>
             <a href="#formulario" class="btn-main">Participa</a>
         </div>
 
@@ -127,7 +127,7 @@
                     <a href="#" class="btn-main">
                         Descarga la convocatoria
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
-                            stroke="#c8e600" stroke-width="3">
+                            stroke="#93d500" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                         </svg>
                     </a>
@@ -138,7 +138,7 @@
         <!-- ⑧ FOTO PAREJA -->
         <div class="photo-pareja">
             <!-- 📁 /images/pareja.jpg -->
-            <img src="./imagenes/imagen-12.jpg" alt="Viajeros en Melilla" onerror="this.style.display='none'" />
+            <img src="./imagenes/imagen-12b.jpg" alt="Viajeros en Melilla" onerror="this.style.display='none'" />
         </div>
 
         <!-- ⑨ SOBRE NOSOTROS -->
@@ -152,7 +152,7 @@
                     fines de lucro que busca el desarrollo del turismo sostenible a través de la prosperidad
                     económica
                     de la comunidad de Melilla.</p>
-                <p class="cta">No te quedes sin participar<br>en esta iniciativa</p>
+                <p class="cta">No te quedes sin participar en esta iniciativa</p>
             </div>
         </div>
 
@@ -447,8 +447,11 @@
             <img src="./imagenes/logos/ComparteMelilla.svg" alt="Comparte Melilla" class="footer-logo-title" />
             <p class="footer-copy">© 2026 Comparte Melilla. Todos los derechos reservados.</p>
             <div class="footer-logos">
-                <img src="./imagenes/logos/TTF_Logo.svg" alt="Ticket to Fun" onerror="this.style.display='none'" />
-                <img src="./imagenes/logos/GeneraLogo.svg" alt="Genera ITM" onerror="this.style.display='none'" />
+                <a href="https://www.instagram.com/tickettofun_" target="_blank">
+                    <img src="./imagenes/logos/TTF_Logo-blanco.svg" alt="Ticket to Fun"
+                        onerror="this.style.display='none'" />
+                </a>
+                <img src="./imagenes/logos/GeneraLogo2.svg" alt="Genera ITM" onerror="this.style.display='none'" />
             </div>
         </div>
 
