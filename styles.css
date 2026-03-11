@@ -573,16 +573,40 @@ body {
         height: 560px;
     }
 
-    .hero-melilla {
-        font-size: 6rem;
+    .hero-overlay {
+        justify-content: flex-start;
+        padding-bottom: 36px;
     }
 
-    .hero-comparte {
-        font-size: 1.3rem;
+    .badge {
+        margin-top: 0;
+    }
+
+    .hero-logo-title {
+        width: 280px !important;
+        margin-top: 30px !important;
+        margin-bottom: auto !important;
     }
 
     .hero-logos img {
-        height: 48px;
+        height: 60px;
+    }
+
+    .logo-ttf {
+        height: 60px !important;
+    }
+
+    /* Huella izquierda pequeña */
+    .hero::before {
+        width: 15vw;
+        height: 15vw;
+        left: -3vw;
+        bottom: -2vw;
+    }
+
+    /* Quitar huella derecha */
+    .hero::after {
+        display: none;
     }
 
     /* Sección blanca */
@@ -663,10 +687,6 @@ body {
     /* Footer */
     .footer {
         padding: 50px 40px 44px;
-    }
-
-    .footer-melilla {
-        font-size: 3rem;
     }
 
     .footer-logos img {
