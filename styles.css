@@ -27,6 +27,9 @@ body {
     padding: 0 24px;
 }
 
+ol {
+    list-style-type: none !important;
+}
 
 /* ============================================
    2. BADGE
@@ -351,7 +354,7 @@ body {
     font-weight: 700;
     font-size: 0.87rem;
     color: #1a1a1a;
-    text-align: justify;
+    text-align: center;
     margin-top: 18px;
     line-height: 1.6;
 }
@@ -589,7 +592,7 @@ input[type="checkbox"]:checked:hover {
 }
 
 .section-how ol li {
-    text-align: justify;
+    text-align: center;
 }
 
 /* ============================================
@@ -756,7 +759,7 @@ input[type="checkbox"]:checked:hover {
         }
 
         .section-how .note {
-            text-align: justify;
+            text-align: center;
         }
 
     }

@@ -112,9 +112,9 @@
         <div class="section-how">
             <div class="section-how-inner">
                 <h2>Como participar</h2>
-                <ol>
-                    <li>Conoce el proyecto, descarga y lee atentamente la convocatoria.</li>
-                    <li>Regístrate e ingresa la información solicitada en el formulario correspondiente, donde
+                <ol class = "list-none">
+                    <li>1. Conoce el proyecto, descarga y lee atentamente la convocatoria.</li>
+                    <li>2. Regístrate e ingresa la información solicitada en el formulario correspondiente, donde
                         deberás
                         adjuntar la ficha de tu propuesta.</li>
                 </ol>
