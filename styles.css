@@ -183,13 +183,14 @@ body {
     margin-right: auto;
 }
 
-.section-purple .title-oportunidad {
+.title-oportunidad {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 1.2rem;
     color: #1a1a1a;
     margin: 14px 0 20px;
     line-height: 1.3;
+    text-align: center;
 }
 
 
@@ -628,8 +629,8 @@ body {
         font-size: 1.05rem;
     }
 
-    .section-purple .title-oportunidad {
-        font-size: 1.6rem;
+    .title-oportunidad br {
+        display: none;
     }
 
     /* Cards en fila */
@@ -706,4 +707,6 @@ body {
         margin-right: auto;
         margin-bottom: 32px;
     }
+
+
 }
