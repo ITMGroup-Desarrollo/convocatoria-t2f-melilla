@@ -351,7 +351,7 @@ body {
     font-weight: 700;
     font-size: 0.87rem;
     color: #1a1a1a;
-    text-align: center;
+    text-align: justify;
     margin-top: 18px;
     line-height: 1.6;
 }
@@ -588,6 +588,9 @@ input[type="checkbox"]:checked:hover {
     /* filter: brightness(0) invert(1); */
 }
 
+.section-how ol li {
+    text-align: justify;
+}
 
 /* ============================================
    RESPONSIVE — DESKTOP (768px+)
@@ -753,7 +756,7 @@ input[type="checkbox"]:checked:hover {
         }
 
         .section-how .note {
-            text-align: center;
+            text-align: justify;
         }
 
     }
