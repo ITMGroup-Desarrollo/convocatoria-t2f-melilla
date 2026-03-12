@@ -113,19 +113,19 @@
         <div class="section-how">
             <div class="section-how-inner">
                 <h2>Como participar</h2>
-                <ol>
-                    <li>Conoce el proyecto, descarga y lee atentamente la convocatoria.</li>
-                    <li>Regístrate e ingresa la información solicitada en el formulario correspondiente, donde
+                <ol class = "list-none" style="list-style-type: none !important;">
+                    <li>1. Conoce el proyecto, descarga y lee atentamente la convocatoria.</li>
+                    <li>2. Regístrate e ingresa la información solicitada en el formulario correspondiente, donde
                         deberás
                         adjuntar la ficha de tu propuesta.</li>
                 </ol>
-                <p class="note">
+                <p class="note text-center">
                     Ticket to Fun y Fundación Genera ITM, revisarán todas las propuestas. Si la tuya es
                     preseleccionada,
                     te contactaremos para conocernos mejor y profundizar en los detalles.
                 </p>
                 <div class="btn-wrap">
-                    <a href="#" class="btn-main">
+                    <a href="convocatoriaComparteMelilla.pdf" class = "btn-main" target="_blank" download>
                         Descarga la convocatoria
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
                             stroke="#93d500" stroke-width="3">
@@ -164,132 +164,282 @@
                 <p class="form-subtitle">Completa el formulario para iniciar tu proceso de inscripción.</p>
 
                 <form id="melillaForm" method="POST" action="submit.php" class="space-y-6">
-                    <!-- 0 Emprendedor/empresa -->
-                    <div class="flex flex-col gap-3">
-                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                            Are you an entrepreneur or a company? / ¿Eres un emprendedor o una empresa?
-                        </label>
+                        <!-- 0 Emprendedor/empresa -->
+                        <div class="flex flex-col gap-3">
+                            <label class="text-sm font-semibold  ">
+                                Are you an entrepreneur or a company?  / ¿Eres un emprendedor o una empresa?
+                            </label>
 
-                        <label class="flex gap-2">
-                            <input type="radio" name="entity" value="emprendedor">
-                            <span class="dark:text-white">entrepreneur / emprendedor</span>
-                        </label>
+                            <label class="flex gap-2">
+                                <input type="radio" name="entity" class="focus:ring-[#93d500]" value="emprendedor">
+                                <span class=" ">Entrepreneur / Emprendedor</span>
+                            </label>
 
-                        <label class="flex gap-2">
-                            <input type="radio" name="entity" value="empresa">
-                            <span class="dark:text-white">company / empresa</span>
-                        </label>
+                            <label class="flex gap-2">
+                                <input type="radio" name="entity" class="focus:ring-[#93d500]" value="empresa">
+                                <span class="">Company / Empresa</span>
+                            </label>
 
-                    </div>
-                    <!-- 1 Company Name -->
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                            Company Name / Razón Social
-                        </label>
-                        <input type="text" name="company" placeholder="Company name"
-                            class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white">
-                    </div>
-
-
-                    <!-- 2 Main Contact -->
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                            Main Contact Name / Contacto Principal
-                        </label>
-                        <input type="text" name="contact_name" placeholder="Contact name"
-                            class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white">
-                    </div>
+                        </div>
+                        <!-- 1 Company Name -->
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold  ">
+                                Company Name / Razón Social
+                            </label>
+                            <input type="text" name="company" placeholder="Company name"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
+                        </div>
 
 
-                    <!-- 3 Tax ID -->
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                            Tax ID / CIF-NIF
-                        </label>
-                        <input type="text" name="tax_id" placeholder="Tax ID"
-                            class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white">
-                    </div>
+                        <!-- 2 Main Contact -->
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold  ">
+                                Main Contact Name / Contacto Principal
+                            </label>
+                            <input type="text" name="contact_name" placeholder="Contact name"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
+                        </div>
 
 
-                    <!-- 4 Address -->
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                            Address in Spain / Dirección en España
-                        </label>
-                        <input type="text" name="address" placeholder="Address"
-                            class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white">
-                    </div>
+                        <!-- 3 Tax ID -->
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold  ">
+                                Tax ID / CIF-NIF
+                            </label>
+                            <input type="text" name="tax_id" placeholder="Tax ID"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
+                        </div>
 
 
-                    <!-- 5 Email -->
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                            Email
-                        </label>
-                        <input type="email" name="email" placeholder="email@company.com"
-                            class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white">
-                    </div>
+                        <!-- 4 Address -->
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold  ">
+                                Address in Spain / Dirección en España
+                            </label>
+                            <input type="text" name="address" placeholder="Address"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
+                        </div>
 
 
-                    <!-- 6 Website -->
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                            Company Website / Website de la empresa
-                        </label>
-                        <input type="url" name="website" placeholder="https://"
-                            class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white">
-                    </div>
-
-                    <<<<<<< HEAD:index.html <div class="form-group">
-                        <label>Categorías de Tours</label>
-                        <label class="flex gap-2"><input type="checkbox" name="tour_categories[]" value="Urban Tours">
-                            Urban Tours (2-3h)</label>
-                        <label class="flex gap-2"><input type="checkbox" name="tour_categories[]" value="Food Tours">
-                            Food Tours (3-4h)</label>
-                        <label class="flex gap-2"><input type="checkbox" name="tour_categories[]"
-                                value="Adventure Tours">
-                            Adventure Tours (3-5h)</label>
-                        <label class="flex gap-2"><input type="checkbox" name="tour_categories[]"
-                                value="Premium Private">
-                            Premium / Private (2-5h)</label>
-                        <label class="flex gap-2"><input type="checkbox" name="tour_categories[]"
-                                value="Thematic Tours">
-                            Thematic Tours</label>
-            </div>
-
-            <div class="form-group">
-                <label>Capacidad por Tour</label>
-                <label class="flex gap-2"><input type="checkbox" name="tour_capacity[]" value="Up to 10 pax">
-                    Hasta 10 pax</label>
-                <label class="flex gap-2"><input type="checkbox" name="tour_capacity[]" value="Up to 25 pax">
-                    Hasta 25 pax</label>
-                <label class="flex gap-2"><input type="checkbox" name="tour_capacity[]" value="Up to 50 pax">
-                    Hasta 50 pax</label>
-                <label class="flex gap-2"><input type="checkbox" name="tour_capacity[]" value="Up to 100 pax">
-                    Hasta 100 pax</label>
-                <label class="flex gap-2"><input type="checkbox" name="tour_capacity[]" value="More than 100 pax">
-                    Más de 100 pax</label>
-            </div>
-            =======
-
-            <!-- 7 phone -->
-            <div class="flex flex-col gap-2">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    Phone / teléfono
-                </label>
-                <input type="tel" name="phone" placeholder="+34..."
-                    class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white">
-            </div>
-            >>>>>>> 59b96d853d21e48f5b3e3fa29d719933670ab432:index.php
+                        <!-- 5 Email -->
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold  ">
+                                Email
+                            </label>
+                            <input type="email" name="email" placeholder="email@company.com"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
+                        </div>
 
 
-            <!-- 8 Social Media -->
-            <div class="flex flex-col gap-2">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    Social Media / Redes Sociales
-                </label>
-                <input type="text" name="social" placeholder="Instagram, Facebook, LinkedIn..."
-                    class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white">
+                        <!-- 6 Website -->
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold  ">
+                                Company Website / Website de la empresa
+                            </label>
+                            <input type="text" name="website" placeholder="https://"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
+                        </div>
+
+
+                        <!-- 7 phone -->
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold  ">
+                                Phone / teléfono
+                            </label>
+                            <input type="tel" name="phone" placeholder="+34..."
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
+                        </div>
+
+
+                        <!-- 8 Social Media -->
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold  ">
+                                Social Media / Redes Sociales
+                            </label>
+                            <input type="text" name="social" placeholder="Instagram, Facebook, LinkedIn..."
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
+                        </div>
+
+
+                        <!-- 9 Years of experience -->
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold  ">
+                                Years of experience in tours / Años experiencia tours
+                            </label>
+                            <input type="number" name="years_exp" placeholder="Years"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
+                        </div>
+
+
+                        <!-- 10 Experience in Melilla -->
+                        <div class="flex flex-col gap-3">
+                            <label class="text-sm font-semibold  ">
+                                Do you have experience operating tours in Melilla? / ¿Tienen experiencia operando tours
+                                en Melilla?
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="radio" name="melilla" class="focus:ring-[#93d500]" value="yes">
+                                <span class="">Yes / Si</span>
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="radio" name="melilla" class="focus:ring-[#93d500]" value="no">
+                                <span class="">No</span>
+                            </label>
+
+                        </div>
+
+
+                        <!-- 11 Tour Details -->
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold  ">
+                                If yes, include details / Incluye detalles
+                            </label>
+                            <textarea name="melilla_details" rows="4"
+                                placeholder="Describe tours conducted in Melilla..."
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none "></textarea>
+                        </div>
+
+
+                        <!-- 12 Certified guides -->
+                        <div class="flex flex-col gap-3">
+                            <label class="text-sm font-semibold  ">
+                                Do you have certified guides registered in Spain? / ¿Cuentas con guías certificados en
+                                España?
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="radio" name="guides" class="focus:ring-[#93d500]" value="yes">
+                                <span class="">Yes / Si</span>
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="radio" name="guides" class="focus:ring-[#93d500]" value="no">
+                                <span class="">No</span>
+                            </label>
+
+                        </div>
+
+
+                        <!-- 13 Tour Categories -->
+                        <div class="flex flex-col gap-3">
+                            <label class="text-sm font-semibold  ">
+                                Select Tour Categories / Seleccione las categorías de tours (multiple)
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="checkbox" name="tour_categories[]" class="focus:ring-[#93d500]" value="Urban Tours">
+                                <span class="">Urban Tours (2-3h)</span>
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="checkbox" name="tour_categories[]" class="focus:ring-[#93d500]" value="Food Tours">
+                                <span class="">Food Tours (3-4h)</span>
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="checkbox" name="tour_categories[]" class="focus:ring-[#93d500]" value="Adventure Tours">
+                                <span class="">Adventure Tours (3-5h)</span>
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="checkbox" name="tour_categories[]" class="focus:ring-[#93d500]" value="Premium Private">
+                                <span class="">Premium / Private (2-5h)</span>
+                            </label>
+                            <label class="flex gap-2">
+                                <input type="checkbox" name="tour_categories[]" class="focus:ring-[#93d500]" value="Thematic Tours">
+                                <span class="">Thematic Tours</span>
+                            </label>
+
+                        </div>
+
+
+                        <!-- 14 Tour Capacity -->
+                        <div class="flex flex-col gap-3">
+                            <label class="text-sm font-semibold  ">
+                                Tour Capacity you can work with / Capacidad por Tour
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="Up to 10 pax">
+                                <span class="">Up to 10 pax</span>
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="Up to 25 pax">
+                                <span class="">Up to 25 pax</span>
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="Up to 50 pax">
+                                <span class="">Up to 50 pax</span>
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="Up to 100 pax">
+                                <span class="">Up to 100 pax</span>
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="More than 100 pax">
+                                <span class="">More than 100 pax</span>
+                            </label>
+
+                        </div>
+
+
+                        <!-- 15 Company Summary -->
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold  ">
+                                Brief Company Summary & Key Info / Breve resumen empresa y datos relevantes
+                            </label>
+                            <textarea name="company_summary" rows="4"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none "></textarea>
+                        </div>
+
+
+                        <!-- 16 Bring guides -->
+                        <div class="flex flex-col gap-3">
+                            <label class="text-sm font-semibold  ">
+                                Do you have the ability to bring your own guides to Melilla? / ¿Tienen capacidad de
+                                llevar sus guías a Melilla?
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="radio" name="bring_guides" class="focus:ring-[#93d500]" value="yes">
+                                <span class="">Yes / Si</span>
+                            </label>
+
+                            <label class="flex gap-2">
+                                <input type="radio" name="bring_guides" class="focus:ring-[#93d500]" value="no">
+                                <span class="">No</span>
+                            </label>
+
+                        </div>
+
+
+                        <!-- 17 Price Range -->
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold  ">
+                                Price Range & Tour Types Offered / Rango de precios y tipos de tours ofrecidos
+                            </label>
+                            <textarea name="price_range" rows="4"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none "></textarea>
+                        </div>
+
+
+                        <!-- Submit -->
+                        
+                        <button
+                            class="btn-main block mx-auto"
+                            type="submit">
+
+                            <span>Send / Enviar</span>
+                            <span class="material-symbols-outlined"></span>
+
+                        </button>
+                </form>
             </div>
 
 
