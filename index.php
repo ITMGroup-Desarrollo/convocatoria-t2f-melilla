@@ -114,10 +114,10 @@
             <div class="section-how-inner">
                 <h2>Como participar</h2>
                 <ol class = "list-none" style="list-style-type: none !important;">
-                    <li>1. Conoce el proyecto, descarga y lee atentamente la convocatoria.</li>
+                    <li>1. Conoce el proyecto, descarga y lee atentamente&nbsp;la&nbsp;convocatoria.</li>
                     <li>2. Regístrate e ingresa la información solicitada en el formulario correspondiente, donde
                         deberás
-                        adjuntar la ficha de tu propuesta.</li>
+                        adjuntar la ficha&nbsp;de&nbsp;tu&nbsp;propuesta.</li>
                 </ol>
                 <p class="note text-center">
                     Ticket to Fun y Fundación Genera ITM, revisarán todas las propuestas. Si la tuya es
@@ -356,37 +356,36 @@
 
 
                         <!-- 14 Tour Capacity -->
-                        <div class="flex flex-col gap-3">
-                            <label class="text-sm font-semibold  ">
-                                Tour Capacity you can work with / Capacidad por Tour
-                            </label>
+                            <div class="flex flex-col gap-3">
+                                <label class="text-sm font-semibold">
+                                    Tour Capacity you can work with / Capacidad por Tour
+                                </label>
 
-                            <label class="flex gap-2">
-                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="Up to 10 pax">
-                                <span class="">Up to 10 pax</span>
-                            </label>
+                                <label class="flex gap-2">
+                                    <input type="radio" name="tour_capacity" value="Up to 10 pax" class="focus:ring-[#93d500]">
+                                    <span>Up to 10 pax</span>
+                                </label>
 
-                            <label class="flex gap-2">
-                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="Up to 25 pax">
-                                <span class="">Up to 25 pax</span>
-                            </label>
+                                <label class="flex gap-2">
+                                    <input type="radio" name="tour_capacity" value="Up to 25 pax" class="focus:ring-[#93d500]">
+                                    <span>Up to 25 pax</span>
+                                </label>
 
-                            <label class="flex gap-2">
-                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="Up to 50 pax">
-                                <span class="">Up to 50 pax</span>
-                            </label>
+                                <label class="flex gap-2">
+                                    <input type="radio" name="tour_capacity" value="Up to 50 pax" class="focus:ring-[#93d500]">
+                                    <span>Up to 50 pax</span>
+                                </label>
 
-                            <label class="flex gap-2">
-                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="Up to 100 pax">
-                                <span class="">Up to 100 pax</span>
-                            </label>
+                                <label class="flex gap-2">
+                                    <input type="radio" name="tour_capacity" value="Up to 100 pax" class="focus:ring-[#93d500]">
+                                    <span>Up to 100 pax</span>
+                                </label>
 
-                            <label class="flex gap-2">
-                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="More than 100 pax">
-                                <span class="">More than 100 pax</span>
-                            </label>
-
-                        </div>
+                                <label class="flex gap-2">
+                                    <input type="radio" name="tour_capacity" value="More than 100 pax" class="focus:ring-[#93d500]">
+                                    <span>More than 100 pax</span>
+                                </label>
+                            </div>
 
 
                         <!-- 15 Company Summary -->
