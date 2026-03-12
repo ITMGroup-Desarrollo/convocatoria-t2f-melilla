@@ -28,7 +28,7 @@
         rel="stylesheet" />
 
     <!-- Estilos propios -->
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=1.0">
 </head>
 
 <body>
@@ -115,9 +115,7 @@
                 <h2>Como participar</h2>
                 <ol class = "list-none" style="list-style-type: none !important;">
                     <li>1. Conoce el proyecto, descarga y lee atentamente&nbsp;la&nbsp;convocatoria.</li>
-                    <li>2. Regístrate e ingresa la información solicitada en el formulario correspondiente, donde
-                        deberás
-                        adjuntar la ficha&nbsp;de&nbsp;tu&nbsp;propuesta.</li>
+                    <li>2. Regístrate e ingresa la información solicitada en el formulario&nbsp;correspondiente.</li>
                 </ol>
                 <p class="note text-center">
                     Ticket to Fun y Fundación Genera ITM, revisarán todas las propuestas. Si la tuya es
