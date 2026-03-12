@@ -506,7 +506,7 @@
             <!-- 13 Tour Categories -->
             <div class="flex flex-col gap-3">
                 <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    Select Tour Categories
+                    Select Tour Categories / Seleccione las Categorías de Tours (multiple)
                 </label>
 
                 <label class="flex gap-2">
