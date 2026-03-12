@@ -361,18 +361,19 @@ body {
    ============================================ */
 .photo-pareja {
     width: 100%;
-    height: 230px;
+    height: 380px;
     overflow: hidden;
     background: #ccc;
+    position: relative;
 }
 
 .photo-pareja img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 150%;
     display: block;
 }
-
 
 /* ============================================
    9. SOBRE NOSOTROS
@@ -670,9 +671,9 @@ body {
     }
 
     /* Foto pareja */
-    .photo-pareja {
+    /* .photo-pareja {
         height: 380px;
-    }
+    } */
 
     /* Sobre nosotros */
     .section-about {
@@ -719,23 +720,48 @@ body {
         margin-bottom: 32px;
     }
 
-    @media (min-width: 768px) {
-        .section-how-inner {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .section-how ol {
-            display: inline-block;
-            text-align: left;
-            padding-left: 18px;
-            text-align: center;
-        }
-
-        .section-how .note {
-            text-align: center;
-        }
-
+    .section-how-inner {
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
     }
+
+    .section-how ol {
+        display: inline-block;
+        text-align: left;
+        padding-left: 18px;
+        text-align: center;
+    }
+
+    .section-how .note {
+        text-align: center;
+    }
+
+    .photo-pareja {
+        height: 700px;
+        position: sticky;
+        top: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .photo-pareja img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 0%;
+        display: block;
+    }
+
+    .section-about {
+        position: relative;
+        z-index: 2;
+        margin-top: 0;
+    }
+
+    .section-form {
+        position: relative;
+        z-index: 3;
+    }
+
 }
