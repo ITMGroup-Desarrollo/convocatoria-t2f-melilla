@@ -370,18 +370,19 @@ ol {
    ============================================ */
 .photo-pareja {
     width: 100%;
-    height: 230px;
+    height: 380px;
     overflow: hidden;
     background: #ccc;
+    position: relative;
 }
 
 .photo-pareja img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 150%;
     display: block;
 }
-
 
 /* ============================================
    9. SOBRE NOSOTROS
@@ -606,7 +607,7 @@ input[type="checkbox"]:checked:hover {
 
     /* Hero */
     .hero {
-        height: 560px;
+        height: 750px;
     }
 
     .hero-overlay {
@@ -695,9 +696,9 @@ input[type="checkbox"]:checked:hover {
     }
 
     /* Foto pareja */
-    .photo-pareja {
-        height: 35rem;
-    }
+    /* .photo-pareja {
+        height: 380px;
+    } */
 
     /* Sobre nosotros */
     .section-about {
@@ -744,23 +745,48 @@ input[type="checkbox"]:checked:hover {
         margin-bottom: 32px;
     }
 
-    @media (min-width: 768px) {
-        .section-how-inner {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .section-how ol {
-            display: inline-block;
-            text-align: left;
-            padding-left: 18px;
-            text-align: center;
-        }
-
-        .section-how .note {
-            text-align: center;
-        }
-
+    .section-how-inner {
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
     }
+
+    .section-how ol {
+        display: inline-block;
+        text-align: left;
+        padding-left: 18px;
+        text-align: center;
+    }
+
+    .section-how .note {
+        text-align: center;
+    }
+
+    .photo-pareja {
+        height: 600px;
+        position: sticky;
+        top: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .photo-pareja img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    .section-about {
+        position: relative;
+        z-index: 2;
+        margin-top: 0;
+    }
+
+    .section-form {
+        position: relative;
+        z-index: 3;
+    }
+
 }
