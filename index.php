@@ -28,7 +28,7 @@
         rel="stylesheet" />
 
     <!-- Estilos propios -->
-    <link rel="stylesheet" href="./styles.css?v=1.0">
+    <link rel="stylesheet" href="./styles.css?v=2.0">
 </head>
 
 <body>
