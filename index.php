@@ -143,7 +143,7 @@
         <!-- ⑨ SOBRE NOSOTROS -->
         <div class="section-about">
             <div class="section-about-inner">
-                <p>Somos <strong>Ticket to Fun</strong>, tour operadora con más de 20 años diseñando y operando
+                <p>Somos <strong>Ticket to Fun</strong>,  comercializadora de tours con más de 20 años diseñando y operando
                     experiencias turísticas alrededor del mundo.</p>
                 <p>Nuestra misión es unir fuerzas con las experiencias locales y las autoridades para que el destino
                     crezca de forma profesional y sostenible.</p>

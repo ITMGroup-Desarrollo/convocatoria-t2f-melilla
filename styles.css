@@ -763,7 +763,7 @@ input[type="checkbox"]:checked:hover {
     }
 
     .photo-pareja {
-        height: 600px;
+        height: 60dvh;
         position: sticky;
         top: 0;
         z-index: 0;
