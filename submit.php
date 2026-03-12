@@ -1,5 +1,3 @@
-
-
 <?php
 function loadEnv($path)
 {
@@ -27,8 +25,7 @@ loadEnv(__DIR__ . '/.env');
 // ======================
 
 $apiKey = getenv('BREVO_API_KEY');
-$listId = getenv('BREVO_LIST_ID');
-
+$listId = (int) getenv('BREVO_LIST_ID');
 // ======================
 // FUNCIONES
 // ======================
@@ -66,7 +63,7 @@ $data = [
 "MELILLA_DETAILS" => getPost("melilla_details"),
 "GUIDES" => getPost("guides"),
 "TOUR_CATEGORIES" => getArray("tour_categories"),
-"TOUR_CAPACITY" => getArray("tour_capacity"),
+"TOUR_CAPACITY" => getPost("tour_capacity"),
 "COMPANY_SUMMARY" => getPost("company_summary"),
 "BRING_GUIDES" => getPost("bring_guides"),
 "PRICE_RANGE" => getPost("price_range")
@@ -100,7 +97,7 @@ CURLOPT_POSTFIELDS => json_encode($data)
 $response = curl_exec($ch);
 
 if(curl_errno($ch)){
-    echo "CURL ERROR: " . curl_error($ch);
+    error_log("Brevo CURL ERROR: " . curl_error($ch));
 }
 
 
@@ -149,7 +146,7 @@ curl_setopt_array($ch, [
 $sheetResponse = curl_exec($ch);
 
 if(curl_errno($ch)){
-    echo "Sheets CURL ERROR: " . curl_error($ch);
+    error_log("Sheets CURL ERROR: " . curl_error($ch));
 }
 
 curl_close($ch);

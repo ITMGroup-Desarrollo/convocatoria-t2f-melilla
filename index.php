@@ -28,7 +28,7 @@
         rel="stylesheet" />
 
     <!-- Estilos propios -->
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=2.0">
 </head>
 
 <body>
@@ -114,10 +114,8 @@
             <div class="section-how-inner">
                 <h2>Como participar</h2>
                 <ol class = "list-none" style="list-style-type: none !important;">
-                    <li>1. Conoce el proyecto, descarga y lee atentamente la convocatoria.</li>
-                    <li>2. Regístrate e ingresa la información solicitada en el formulario correspondiente, donde
-                        deberás
-                        adjuntar la ficha de tu propuesta.</li>
+                    <li>1. Conoce el proyecto, descarga y lee atentamente&nbsp;la&nbsp;convocatoria.</li>
+                    <li>2. Regístrate e ingresa la información solicitada en el formulario&nbsp;correspondiente.</li>
                 </ol>
                 <p class="note text-center">
                     Ticket to Fun y Fundación Genera ITM, revisarán todas las propuestas. Si la tuya es
@@ -145,7 +143,7 @@
         <!-- ⑨ SOBRE NOSOTROS -->
         <div class="section-about">
             <div class="section-about-inner">
-                <p>Somos <strong>Ticket to Fun</strong>, tour operadora con más de 20 años diseñando y operando
+                <p>Somos <strong>Ticket to Fun</strong>,  comercializadora de tours con más de 20 años diseñando y operando
                     experiencias turísticas alrededor del mundo.</p>
                 <p>Nuestra misión es unir fuerzas con las experiencias locales y las autoridades para que el destino
                     crezca de forma profesional y sostenible.</p>
@@ -356,37 +354,36 @@
 
 
                         <!-- 14 Tour Capacity -->
-                        <div class="flex flex-col gap-3">
-                            <label class="text-sm font-semibold  ">
-                                Tour Capacity you can work with / Capacidad por Tour
-                            </label>
+                            <div class="flex flex-col gap-3">
+                                <label class="text-sm font-semibold">
+                                    Tour Capacity you can work with / Capacidad por Tour
+                                </label>
 
-                            <label class="flex gap-2">
-                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="Up to 10 pax">
-                                <span class="">Up to 10 pax</span>
-                            </label>
+                                <label class="flex gap-2">
+                                    <input type="radio" name="tour_capacity" value="Up to 10 pax" class="focus:ring-[#93d500]">
+                                    <span>Up to 10 pax</span>
+                                </label>
 
-                            <label class="flex gap-2">
-                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="Up to 25 pax">
-                                <span class="">Up to 25 pax</span>
-                            </label>
+                                <label class="flex gap-2">
+                                    <input type="radio" name="tour_capacity" value="Up to 25 pax" class="focus:ring-[#93d500]">
+                                    <span>Up to 25 pax</span>
+                                </label>
 
-                            <label class="flex gap-2">
-                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="Up to 50 pax">
-                                <span class="">Up to 50 pax</span>
-                            </label>
+                                <label class="flex gap-2">
+                                    <input type="radio" name="tour_capacity" value="Up to 50 pax" class="focus:ring-[#93d500]">
+                                    <span>Up to 50 pax</span>
+                                </label>
 
-                            <label class="flex gap-2">
-                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="Up to 100 pax">
-                                <span class="">Up to 100 pax</span>
-                            </label>
+                                <label class="flex gap-2">
+                                    <input type="radio" name="tour_capacity" value="Up to 100 pax" class="focus:ring-[#93d500]">
+                                    <span>Up to 100 pax</span>
+                                </label>
 
-                            <label class="flex gap-2">
-                                <input type="checkbox" name="tour_capacity[]" class="focus:ring-[#93d500]" value="More than 100 pax">
-                                <span class="">More than 100 pax</span>
-                            </label>
-
-                        </div>
+                                <label class="flex gap-2">
+                                    <input type="radio" name="tour_capacity" value="More than 100 pax" class="focus:ring-[#93d500]">
+                                    <span>More than 100 pax</span>
+                                </label>
+                            </div>
 
 
                         <!-- 15 Company Summary -->
@@ -443,185 +440,7 @@
             </div>
 
 
-            <!-- 9 Years of experience -->
-            <div class="flex flex-col gap-2">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    Years of experience in tours / Años experiencia tours
-                </label>
-                <input type="number" name="years_exp" placeholder="Years"
-                    class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white">
-            </div>
-
-
-            <!-- 10 Experience in Melilla -->
-            <div class="flex flex-col gap-3">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    Do you have experience operating tours in Melilla? / ¿Tienen experiencia operando tours
-                    en Melilla?
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="radio" name="melilla" value="yes">
-                    <span class="dark:text-white">Yes / Si</span>
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="radio" name="melilla" value="no">
-                    <span class="dark:text-white">No</span>
-                </label>
-
-            </div>
-
-
-            <!-- 11 Tour Details -->
-            <div class="flex flex-col gap-2">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    If yes, include details / Incluye detalles
-                </label>
-                <textarea name="melilla_details" rows="4" placeholder="Describe tours conducted in Melilla..."
-                    class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white"></textarea>
-            </div>
-
-
-            <!-- 12 Certified guides -->
-            <div class="flex flex-col gap-3">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    Do you have certified guides registered in Spain? / ¿Cuentas con guías certificados en
-                    España?
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="radio" name="guides" value="yes">
-                    <span class="dark:text-white">Yes / Si</span>
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="radio" name="guides" value="no">
-                    <span class="dark:text-white">No</span>
-                </label>
-
-            </div>
-
-
-            <!-- 13 Tour Categories -->
-            <div class="flex flex-col gap-3">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    Select Tour Categories
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="checkbox" name="tour_categories[]" value="Urban Tours">
-                    <span class="dark:text-white">Urban Tours (2-3h)</span>
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="checkbox" name="tour_categories[]" value="Food Tours">
-                    <span class="dark:text-white">Food Tours (3-4h)</span>
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="checkbox" name="tour_categories[]" value="Adventure Tours">
-                    <span class="dark:text-white">Adventure Tours (3-5h)</span>
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="checkbox" name="tour_categories[]" value="Premium Private">
-                    <span class="dark:text-white">Premium / Private (2-5h)</span>
-                </label>
-                <label class="flex gap-2">
-                    <input type="checkbox" name="tour_categories[]" value="Thematic Tours">
-                    <span class="dark:text-white">Thematic Tours</span>
-                </label>
-
-            </div>
-
-
-            <!-- 14 Tour Capacity -->
-            <div class="flex flex-col gap-3">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    Tour Capacity you can work with / Capacidad por Tour
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="checkbox" name="tour_capacity[]" value="Up to 10 pax">
-                    <span class="dark:text-white">Up to 10 pax</span>
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="checkbox" name="tour_capacity[]" value="Up to 25 pax">
-                    <span class="dark:text-white">Up to 25 pax</span>
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="checkbox" name="tour_capacity[]" value="Up to 50 pax">
-                    <span class="dark:text-white">Up to 50 pax</span>
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="checkbox" name="tour_capacity[]" value="Up to 100 pax">
-                    <span class="dark:text-white">Up to 100 pax</span>
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="checkbox" name="tour_capacity[]" value="More than 100 pax">
-                    <span class="dark:text-white">More than 100 pax</span>
-                </label>
-
-            </div>
-
-
-            <!-- 15 Company Summary -->
-            <div class="flex flex-col gap-2">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    Brief Company Summary & Key Info / Breve resumen empresa y datos relevantes
-                </label>
-                <textarea name="company_summary" rows="4"
-                    class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white"></textarea>
-            </div>
-
-
-            <!-- 16 Bring guides -->
-            <div class="flex flex-col gap-3">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    Do you have the ability to bring your own guides to Melilla? / ¿Tienen capacidad de
-                    llevar sus guías a Melilla?
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="radio" name="bring_guides" value="yes">
-                    <span class="dark:text-white">Yes / Si</span>
-                </label>
-
-                <label class="flex gap-2">
-                    <input type="radio" name="bring_guides" value="no">
-                    <span class="dark:text-white">No</span>
-                </label>
-
-            </div>
-
-
-            <!-- 17 Price Range -->
-            <div class="flex flex-col gap-2">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    Price Range & Tour Types Offered / Rango de precios y tipos de tours ofrecidos
-                </label>
-                <textarea name="price_range" rows="4"
-                    class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary outline-none dark:text-white"></textarea>
-            </div>
-
-
-            <!-- Submit -->
-            <button
-                class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2 hover:scale-[1.02]"
-                type="submit">
-
-                <span>Send / Enviar</span>
-                <span class="material-symbols-outlined">send</span>
-
-            </button>
-
-            </form>
-        </div>
+            
     </div>
 
     <!-- ⑪ FOOTER -->
