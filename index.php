@@ -112,7 +112,7 @@
         <div class="section-how">
             <div class="section-how-inner">
                 <h2>Como participar</h2>
-                <ol class = "list-none">
+                <ol class = "list-none" style="list-style-type: none !important;">
                     <li>1. Conoce el proyecto, descarga y lee atentamente la convocatoria.</li>
                     <li>2. Regístrate e ingresa la información solicitada en el formulario correspondiente, donde
                         deberás
@@ -124,7 +124,7 @@
                     te contactaremos para conocernos mejor y profundizar en los detalles.
                 </p>
                 <div class="btn-wrap">
-                    <a href="prueba.pdf" class = "btn-main" target="_blank" download>
+                    <a href="convocatoriaComparteMelilla.pdf" class = "btn-main" target="_blank" download>
                         Descarga la convocatoria
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
                             stroke="#93d500" stroke-width="3">
@@ -235,7 +235,7 @@
                             <label class="text-sm font-semibold  ">
                                 Company Website / Website de la empresa
                             </label>
-                            <input type="url" name="website" placeholder="https://"
+                            <input type="text" name="website" placeholder="https://"
                                 class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
                         </div>
 
@@ -324,7 +324,7 @@
                         <!-- 13 Tour Categories -->
                         <div class="flex flex-col gap-3">
                             <label class="text-sm font-semibold  ">
-                                Select Tour Categories
+                                Select Tour Categories / Seleccione las categorías de tours (multiple)
                             </label>
 
                             <label class="flex gap-2">
