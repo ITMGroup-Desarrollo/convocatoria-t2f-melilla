@@ -1,12 +1,31 @@
 <?php
+function loadEnv($path)
+{
+    if (!file_exists($path)) return;
 
+    $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+    foreach ($lines as $line) {
+
+        if (strpos(trim($line), '#') === 0) continue;
+
+        list($name, $value) = explode('=', $line, 2);
+
+        $name = trim($name);
+        $value = trim($value);
+
+        putenv("$name=$value");
+        $_ENV[$name] = $value;
+    }
+}
+
+loadEnv(__DIR__ . '/.env');
 // ======================
 // CONFIG
 // ======================
 
-
-$listId = 37; // ID de la lista Landing Melilla
-
+$apiKey = getenv('BREVO_API_KEY');
+$listId = (int) getenv('BREVO_LIST_ID');
 // ======================
 // FUNCIONES
 // ======================
@@ -44,7 +63,7 @@ $data = [
 "MELILLA_DETAILS" => getPost("melilla_details"),
 "GUIDES" => getPost("guides"),
 "TOUR_CATEGORIES" => getArray("tour_categories"),
-"TOUR_CAPACITY" => getArray("tour_capacity"),
+"TOUR_CAPACITY" => getPost("tour_capacity"),
 "COMPANY_SUMMARY" => getPost("company_summary"),
 "BRING_GUIDES" => getPost("bring_guides"),
 "PRICE_RANGE" => getPost("price_range")
@@ -78,9 +97,9 @@ CURLOPT_POSTFIELDS => json_encode($data)
 $response = curl_exec($ch);
 
 if(curl_errno($ch)){
-    echo "Error CURL: " . curl_error($ch);
-    exit;
+    error_log("Brevo CURL ERROR: " . curl_error($ch));
 }
+
 
 curl_close($ch);
 
@@ -88,7 +107,7 @@ curl_close($ch);
 // Google Sheets
 // ======================
 
-$webhook = "https://script.google.com/macros/s/AKfycbxrdjSEaldZ-za1FjQSN_RbMAb4cxmf7FlJ9Spvyp6s56QP6lX_Mzu4R589z4Xc4bjH/exec";
+$webhook = "https://script.google.com/macros/s/AKfycbzQdCAPOMu-dYFhrIeV_oJlmKKe7skovVJ4P-G_4o09PzxBsCtgilv5Or45uATESWoz/exec";
 
 $payload = [
 
@@ -112,24 +131,28 @@ $payload = [
 "BRING_GUIDES" => getPost("bring_guides"),
 "PRICE_RANGE" => getPost("price_range")
 
-
-
 ];
 
 $ch = curl_init($webhook);
 
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
-curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt_array($ch, [
+    CURLOPT_POST => true,
+    CURLOPT_POSTFIELDS => json_encode($payload),
+    CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_FOLLOWLOCATION => true
+]);
 
-curl_exec($ch);
+$sheetResponse = curl_exec($ch);
+
+if(curl_errno($ch)){
+    error_log("Sheets CURL ERROR: " . curl_error($ch));
+}
+
 curl_close($ch);
-
 // ======================
 // REDIRECT
 // ======================
-
 header("Location: gracias.php");
 exit;
 ?>
