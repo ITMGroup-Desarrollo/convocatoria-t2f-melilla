@@ -400,7 +400,10 @@
                     <!-- 18 experiencia -->
                     <div class="flex flex-col gap-2">
                         <label class="text-sm font-semibold  ">
-                            Describa lo que vive el visitante
+                            Describa en no más de 1 cuartilla
+                        </label>
+                        <label class="text-sm font-semibold  ">
+                            ¿Qué va a vivir el visitante?
                         </label>
                         <textarea name="experience" rows="4" 
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none "></textarea>
