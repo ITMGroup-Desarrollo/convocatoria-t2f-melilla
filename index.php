@@ -170,12 +170,12 @@
                         </label>
 
                         <label class="flex gap-2">
-                            <input type="radio" name="entity" class="focus:ring-[#93d500]" value="emprendedor">
+                            <input type="radio" name="entity" class="focus:ring-[#93d500]" value="emprendedor" required>
                             <span class=" ">Emprendedor</span>
                         </label>
 
                         <label class="flex gap-2">
-                            <input type="radio" name="entity" class="focus:ring-[#93d500]" value="empresa">
+                            <input type="radio" name="entity" class="focus:ring-[#93d500]" value="empresa" required>
                             <span class="">Empresa</span>
                         </label>
 
@@ -185,7 +185,7 @@
                         <label class="text-sm font-semibold  ">
                             Razón Social
                         </label>
-                        <input type="text" name="company" placeholder="Company name"
+                        <input type="text" name="company" placeholder="Razón Social"
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
                     </div>
 
@@ -195,27 +195,16 @@
                         <label class="text-sm font-semibold  ">
                             Contacto Principal
                         </label>
-                        <input type="text" name="contact_name" placeholder="Contact name"
+                        <input type="text" name="contact_name" placeholder="Nombre y Apellidos" required
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
                     </div>
-
-
-                    <!-- 3 Tax ID -->
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold  ">
-                            CIF-NIF
-                        </label>
-                        <input type="text" name="tax_id" placeholder="Tax ID"
-                            class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
-                    </div>
-
 
                     <!-- 4 Address -->
                     <div class="flex flex-col gap-2">
                         <label class="text-sm font-semibold  ">
                             Dirección en España
                         </label>
-                        <input type="text" name="address" placeholder="Address"
+                        <input type="text" name="address" placeholder="Dirección"
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
                     </div>
 
@@ -225,7 +214,7 @@
                         <label class="text-sm font-semibold  ">
                             Email
                         </label>
-                        <input type="email" name="email" placeholder="email@company.com"
+                        <input type="email" name="email" placeholder="email@company.com" required
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
                     </div>
 
@@ -235,7 +224,7 @@
                         <label class="text-sm font-semibold  ">
                             Website de la empresa
                         </label>
-                        <input type="text" name="website" placeholder="https://"
+                        <input type="text" name="website" placeholder="www.empresa.com"
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
                     </div>
 
@@ -245,7 +234,7 @@
                         <label class="text-sm font-semibold  ">
                             Teléfono
                         </label>
-                        <input type="tel" name="phone" placeholder="+34..."
+                        <input type="tel" name="phone" placeholder="+34..." required
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
                     </div>
 
@@ -255,7 +244,7 @@
                         <label class="text-sm font-semibold  ">
                             Redes Sociales
                         </label>
-                        <input type="text" name="social" placeholder="Instagram, Facebook, LinkedIn..."
+                        <input type="text" name="social" placeholder="@Instagram, @Facebook, @LinkedIn..."
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
                     </div>
 
@@ -265,7 +254,7 @@
                         <label class="text-sm font-semibold  ">
                             Años experiencia tours
                         </label>
-                        <input type="number" name="years_exp" placeholder="Years"
+                        <input type="number" name="years_exp" placeholder="Años"
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
                     </div>
 
@@ -277,12 +266,12 @@
                         </label>
 
                         <label class="flex gap-2">
-                            <input type="radio" name="melilla" class="focus:ring-[#93d500]" value="yes">
+                            <input type="radio" name="melilla" class="focus:ring-[#93d500]" value="Si">
                             <span class="">Si</span>
                         </label>
 
                         <label class="flex gap-2">
-                            <input type="radio" name="melilla" class="focus:ring-[#93d500]" value="no">
+                            <input type="radio" name="melilla" class="focus:ring-[#93d500]" value="No">
                             <span class="">No</span>
                         </label>
 
@@ -294,7 +283,7 @@
                         <label class="text-sm font-semibold  ">
                             Incluye detalles
                         </label>
-                        <textarea name="melilla_details" rows="4" placeholder="Describe tours conducted in Melilla..."
+                        <textarea name="melilla_details" rows="4" placeholder="Describe tours..."
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none "></textarea>
                     </div>
 
@@ -306,12 +295,12 @@
                         </label>
 
                         <label class="flex gap-2">
-                            <input type="radio" name="guides" class="focus:ring-[#93d500]" value="yes">
+                            <input type="radio" name="guides" class="focus:ring-[#93d500]" value="Si">
                             <span class="">Si</span>
                         </label>
 
                         <label class="flex gap-2">
-                            <input type="radio" name="guides" class="focus:ring-[#93d500]" value="no">
+                            <input type="radio" name="guides" class="focus:ring-[#93d500]" value="No">
                             <span class="">No</span>
                         </label>
 
@@ -326,31 +315,31 @@
 
                         <label class="flex gap-2">
                             <input type="checkbox" name="tour_categories[]" class="focus:ring-[#93d500]"
-                                value="Urban Tours">
-                            <span class="">Urban Tours (2-3h)</span>
+                                value="Tours Urbanos">
+                            <span class="">Tours Urbanos (2-3h)</span>
                         </label>
 
                         <label class="flex gap-2">
                             <input type="checkbox" name="tour_categories[]" class="focus:ring-[#93d500]"
-                                value="Food Tours">
-                            <span class="">Food Tours (3-4h)</span>
+                                value="Tours gastronómicos">
+                            <span class="">Tours gastronómicos (3-4h)</span>
                         </label>
 
                         <label class="flex gap-2">
                             <input type="checkbox" name="tour_categories[]" class="focus:ring-[#93d500]"
-                                value="Adventure Tours">
-                            <span class="">Adventure Tours (3-5h)</span>
+                                value="Tours de aventura">
+                            <span class="">Tours de aventura (3-5h)</span>
                         </label>
 
                         <label class="flex gap-2">
                             <input type="checkbox" name="tour_categories[]" class="focus:ring-[#93d500]"
-                                value="Premium Private">
-                            <span class="">Premium / Private (2-5h)</span>
+                                value="Premium / Privados">
+                            <span class="">Premium / Privados (2-5h)</span>
                         </label>
                         <label class="flex gap-2">
                             <input type="checkbox" name="tour_categories[]" class="focus:ring-[#93d500]"
-                                value="Thematic Tours">
-                            <span class="">Thematic Tours</span>
+                                value="Tours temáticos">
+                            <span class="">Tours temáticos</span>
                         </label>
 
                     </div>
@@ -363,29 +352,29 @@
                         </label>
 
                         <label class="flex gap-2">
-                            <input type="radio" name="tour_capacity" value="Up to 10 pax" class="focus:ring-[#93d500]">
-                            <span>Up to 10 pax</span>
+                            <input type="radio" name="tour_capacity" value="Hasta 10 pax" class="focus:ring-[#93d500]">
+                            <span>Hasta 10 pax</span>
                         </label>
 
                         <label class="flex gap-2">
-                            <input type="radio" name="tour_capacity" value="Up to 25 pax" class="focus:ring-[#93d500]">
-                            <span>Up to 25 pax</span>
+                            <input type="radio" name="tour_capacity" value="Hasta 25 pax" class="focus:ring-[#93d500]">
+                            <span>Hasta 25 pax</span>
                         </label>
 
                         <label class="flex gap-2">
-                            <input type="radio" name="tour_capacity" value="Up to 50 pax" class="focus:ring-[#93d500]">
-                            <span>Up to 50 pax</span>
+                            <input type="radio" name="tour_capacity" value="Hasta 50 pax" class="focus:ring-[#93d500]">
+                            <span>Hasta 50 pax</span>
                         </label>
 
                         <label class="flex gap-2">
-                            <input type="radio" name="tour_capacity" value="Up to 100 pax" class="focus:ring-[#93d500]">
-                            <span>Up to 100 pax</span>
+                            <input type="radio" name="tour_capacity" value="Hasta 100 pax" class="focus:ring-[#93d500]">
+                            <span>Hasta 100 pax</span>
                         </label>
 
                         <label class="flex gap-2">
-                            <input type="radio" name="tour_capacity" value="More than 100 pax"
+                            <input type="radio" name="tour_capacity" value="Más de 100 pax"
                                 class="focus:ring-[#93d500]">
-                            <span>More than 100 pax</span>
+                            <span>Más de 100 pax</span>
                         </label>
                     </div>
 
@@ -398,26 +387,6 @@
                         <textarea name="company_summary" rows="4"
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none "></textarea>
                     </div>
-
-
-                    <!-- 16 Bring guides -->
-                    <div class="flex flex-col gap-3">
-                        <label class="text-sm font-semibold  ">
-                            ¿Tienen capacidad de llevar sus guías a Melilla?
-                        </label>
-
-                        <label class="flex gap-2">
-                            <input type="radio" name="bring_guides" class="focus:ring-[#93d500]" value="yes">
-                            <span class="">Si</span>
-                        </label>
-
-                        <label class="flex gap-2">
-                            <input type="radio" name="bring_guides" class="focus:ring-[#93d500]" value="no">
-                            <span class="">No</span>
-                        </label>
-
-                    </div>
-
 
                     <!-- 17 Price Range -->
                     <div class="flex flex-col gap-2">
