@@ -175,7 +175,8 @@
 
             <!-- Texto -->
             <p class="title">Gracias<br>por compartir<br>Melilla</p>
-            <p class="subtitle">La información ya está en tu correo<br>¡Escucharás noticias de nosotros pronto!</p>
+            <p class="subtitle">La información ya está en tu correo<br>*No olvides revisar tu carpeta de no&nbsp;deseados*</p>
+            <p class="subtitle">¡Escucharás noticias de nosotros pronto!</p>
 
             <!-- Botón volver -->
             <a href="./index.php" class="btn-volver">Volver</a>
