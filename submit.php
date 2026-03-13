@@ -64,7 +64,8 @@ $data = [
 "TOUR_CATEGORIES" => getArray("tour_categories"),
 "TOUR_CAPACITY" => getPost("tour_capacity"),
 "COMPANY_SUMMARY" => getPost("company_summary"),
-"PRICE_RANGE" => getPost("price_range")
+"PRICE_RANGE" => getPost("price_range"),
+"EXPERIENCE" => getPost("experience")
 
 ],
 
@@ -125,7 +126,8 @@ $payload = [
 "TOUR_CATEGORIES" => getArray("tour_categories"),
 "TOUR_CAPACITY" => getPost("tour_capacity"),
 "COMPANY_SUMMARY" => getPost("company_summary"),
-"PRICE_RANGE" => getPost("price_range")
+"PRICE_RANGE" => getPost("price_range"),
+"EXPERIENCE" => getPost("experience")
 
 ];
 

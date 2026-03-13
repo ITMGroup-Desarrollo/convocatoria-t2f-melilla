@@ -382,7 +382,7 @@
                     <!-- 15 Company Summary -->
                     <div class="flex flex-col gap-2">
                         <label class="text-sm font-semibold  ">
-                            Breve resumen empresa y datos relevantes
+                            Breve resumen de la empresa y datos relevantes
                         </label>
                         <textarea name="company_summary" rows="4"
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none "></textarea>
@@ -394,6 +394,15 @@
                             Rango de precios y tipos de tours ofrecidos
                         </label>
                         <textarea name="price_range" rows="4"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none "></textarea>
+                    </div>
+
+                    <!-- 18 experiencia -->
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold  ">
+                            Describa lo que vive el visitante
+                        </label>
+                        <textarea name="experience" rows="4" 
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none "></textarea>
                     </div>
 
