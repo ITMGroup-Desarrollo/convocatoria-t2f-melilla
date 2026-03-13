@@ -252,7 +252,7 @@
                     <!-- 9 Years of experience -->
                     <div class="flex flex-col gap-2">
                         <label class="text-sm font-semibold  ">
-                            Años experiencia tours
+                            Años de experiencia en tours
                         </label>
                         <input type="number" name="years_exp" placeholder="Años"
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none ">
@@ -262,7 +262,7 @@
                     <!-- 10 Experience in Melilla -->
                     <div class="flex flex-col gap-3">
                         <label class="text-sm font-semibold  ">
-                            ¿Tienen experiencia operando tours en Melilla?
+                            ¿Tienes experiencia operando tours en Melilla?
                         </label>
 
                         <label class="flex gap-2">
@@ -310,7 +310,7 @@
                     <!-- 13 Tour Categories -->
                     <div class="flex flex-col gap-3">
                         <label class="text-sm font-semibold  ">
-                            Seleccione las categorías de tours (multiple)
+                            Selecciona las categorías de tours (multiple)
                         </label>
 
                         <label class="flex gap-2">
@@ -400,7 +400,7 @@
                     <!-- 18 experiencia -->
                     <div class="flex flex-col gap-2">
                         <label class="text-sm font-semibold  ">
-                            Describa en no más de 1 cuartilla
+                            Describe en no más de 1 cuartilla
                         </label>
                         <label class="text-sm font-semibold  ">
                             ¿Qué va a vivir el visitante?
