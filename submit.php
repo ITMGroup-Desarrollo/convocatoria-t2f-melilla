@@ -114,7 +114,6 @@ $payload = [
 "COMPANY" => getPost("company"),
 "CONTACT_NAME" => getPost("contact_name"),
 "EMAIL" => getPost("email"),
-"TAX_ID" => getPost("tax_id"),
 "ADDRESS" => getPost("address"),
 "WEBSITE" => getPost("website"),
 "PHONE" => getPost("phone"),
@@ -126,7 +125,6 @@ $payload = [
 "TOUR_CATEGORIES" => getArray("tour_categories"),
 "TOUR_CAPACITY" => getPost("tour_capacity"),
 "COMPANY_SUMMARY" => getPost("company_summary"),
-"BRING_GUIDES" => getPost("bring_guides"),
 "PRICE_RANGE" => getPost("price_range")
 
 ];
