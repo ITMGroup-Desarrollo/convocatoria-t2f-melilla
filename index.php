@@ -2,6 +2,15 @@
 <html lang="es">
 
 <head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2VZW040HN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z2VZW040HN');
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comparte Melilla</title>
@@ -29,16 +38,9 @@
 
     <!-- Estilos propios -->
     <link rel="stylesheet" href="./styles.css?v=2.0">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2VZW040HN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-Z2VZW040HN');
-</script>
+</head>
+
 <body>
 
     <div class="page-wrapper">
