@@ -30,7 +30,15 @@
     <!-- Estilos propios -->
     <link rel="stylesheet" href="./styles.css?v=2.0">
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2VZW040HN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-Z2VZW040HN');
+</script>
 <body>
 
     <div class="page-wrapper">
@@ -148,7 +156,7 @@
                     experiencias turísticas alrededor del mundo.</p>
                 <p>Nuestra misión es unir fuerzas con las experiencias locales y las autoridades para que el destino
                     crezca de forma profesional y sostenible.</p>
-                <p>Esta convocatoria, es en colaboración con <strong>Fundación Genera</strong>, una organización sin
+                <p>Esta convocatoria, es en colaboración con <strong>Fundación Genera ITM</strong>, una organización sin
                     fines de lucro que busca el desarrollo del turismo sostenible a través de la prosperidad
                     económica
                     de la comunidad de Melilla.</p>
