@@ -38,7 +38,8 @@
 
     <!-- Estilos propios -->
     <link rel="stylesheet" href="./styles.css?v=2.0">
-
+    <!-- reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -419,16 +420,23 @@
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none "></textarea>
                     </div>
 
+                    <?php if (isset($_GET['error']) && $_GET['error'] === 'captcha'): ?>
+                        <div class="text-red-500 text-sm text-center mb-4">
+                            Por favor, completa el captcha antes de enviar.
+                        </div>
+                    <?php endif; ?>
+                    <!-- reCAPTCHA -->
+                    <div class="flex justify-center">
+                        <div class="g-recaptcha" data-sitekey="<?= getenv('RECAPTCHA_SITE_KEY') ?>"></div>
+                    </div>
 
                     <!-- Submit -->
-
                     <button class="btn-main block mx-auto" type="submit">
-
                         <span>Enviar</span>
                         <span class="material-symbols-outlined"></span>
-
                     </button>
                 </form>
+                                    
             </div>
 
 
