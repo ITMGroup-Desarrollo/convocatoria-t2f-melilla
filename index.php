@@ -427,7 +427,7 @@
                     <?php endif; ?>
                     <!-- reCAPTCHA -->
                     <div class="flex justify-center">
-                        <div class="g-recaptcha" data-sitekey="6LenMZAsAAAAACdgcxlKtcoZrwRQpFtr9mdQRN44"></div>
+                        <div class="g-recaptcha" data-sitekey="6LdkO5AsAAAAAJpYBhTpZXZZn2ZcRuG3mvJ64kyc"></div>
                     </div>
 
                     <!-- Submit -->
