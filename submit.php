@@ -1,4 +1,8 @@
 <?php
+session_start();
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    exit;
+}
 function loadEnv($path)
 {
     if (!file_exists($path)) return;
@@ -24,7 +28,27 @@ loadEnv(__DIR__ . '/.env');
 // ======================
 $apiKey = getenv('BREVO_API_KEY');
 $listId = (int) getenv('BREVO_LIST_ID');
+// ======================
+// HONEYPOT (ANTI BOT)
+// ======================
+if (!empty($_POST['website_hp'])) {
+    header("Location: index.php?error=bot");
+    exit;
+}
+// ======================
+// VALIDAR TIEMPO (ANTI BOT)
+// ======================
+if (!isset($_SESSION['form_time'])) {
+    header("Location: index.php");
+    exit;
+}
 
+// menos de 3 segundos = bot
+if (time() - $_SESSION['form_time'] < 3) {
+    header("Location: index.php?error=rapido");
+    exit;
+}
+unset($_SESSION['form_time']);
 // ======================
 // VERIFICAR reCAPTCHA
 // ======================

@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['form_time'] = time();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -419,7 +423,7 @@
                         <textarea name="experience" rows="4" 
                             class="w-full px-4 py-3 rounded-lg border border-slate-300  bg-transparent focus:ring-2 focus:ring-primary outline-none "></textarea>
                     </div>
-
+                        <input type="text" name="website_hp" style="display:none">
                     <?php if (isset($_GET['error']) && $_GET['error'] === 'captcha'): ?>
                         <div class="text-red-500 text-sm text-center mb-4">
                             Por favor, completa el captcha antes de enviar.
