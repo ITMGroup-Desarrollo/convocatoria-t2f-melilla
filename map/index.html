@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -215,6 +215,15 @@
             flex-shrink: 0;
         }
 
+        .insta-link {
+            display: flex;
+            flex-shrink: 0;
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity .2s;
+        }
+        .insta-link:hover { opacity: .8; }
+
         .social-rule {
             width: 2px;
             height: clamp(55px, 9vh, 118px);
@@ -242,7 +251,11 @@
             font-size: clamp(16px, 2.2vw, 40px);
             font-weight: 800;
             line-height: 1.2;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
         }
+        .social-copy .handle:hover { text-decoration: underline; }
 
         .social-copy .follow {
             font-size: clamp(11px, 1.3vw, 28px);
@@ -526,11 +539,13 @@
                 <img class="arrow" src="arrow-back-ios.svg" alt="">
             </a>
             <div class="social">
-                <img class="insta-icon" src="instainverso-1.svg" alt="Instagram">
+                <a class="insta-link" href="https://www.instagram.com/portmelilla/" target="_blank" rel="noopener" aria-label="Port Melilla en Instagram">
+                    <img class="insta-icon" src="instainverso-1.svg" alt="Instagram">
+                </a>
                 <span class="social-rule" aria-hidden="true"></span>
                 <div class="social-copy">
                     <p class="intro">Share your Melilla memories</p>
-                    <p class="handle">@portmelilla</p>
+                    <a class="handle" href="https://www.instagram.com/portmelilla/" target="_blank" rel="noopener">@portmelilla</a>
                     <p class="follow">Follow and tag us to be featured!</p>
                 </div>
             </div>
