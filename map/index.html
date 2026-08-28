@@ -30,6 +30,7 @@
         html,
         body {
             height: 100%;
+            overflow-x: hidden;
         }
 
         body {
@@ -66,10 +67,12 @@
             left: 0;
             width: 52vw;
             height: 100%;
-            background: linear-gradient(to top,
-                    #0071ce 0%, rgba(0, 113, 206, .85) 22%,
-                    rgba(0, 113, 206, .5) 42%, rgba(0, 113, 206, .12) 60%,
-                    rgba(0, 113, 206, 0) 76%);
+            background: radial-gradient(ellipse 50vw 60vh at bottom left,
+                    #0071ce 0%,
+                    #0071ce 15%,
+                    rgba(0, 113, 206, 0.85) 30%,
+                    rgba(0, 113, 206, 0.85) 50%,
+                    rgba(0, 113, 206, 0) 100%);
         }
 
         /* White wave divider — right edge of photo */
@@ -96,14 +99,16 @@
             left: 3vw;
             width: clamp(100px, 15vw, 235px);
             height: auto;
+            transform: scaleX(-1);
         }
 
         /* Brand mark — bottom left */
         .brand-mark {
             position: absolute;
-            bottom: 6vh;
-            left: 2vw;
-            width: clamp(150px, 28vw, 428px);
+            bottom: 22vh;
+            left: 23vw;
+            transform: translateX(-50%);
+            width: clamp(160px, 28vw, 380px);
             height: auto;
         }
 
@@ -145,7 +150,7 @@
             gap: clamp(10px, 1.5vw, 30px);
             background: linear-gradient(-5deg, #c10022 12.6%, #ea0029 96.1%);
             border: .5px solid var(--white);
-            border-radius: 50px;
+            border-radius: 16px;
             box-shadow: 0 5px 20px rgba(193, 0, 34, .3), inset 0 0 30px rgba(156, 73, 0, .2);
             color: var(--white);
             text-decoration: none;
@@ -222,7 +227,10 @@
             opacity: 1;
             transition: opacity .2s;
         }
-        .insta-link:hover { opacity: .8; }
+
+        .insta-link:hover {
+            opacity: .8;
+        }
 
         .social-rule {
             width: 2px;
@@ -255,7 +263,10 @@
             cursor: pointer;
             display: block;
         }
-        .social-copy .handle:hover { text-decoration: underline; }
+
+        .social-copy .handle:hover {
+            text-decoration: underline;
+        }
 
         .social-copy .follow {
             font-size: clamp(11px, 1.3vw, 28px);
@@ -279,11 +290,12 @@
 
             /* Page resets to normal flow */
             .page {
-                position: static;
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 min-height: 100vh;
-                overflow: visible;
+                overflow-x: hidden;
+                overflow-y: auto;
                 background: var(--white);
             }
 
@@ -302,8 +314,8 @@
                 position: relative;
                 width: 100%;
                 overflow: hidden;
-                height: 58vw;
-                min-height: 320px;
+                height: 50vh;
+                min-height: 350px;
                 max-height: 540px;
                 background: var(--blue);
             }
@@ -323,11 +335,13 @@
             .photo-overlay {
                 position: absolute;
                 inset: 0;
-                background: linear-gradient(to bottom,
-                        rgba(0, 113, 206, 0) 10%,
-                        rgba(0, 113, 206, .38) 40%,
-                        rgba(0, 113, 206, .88) 68%,
-                        #0071ce 100%);
+                background: radial-gradient(ellipse 150% 80% at bottom left,
+                        #0071ce 0%,
+                        #0071ce 15%,
+                        rgba(0, 113, 206, .7) 35%,
+                        rgba(0, 113, 206, .7) 50%,
+                        rgba(0, 113, 206, .2) 65%,
+                        transparent 100%);
             }
 
             /* Seagull on photo */
@@ -337,6 +351,7 @@
                 left: 5%;
                 width: clamp(100px, 26vw, 200px);
                 height: auto;
+                transform: scaleX(-1);
             }
 
             /* White "Welcome to Melilla" text over photo */
@@ -356,7 +371,7 @@
                 bottom: -1px;
                 left: 0;
                 width: 100%;
-                height: clamp(48px, 10vw, 90px);
+                height: 64px;
                 z-index: 2;
             }
 
@@ -394,28 +409,30 @@
             }
 
             .message {
-                font-size: clamp(16px, 3.5vw, 28px);
+                font-size: clamp(22px, 5.5vw, 38px);
             }
 
             .map-link {
-                width: clamp(240px, 68vw, 440px);
-                padding: clamp(12px, 2vw, 20px) clamp(16px, 2.5vw, 26px);
+                width: fit-content;
+                max-width: 90%;
+                padding: clamp(12px, 2.2vw, 20px) clamp(18px, 3vw, 32px);
+                white-space: nowrap;
             }
 
             .map-copy strong {
-                font-size: clamp(16px, 3.2vw, 28px);
+                font-size: clamp(17px, 3.2vw, 26px);
             }
 
             .map-copy span {
-                font-size: clamp(13px, 2.6vw, 22px);
+                font-size: clamp(13px, 2.6vw, 20px);
             }
 
             .loc-icon {
-                width: clamp(32px, 5.5vw, 50px);
+                width: clamp(36px, 6.5vw, 56px);
             }
 
             .arrow {
-                width: clamp(18px, 3vw, 30px);
+                width: clamp(20px, 3.5vw, 32px);
             }
 
             .social {
@@ -423,23 +440,23 @@
             }
 
             .insta-icon {
-                width: clamp(40px, 8vw, 60px);
+                width: clamp(48px, 9vw, 68px);
             }
 
             .social-rule {
-                height: clamp(60px, 12vw, 96px);
+                height: clamp(68px, 14vw, 100px);
             }
 
             .social-copy .intro {
-                font-size: clamp(13px, 2.8vw, 24px);
+                font-size: clamp(15px, 3.4vw, 26px);
             }
 
             .social-copy .handle {
-                font-size: clamp(18px, 4vw, 34px);
+                font-size: clamp(22px, 5vw, 40px);
             }
 
             .social-copy .follow {
-                font-size: clamp(12px, 2.5vw, 20px);
+                font-size: clamp(13px, 3vw, 22px);
             }
 
             /* ─ Blue footer ─ */
@@ -448,14 +465,25 @@
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
-                background: var(--blue);
-                padding-bottom: clamp(20px, 5vw, 44px);
+                background: transparent;
             }
 
             .footer-wave {
                 width: 100%;
+                height: 64px;
                 display: block;
                 margin-top: -1px;
+            }
+
+            .footer-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                background: var(--blue);
+                height: 120px;
+                padding-bottom: clamp(16px, 3vw, 28px);
             }
 
             .footer-logo {
@@ -471,18 +499,56 @@
 		═══════════════════════════════════════════════════ */
         @media (max-width: 600px) {
             .photo-section {
-                height: 64vw;
-                min-height: 260px;
-                max-height: 380px;
+                height: 50vh;
+                min-height: 300px;
+            }
+
+            .footer-content {
+                height: 130px;
+                padding-bottom: clamp(20px, 5vw, 36px);
+            }
+
+            .footer-logo {
+                width: clamp(112px, 36vw, 200px);
             }
 
             .photo-seagull {
                 width: clamp(80px, 24vw, 150px);
             }
 
+            .message {
+                font-size: clamp(22px, 6.5vw, 36px);
+            }
+
+            .map-link {
+                width: fit-content;
+                max-width: 88%;
+                white-space: nowrap;
+            }
+
+            .map-copy strong {
+                font-size: clamp(17px, 5vw, 26px);
+            }
+
+            .map-copy span {
+                font-size: clamp(13px, 3.8vw, 20px);
+            }
+
+            .social-copy .intro {
+                font-size: clamp(15px, 4vw, 24px);
+            }
+
+            .social-copy .handle {
+                font-size: clamp(22px, 6vw, 36px);
+            }
+
+            .social-copy .follow {
+                font-size: clamp(13px, 3.5vw, 20px);
+            }
+
             .photo-welcome {
                 bottom: 14%;
-                width: clamp(170px, 74vw, 300px);
+                width: clamp(200px, 80vw, 340px);
             }
 
             .content {
@@ -491,7 +557,7 @@
             }
 
             .map-link {
-                width: clamp(220px, 84vw, 340px);
+                width: clamp(220px, 68vw, 300px);
             }
         }
     </style>
@@ -516,8 +582,7 @@
             <!-- Inline wave: clean bottom transition, no overflow issues -->
             <div class="photo-wave">
                 <svg viewBox="0 0 768 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0,64 L0,28 Q96,0 192,24 Q288,52 384,14 Q480,-4 576,22 Q672,52 768,18 L768,64 Z"
-                        fill="#fcfcfc" />
+                    <path d="M0,64 L0,32 Q192,0 384,32 Q576,64 768,48 L768,64 Z" fill="#fff" />
                 </svg>
             </div>
         </div>
@@ -539,13 +604,15 @@
                 <img class="arrow" src="arrow-back-ios.svg" alt="">
             </a>
             <div class="social">
-                <a class="insta-link" href="https://www.instagram.com/portmelilla/" target="_blank" rel="noopener" aria-label="Port Melilla en Instagram">
+                <a class="insta-link" href="https://www.instagram.com/portmelilla/" target="_blank" rel="noopener"
+                    aria-label="Port Melilla en Instagram">
                     <img class="insta-icon" src="instainverso-1.svg" alt="Instagram">
                 </a>
                 <span class="social-rule" aria-hidden="true"></span>
                 <div class="social-copy">
                     <p class="intro">Share your Melilla memories</p>
-                    <a class="handle" href="https://www.instagram.com/portmelilla/" target="_blank" rel="noopener">@portmelilla</a>
+                    <a class="handle" href="https://www.instagram.com/portmelilla/" target="_blank"
+                        rel="noopener">@portmelilla</a>
                     <p class="follow">Follow and tag us to be featured!</p>
                 </div>
             </div>
@@ -554,10 +621,11 @@
         <!-- ── MOBILE FOOTER (blue wave + logo, hidden on desktop) ── -->
         <div class="mobile-footer" aria-hidden="true">
             <svg class="footer-wave" viewBox="0 0 768 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,64 L0,32 Q96,0 192,28 Q288,56 384,18 Q480,0 576,30 Q672,58 768,20 L768,64 Z"
-                    fill="#0071ce" />
+                <path d="M0,64 L0,32 Q192,0 384,32 Q576,64 768,48 L768,64 Z" fill="#0071ce" />
             </svg>
-            <img class="footer-logo" src="vector.svg" alt="Port Melilla – City of Cultures · Spain">
+            <div class="footer-content">
+                <img class="footer-logo" src="vector.svg" alt="Port Melilla – City of Cultures · Spain">
+            </div>
         </div>
 
     </main>
