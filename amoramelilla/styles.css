@@ -803,3 +803,89 @@ input[type="checkbox"]:checked:hover {
     }
 
 }
+
+/* ══ DROPZONE PDF ═══════════════════════════════════════════════════ */
+.dropzone {
+    position: relative;
+    border: 2px dashed #c9a8e0;
+    border-radius: 12px;
+    background: #faf5ff;
+    transition: border-color 0.2s, background 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+}
+.dropzone:hover,
+.dropzone.drag-over {
+    border-color: #7c4daf;
+    background: #f3e8ff;
+}
+.dropzone-input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+.dropzone-idle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 28px 20px;
+    pointer-events: none;
+}
+.dropzone-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #7c4daf;
+    margin: 0;
+}
+.dropzone-sub {
+    font-size: 0.82rem;
+    color: #999;
+    margin: 0;
+}
+.dropzone-link {
+    color: #b98fd4;
+    text-decoration: underline;
+}
+.dropzone-selected {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    background: #f0e6f8;
+    pointer-events: none;
+}
+.dropzone-selected.active {
+    display: flex;
+}
+.dropzone-filename {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #7c4daf;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.dropzone-clear {
+    pointer-events: all;
+    background: none;
+    border: none;
+    color: #b98fd4;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background 0.15s;
+    z-index: 3;
+    position: relative;
+}
+.dropzone-clear:hover {
+    background: #e8d5f5;
+    color: #7c4daf;
+}

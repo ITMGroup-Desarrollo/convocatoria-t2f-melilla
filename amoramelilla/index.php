@@ -141,7 +141,7 @@ $_SESSION['form_time'] = time();
                 <h3>Registro de persona proveedora AMORA</h3>
                 <p class="form-subtitle">Completa el formulario para iniciar tu proceso de inscripción.</p>
 
-                <form id="amoraForm" method="POST" action="submit.php" class="space-y-6">
+                <form id="amoraForm" method="POST" action="submit.php" enctype="multipart/form-data" class="space-y-6">
 
                     <!-- ══ 1. DATOS GENERALES ══ -->
                     <div class="form-section-title">1. Datos generales de persona artesana</div>
@@ -323,6 +323,29 @@ $_SESSION['form_time'] = time();
                     <div class="flex flex-col gap-2">
                         <label class="text-sm font-semibold">Enlace o referencia del catálogo</label>
                         <input type="text" name="enlace_catalogo" placeholder="https://... o descripción" class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-transparent focus:ring-2 focus:ring-primary outline-none">
+                    </div>
+
+                    <!-- Catálogo PDF Upload -->
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold">Catálogo en PDF <span class="text-slate-400 font-normal">(opcional · máx. 8 MB)</span></label>
+                        <div class="dropzone" id="pdfDropzone">
+                            <input type="file" name="catalogo_pdf" id="catalogoPdf" accept=".pdf,application/pdf" class="dropzone-input">
+                            <div class="dropzone-idle" id="dropzoneIdle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#b98fd4" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 16v-8m0 0-3 3m3-3 3 3M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1" />
+                                </svg>
+                                <p class="dropzone-text">Arrastra tu PDF aquí</p>
+                                <p class="dropzone-sub">o <span class="dropzone-link">haz clic para seleccionar</span></p>
+                            </div>
+                            <div class="dropzone-selected" id="dropzoneSelected">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#b98fd4" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                                <span class="dropzone-filename" id="dropzoneFileName">archivo.pdf</span>
+                                <button type="button" class="dropzone-clear" id="dropzoneClear" title="Quitar archivo">✕</button>
+                            </div>
+                        </div>
+                        <p class="dropzone-error text-red-500 text-xs" id="dropzoneError" style="display:none">Solo se aceptan archivos PDF de hasta 8 MB.</p>
                     </div>
 
                     <div class="flex flex-col gap-3">
