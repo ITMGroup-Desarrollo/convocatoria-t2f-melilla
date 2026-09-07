@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gracias — Comparte Melilla</title>
+    <title>Gracias — Amora Melilla</title>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap"
@@ -43,7 +43,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url('./imagenes/textura/TTF_textura.png');
+            background-image: url('../imagenes/textura/TTF_textura.png');
             background-repeat: repeat;
             background-size: 100px;
             opacity: 0.15;
@@ -171,7 +171,7 @@
 
             <!-- Círculo con check -->
             <div class="check-circle">
-                <img src="./imagenes/check1.png" alt="Confirmación" />
+                <img src="../imagenes/check1.png" alt="Confirmación" />
             </div>
 
             <!-- Texto -->
