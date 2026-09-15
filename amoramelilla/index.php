@@ -25,8 +25,8 @@ $_SESSION['form_time'] = time();
                 extend: {
                     colors: { primary: "#144bb8" },
                     fontFamily: {
-                        heading: ["Montserrat", "sans-serif"],
-                        body: ["Open Sans", "sans-serif"],
+                        heading: ["Poppins", "sans-serif"],
+                        body: ["Lato", "sans-serif"],
                     },
                 },
             },
@@ -34,11 +34,11 @@ $_SESSION['form_time'] = time();
     </script>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Poppins:wght@400;600;700;800;900&display=swap"
         rel="stylesheet" />
 
     <!-- Estilos propios -->
-    <link rel="stylesheet" href="./styles.css?v=3.0">
+    <link rel="stylesheet" href="./styles.css?v=4.0">
     <!-- reCAPTCHA v2 -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
