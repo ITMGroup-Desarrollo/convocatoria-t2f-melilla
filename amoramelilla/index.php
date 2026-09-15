@@ -280,6 +280,7 @@ $_SESSION['form_time'] = time();
                     </div>
 
                     <div class="flex flex-col gap-2">
+                         <label class="text-sm font-semibold">Menciona si se utiliza alguna de estas características las piezas artesanales:</label>
                         <label class="text-sm font-semibold">Especies silvestres</label>
                         <div class="flex gap-4 flex-wrap">
                             <label class="flex gap-2 items-center"><input type="radio" name="especies_silvestres" class="focus:ring-[#93d500]" value="No"><span>No</span></label>

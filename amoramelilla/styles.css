@@ -36,7 +36,7 @@ ol {
    ============================================ */
 .badge {
     background: #E4257D;
-    color: #fff;
+    color: #F6EBE3;
     font-family: 'Poppins', sans-serif !important;
     font-weight: 800;
     font-size: 0.72rem;
@@ -157,28 +157,9 @@ ol {
     display: none !important;
 }
 
-.section-white p,
-.section-white a {
-    position: relative;
-    z-index: 1;
-}
-
-/* Textos destacados */
-strong,
-b,
-.text-pink,
-.text-orange {
-    font-family: 'Poppins', sans-serif !important;
-}
-
-.text-pink {
-    color: #E4257D !important;
-    font-weight: 800 !important;
-}
-
-.text-orange {
-    color: #DF6418 !important;
-    font-weight: 800 !important;
+.section-white p {
+    font-size: 16px !important;
+    text-align: center !important;
 }
 
 /* ============================================
@@ -187,24 +168,25 @@ b,
 .section-purple {
     background: #F6EBE3 !important;
     padding: 28px 24px 30px;
-    text-align: center;
+    text-align: center !important;
 }
 
 .section-purple p {
-    font-size: 0.93rem;
+    font-size: 16px !important;
     color: #1a1a1a;
     line-height: 1.6;
     margin-bottom: 10px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center !important;
 }
 
 .section-purple .title-oportunidad,
 .title-oportunidad {
     font-family: 'Poppins', sans-serif !important;
     font-weight: 800 !important;
-    font-size: 1.3rem !important;
+    font-size: 18px !important;
     color: #E4257D !important;
     margin: 18px auto 20px auto !important;
     line-height: 1.3 !important;
@@ -218,10 +200,10 @@ b,
    ============================================ */
 .btn-main {
     background: #E4257D !important;
-    color: #ffffff !important;
+    color: #F6EBE3 !important;
     font-family: 'Poppins', sans-serif !important;
     font-weight: 700 !important;
-    font-size: 0.97rem !important;
+    font-size: 18px !important;
     border-radius: 9999px !important;
     padding: 13px 34px !important;
     border: 2px solid #E4257D !important;
@@ -309,7 +291,7 @@ b,
     color: #fff;
     font-family: 'Poppins', sans-serif !important;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 18px !important;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
@@ -331,7 +313,7 @@ b,
 .title-how {
     font-family: 'Poppins', sans-serif !important;
     font-weight: 800 !important;
-    font-size: 1.35rem !important;
+    font-size: 18px !important;
     text-align: center;
     color: #DF6418 !important;
     margin-bottom: 18px;
@@ -347,16 +329,16 @@ b,
 }
 
 .section-how ol li {
-    font-size: 0.93rem;
+    font-size: 16px !important;
     color: #222;
     line-height: 1.65;
     text-align: center;
 }
 
 .section-how .note {
-    font-family: 'Poppins', sans-serif !important;
-    font-weight: 700;
-    font-size: 0.87rem;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 400;
+    font-size: 16px !important;
     color: #1a1a1a;
     text-align: center;
     margin-top: 18px;
@@ -385,7 +367,7 @@ b,
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-radius: 0;
+    border-radius: 0 !important;
     overflow: hidden;
 }
 
@@ -422,22 +404,22 @@ b,
 }
 
 .section-about p {
-    color: #ffffff;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 16px;
+    color: #F6EBE3;
+    font-size: 16px !important;
+    line-height: 1.5;
+    margin-bottom: 20px;
     text-align: center !important;
 }
 
 .section-about p strong {
-    color: #ffffff;
+    color: #F6EBE3;
 }
 
 .section-about .cta {
     font-family: 'Poppins', sans-serif !important;
     font-weight: 800;
-    font-size: 1.265rem;
-    color: #ffffff;
+    font-size: 18px !important;
+    color: #F6EBE3;
     margin-top: 24px;
     line-height: 1.3;
     display: block;
@@ -472,8 +454,8 @@ b,
 .form-section-title {
     font-family: 'Lato', sans-serif !important;
     font-weight: 800;
-    font-size: 1rem;
-    color: #fff;
+    font-size: 18px !important;
+    color: #F6EBE3;
     background: #E4257D;
     border-radius: 8px;
     padding: 10px 16px;
@@ -484,13 +466,13 @@ b,
 .form-card h3 {
     font-family: 'Poppins', sans-serif !important;
     font-weight: 800;
-    font-size: 1.15rem;
+    font-size: 18px !important;
     color: #1a1a1a;
     margin-bottom: 4px;
 }
 
 .form-subtitle {
-    font-size: 0.85rem;
+    font-size: 16px !important;
     color: #777;
     margin-bottom: 22px;
     line-height: 1.5;
@@ -504,7 +486,7 @@ b,
 }
 
 .form-group label {
-    font-size: 0.87rem;
+    font-size: 16px !important;
     color: #333;
     font-family: 'Lato', sans-serif !important;
 }
@@ -515,7 +497,7 @@ b,
     border: 1.5px solid #ddd;
     border-radius: 8px;
     padding: 10px 14px;
-    font-size: 0.88rem;
+    font-size: 16px !important;
     color: #333;
     background: #fff;
     outline: none;
@@ -540,7 +522,7 @@ b,
     color: #ffffff !important;
     font-family: 'Poppins', sans-serif !important;
     font-weight: 700 !important;
-    font-size: 1rem !important;
+    font-size: 18px !important;
     padding: 14px 60px !important;
     border-radius: 9999px !important;
     border: 2px solid #E4257D !important;
@@ -584,7 +566,7 @@ b,
 }
 
 .footer-copy {
-    font-size: 0.95rem;
+    font-size: 16px !important;
     color: #DF6418 !important;
     font-weight: 600;
     margin-bottom: 24px;
@@ -655,7 +637,7 @@ b,
 
     .section-white p {
         max-width: 680px;
-        font-size: 1.1rem;
+        font-size: 24px !important;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 32px;
@@ -663,10 +645,39 @@ b,
 
     .section-purple {
         padding: 50px 40px;
+        text-align: center !important;
     }
 
     .section-purple p {
-        font-size: 1.05rem;
+        font-size: 24px !important;
+        text-align: center !important;
+    }
+
+    .section-purple .title-oportunidad,
+    .title-oportunidad {
+        font-size: 28px !important;
+    }
+
+    .btn-main {
+        font-size: 28px !important;
+    }
+
+    .card-label {
+        font-size: 28px !important;
+    }
+
+    .section-how h2,
+    .title-how {
+        font-size: 28px !important;
+    }
+
+    .section-how ol li {
+        font-size: 24px !important;
+        text-align: center;
+    }
+
+    .section-how .note {
+        font-size: 24px !important;
     }
 
     .cards-wrap {
@@ -684,15 +695,6 @@ b,
         padding: 50px 40px;
     }
 
-    .section-how h2 {
-        font-size: 1.8rem;
-    }
-
-    .section-how ol li {
-        font-size: 1.05rem;
-        text-align: center;
-    }
-
     .section-how-inner {
         max-width: 580px;
         margin: 0 auto;
@@ -700,15 +702,15 @@ b,
     }
 
     .about-container {
-        padding-left: 10% !important;
-        padding-right: 10% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
         box-sizing: border-box;
     }
 
     .about-row {
         flex-direction: row;
         align-items: stretch;
-        border-radius: 14px;
+        border-radius: 0 !important;
         overflow: hidden;
     }
 
@@ -741,16 +743,46 @@ b,
     .section-about-inner {
         text-align: left !important;
         margin: 0;
+        max-width: 540px !important;
     }
 
     .section-about p {
-        font-size: 1.2rem;
+        font-size: 24px !important;
         text-align: left !important;
     }
 
     .section-about .cta {
-        font-size: 1.38rem;
+        font-size: 28px !important;
         text-align: left !important;
+    }
+
+    .form-card h3 {
+        font-size: 28px !important;
+    }
+
+    .form-section-title {
+        font-size: 18px !important;
+    }
+
+    .form-subtitle {
+        font-size: 24px !important;
+    }
+
+    .form-group label {
+        font-size: 24px !important;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 24px !important;
+    }
+
+    .btn-enviar {
+        font-size: 28px !important;
+    }
+
+    .footer-copy {
+        font-size: 24px !important;
     }
 
     .section-form {
