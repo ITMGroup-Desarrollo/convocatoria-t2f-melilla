@@ -279,32 +279,35 @@ $_SESSION['form_time'] = time();
                         <label class="flex gap-2 items-center"><input type="checkbox" name="tipo_materiales[]" class="focus:ring-[#93d500]" value="Materiales comerciales nuevos"><span>Utiliza materiales comerciales nuevos</span></label>
                     </div>
 
-                    <div class="flex flex-col gap-2">
-                         <label class="text-sm font-semibold">Menciona si se utiliza alguna de estas características las piezas artesanales:</label>
-                        <label class="text-sm font-semibold">Especies silvestres</label>
-                        <div class="flex gap-4 flex-wrap">
-                            <label class="flex gap-2 items-center"><input type="radio" name="especies_silvestres" class="focus:ring-[#93d500]" value="No"><span>No</span></label>
-                            <label class="flex gap-2 items-center"><input type="radio" name="especies_silvestres" class="focus:ring-[#93d500]" value="Sí"><span>Sí</span></label>
-                            <label class="flex gap-2 items-center"><input type="radio" name="especies_silvestres" class="focus:ring-[#93d500]" value="No sabe"><span>No sabe</span></label>
-                        </div>
-                    </div>
+                    <div class="flex flex-col gap-3 mt-2">
+                        <label class="text-sm font-bold text-slate-900">Menciona si se utiliza alguna de estas características las piezas artesanales:</label>
 
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold">Sustancias especiales</label>
-                        <div class="flex gap-4 flex-wrap">
-                            <label class="flex gap-2 items-center"><input type="radio" name="sustancias_especiales" class="focus:ring-[#93d500]" value="No"><span>No</span></label>
-                            <label class="flex gap-2 items-center"><input type="radio" name="sustancias_especiales" class="focus:ring-[#93d500]" value="Sí"><span>Sí</span></label>
-                            <label class="flex gap-2 items-center"><input type="radio" name="sustancias_especiales" class="focus:ring-[#93d500]" value="No sabe"><span>No sabe</span></label>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-semibold">Especies silvestres</label>
+                            <div class="flex gap-4 flex-wrap">
+                                <label class="flex gap-2 items-center"><input type="radio" name="especies_silvestres" class="focus:ring-[#93d500]" value="No"><span>No</span></label>
+                                <label class="flex gap-2 items-center"><input type="radio" name="especies_silvestres" class="focus:ring-[#93d500]" value="Sí"><span>Sí</span></label>
+                                <label class="flex gap-2 items-center"><input type="radio" name="especies_silvestres" class="focus:ring-[#93d500]" value="No sabe"><span>No sabe</span></label>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold">Plástico de un solo uso</label>
-                        <div class="flex gap-4 flex-wrap">
-                            <label class="flex gap-2 items-center"><input type="radio" name="plastico_uso_unico" class="focus:ring-[#93d500]" value="No"><span>No</span></label>
-                            <label class="flex gap-2 items-center"><input type="radio" name="plastico_uso_unico" class="focus:ring-[#93d500]" value="Producto"><span>Producto</span></label>
-                            <label class="flex gap-2 items-center"><input type="radio" name="plastico_uso_unico" class="focus:ring-[#93d500]" value="Empaque"><span>Empaque</span></label>
-                            <label class="flex gap-2 items-center"><input type="radio" name="plastico_uso_unico" class="focus:ring-[#93d500]" value="Ambos"><span>Ambos</span></label>
+                        <div class="flex flex-col gap-2 mt-2">
+                            <label class="text-sm font-semibold">Sustancias especiales</label>
+                            <div class="flex gap-4 flex-wrap">
+                                <label class="flex gap-2 items-center"><input type="radio" name="sustancias_especiales" class="focus:ring-[#93d500]" value="No"><span>No</span></label>
+                                <label class="flex gap-2 items-center"><input type="radio" name="sustancias_especiales" class="focus:ring-[#93d500]" value="Sí"><span>Sí</span></label>
+                                <label class="flex gap-2 items-center"><input type="radio" name="sustancias_especiales" class="focus:ring-[#93d500]" value="No sabe"><span>No sabe</span></label>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-2 mt-2">
+                            <label class="text-sm font-semibold">Plástico de un solo uso</label>
+                            <div class="flex gap-4 flex-wrap">
+                                <label class="flex gap-2 items-center"><input type="radio" name="plastico_uso_unico" class="focus:ring-[#93d500]" value="No"><span>No</span></label>
+                                <label class="flex gap-2 items-center"><input type="radio" name="plastico_uso_unico" class="focus:ring-[#93d500]" value="Producto"><span>Producto</span></label>
+                                <label class="flex gap-2 items-center"><input type="radio" name="plastico_uso_unico" class="focus:ring-[#93d500]" value="Empaque"><span>Empaque</span></label>
+                                <label class="flex gap-2 items-center"><input type="radio" name="plastico_uso_unico" class="focus:ring-[#93d500]" value="Ambos"><span>Ambos</span></label>
+                            </div>
                         </div>
                     </div>
 

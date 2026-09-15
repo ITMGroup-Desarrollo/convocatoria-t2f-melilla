@@ -31,6 +31,14 @@ ol {
     list-style-type: none !important;
 }
 
+.text-pink {
+    color: #E4257D !important;
+}
+
+.text-orange {
+    color: #DF6418 !important;
+}
+
 /* ============================================
    2. BADGE
    ============================================ */
