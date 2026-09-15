@@ -272,7 +272,7 @@ b,
     padding: 16px 10% 20px !important;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 24px !important;
     box-sizing: border-box;
 }
 
@@ -410,15 +410,15 @@ b,
    ============================================ */
 .section-about {
     background: #E4257D;
-    padding: 40px 32px;
-    text-align: left !important;
+    padding: 40px 24px;
+    text-align: center !important;
     width: 100%;
 }
 
 .section-about-inner {
     max-width: 420px;
-    margin: 0;
-    text-align: left !important;
+    margin: 0 auto;
+    text-align: center !important;
 }
 
 .section-about p {
@@ -426,7 +426,7 @@ b,
     font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 16px;
-    text-align: left !important;
+    text-align: center !important;
 }
 
 .section-about p strong {
@@ -436,12 +436,12 @@ b,
 .section-about .cta {
     font-family: 'Poppins', sans-serif !important;
     font-weight: 800;
-    font-size: 1.6rem;
+    font-size: 1.265rem;
     color: #ffffff;
     margin-top: 24px;
     line-height: 1.3;
     display: block;
-    text-align: left !important;
+    text-align: center !important;
 }
 
 /* ============================================
@@ -738,13 +738,18 @@ b,
         text-align: left !important;
     }
 
+    .section-about-inner {
+        text-align: left !important;
+        margin: 0;
+    }
+
     .section-about p {
-        font-size: 1.22rem;
+        font-size: 1.2rem;
         text-align: left !important;
     }
 
     .section-about .cta {
-        font-size: 1.95rem;
+        font-size: 1.38rem;
         text-align: left !important;
     }
 
