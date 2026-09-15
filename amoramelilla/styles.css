@@ -35,19 +35,18 @@ ol {
    2. BADGE
    ============================================ */
 .badge {
-    background: #1d1a1a;
-    color: #93d500;
+    background: #E4257D;
+    color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     font-size: 0.72rem;
     letter-spacing: 0.2em;
     text-align: center;
     padding: 8px 0;
-    margin-top: 40px;
+    margin-top: 0 !important;
     position: relative;
     z-index: 10;
 }
-
 
 /* ============================================
    3. HERO
@@ -64,7 +63,6 @@ ol {
     background-repeat: no-repeat;
     opacity: 0.9;
     z-index: 2;
-
     pointer-events: none;
 }
 
@@ -100,7 +98,12 @@ ol {
 }
 
 .hero-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
+    z-index: 10;
 }
 
 .hero-overlay {
@@ -110,16 +113,18 @@ ol {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding-bottom: 36px;
+    justify-content: center;
+    padding: 0 20px;
 }
 
 .hero-logo-title {
-    width: 150px;
+    width: 175px;
+    max-width: 85%;
+    height: auto;
     object-fit: contain;
     filter: none;
-    margin-top: auto;
-    margin-bottom: 260px;
+    margin: auto;
+    display: block;
 }
 
 .hero-logos {
@@ -132,7 +137,6 @@ ol {
 .hero-logos img {
     height: 50px;
     object-fit: contain;
-    /* filter: brightness(0) invert(1); */
 }
 
 .logo-ttf {
@@ -140,7 +144,7 @@ ol {
 }
 
 /* ============================================
-   4. SECCIÓN BLANCA CON TEXTURA
+   4. SECCIÓN BLANCA
    ============================================ */
 .section-white {
     position: relative;
@@ -150,14 +154,7 @@ ol {
 }
 
 .section-white::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('../imagenes/textura/TTF_textura.png');
-    background-repeat: repeat;
-    background-size: 100px;
-    opacity: 0.15;
-    z-index: 0;
+    display: none !important;
 }
 
 .section-white p,
@@ -166,12 +163,22 @@ ol {
     z-index: 1;
 }
 
+/* Textos destacados */
+.text-pink {
+    color: #E4257D !important;
+    font-weight: 800 !important;
+}
+
+.text-orange {
+    color: #DF6418 !important;
+    font-weight: 800 !important;
+}
 
 /* ============================================
-   5. SECCIÓN MORADA
+   5. SECCIÓN DURAZNO / CREMA
    ============================================ */
 .section-purple {
-    background: #c9a3dc;
+    background: #F6EBE3 !important;
     padding: 28px 24px 30px;
     text-align: center;
 }
@@ -186,96 +193,87 @@ ol {
     margin-right: auto;
 }
 
+.section-purple .title-oportunidad,
 .title-oportunidad {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 1.2rem;
-    color: #1a1a1a;
-    margin: 14px 0 20px;
-    line-height: 1.3;
-    text-align: center;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 1.3rem !important;
+    color: #E4257D !important;
+    margin: 18px auto 20px auto !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
 }
 
-
 /* ============================================
-   BOTÓN PRINCIPAL
+   BOTÓN PRINCIPAL (ESTADOS: DEFAULT, HOVER, CLICK)
    ============================================ */
 .btn-main {
-    background: #1a1a1a;
-    color: #93d500;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 0.97rem;
-    border-radius: 9999px;
-    padding: 13px 34px;
-    border: none;
+    background: #E4257D !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 0.97rem !important;
+    border-radius: 9999px !important;
+    padding: 13px 34px !important;
+    border: 2px solid #E4257D !important;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    text-decoration: none;
-    transition: opacity 0.2s;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
 }
 
+.btn-main svg {
+    stroke: #ffffff !important;
+    transition: stroke 0.2s ease;
+}
+
+/* HOVER: Fondo guinda/rosa oscuro, texto amarillo */
 .btn-main:hover {
-    background: #BB83CA;
-    color: #ffffff;
+    background: #B81B60 !important;
+    color: #F5C942 !important;
+    border-color: #B81B60 !important;
 }
 
-.btn-main:focus {
-    background: #727272;
-    color: #93d500;
+.btn-main:hover svg {
+    stroke: #F5C942 !important;
 }
 
+/* CLICK / FOCUS: Fondo blanco, texto rosa, borde rosa */
+.btn-main:focus,
+.btn-main:active {
+    background: #ffffff !important;
+    color: #E4257D !important;
+    border-color: #E4257D !important;
+    outline: none !important;
+}
+
+.btn-main:focus svg,
+.btn-main:active svg {
+    stroke: #E4257D !important;
+}
 
 /* ============================================
    6. CARDS
    ============================================ */
-/* Textura en cards */
 .cards-wrap {
     position: relative;
-    background-color: #efefef;
-    padding: 16px 16px 20px;
+    background-color: #ffffff;
+    padding: 16px 10% 20px !important;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    box-sizing: border-box;
 }
 
 .cards-wrap::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('../imagenes/textura/TTF_textura.png');
-    background-repeat: repeat;
-    background-size: 100px;
-    opacity: 0.15;
-    z-index: 0;
+    display: none !important;
 }
 
 .cards-wrap .card {
-    position: relative;
-    z-index: 1;
-}
-
-/* Textura en formulario */
-.section-form {
-    position: relative;
-    background-color: #f0f0f0;
-    padding: 30px 16px 36px;
-}
-
-.section-form::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('../imagenes/textura/TTF_textura.png');
-    background-repeat: repeat;
-    background-size: 100px;
-    opacity: 0.15;
-    z-index: 0;
-}
-
-.section-form .form-card {
     position: relative;
     z-index: 1;
 }
@@ -308,7 +306,6 @@ ol {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-
 /* ============================================
    7. CÓMO PARTICIPAR
    ============================================ */
@@ -323,14 +320,14 @@ ol {
     text-align: center;
 }
 
-.section-how h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 1.35rem;
+.section-how h2,
+.title-how {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 1.35rem !important;
     text-align: center;
-    color: #1a1a1a;
+    color: #DF6418 !important;
     margin-bottom: 18px;
-    text-align: center;
 }
 
 .section-how ol {
@@ -364,13 +361,30 @@ ol {
     margin-top: 22px;
 }
 
-
 /* ============================================
-   8. FOTO PAREJA
+   8. FOTO PAREJA Y SOBRE NOSOTROS (LADO A LADO)
    ============================================ */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.about-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+}
+
 .photo-pareja {
     width: 100%;
-    height: 380px;
+    height: 320px;
     overflow: hidden;
     background: #ccc;
     position: relative;
@@ -380,7 +394,7 @@ ol {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 150%;
+    object-position: center;
     display: block;
 }
 
@@ -388,44 +402,52 @@ ol {
    9. SOBRE NOSOTROS
    ============================================ */
 .section-about {
-    background: #1a1a1a;
-    padding: 34px 26px;
-    text-align: center;
+    background: #E4257D;
+    padding: 40px 32px;
+    text-align: left !important;
+    width: 100%;
 }
 
 .section-about-inner {
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 420px;
+    margin: 0;
+    text-align: left !important;
 }
 
 .section-about p {
-    color: #cecece;
-    font-size: 0.93rem;
-    line-height: 1.75;
-    margin-bottom: 13px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    text-align: left !important;
 }
 
 .section-about p strong {
-    color: #fff;
+    color: #ffffff;
 }
 
 .section-about .cta {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 1.25rem;
-    color: #fff;
-    margin-top: 22px;
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-top: 24px;
     line-height: 1.3;
     display: block;
+    text-align: left !important;
 }
-
 
 /* ============================================
    10. FORMULARIO
    ============================================ */
 .section-form {
-    background: #f0f0f0;
+    background: #f5f5f5;
     padding: 30px 16px 36px;
+    position: relative;
+}
+
+.section-form::before {
+    display: none !important;
 }
 
 .form-card {
@@ -436,15 +458,16 @@ ol {
     border: 1px solid #e8e8e8;
     max-width: 620px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
-/* Título de sección dentro del formulario AMORA */
 .form-section-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 1rem;
     color: #fff;
-    background: #b98fd4;
+    background: #E4257D;
     border-radius: 8px;
     padding: 10px 16px;
     margin-top: 12px;
@@ -500,113 +523,76 @@ ol {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #144bb8;
-    box-shadow: 0 0 0 3px rgba(20, 75, 184, 0.08);
-}
-
-
-input[type="radio"]:checked,
-input[type="radio"]:focus,
-input[type="radio"]:checked:focus,
-input[type="checkbox"]:focus,
-input[type="checkbox"]:checked:focus,
-input[type="checkbox"]:checked,
-input[type="checkbox"]:hover,
-input[type="checkbox"]:focus:hover,
-input[type="checkbox"]:checked:hover {
-    background-color: #93d500;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.form-check {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 18px;
-}
-
-.form-check input[type="checkbox"] {
-    width: 17px;
-    height: 17px;
-    accent-color: #144bb8;
-    margin-top: 2px;
-    flex-shrink: 0;
-}
-
-.form-check label {
-    font-size: 0.87rem;
-    color: #333;
-    line-height: 1.5;
-    cursor: pointer;
-}
-
-.form-check label a {
-    color: #144bb8;
-    text-decoration: underline;
+    border-color: #E4257D;
+    box-shadow: 0 0 0 3px rgba(228, 37, 125, 0.12);
 }
 
 .btn-enviar {
     width: auto;
-    background: #1a1a1a;
-    color: #93d500;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 14px 60px;
-    border-radius: 9999px;
-    border: none;
+    background: #E4257D !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    padding: 14px 60px !important;
+    border-radius: 9999px !important;
+    border: 2px solid #E4257D !important;
     cursor: pointer;
-    transition: opacity 0.2s;
+    transition: all 0.2s ease;
     display: block;
     margin: 0 auto;
 }
 
 .btn-enviar:hover {
-    opacity: 0.83;
+    background: #B81B60 !important;
+    color: #F5C942 !important;
+    border-color: #B81B60 !important;
 }
 
+.btn-enviar:focus,
+.btn-enviar:active {
+    background: #ffffff !important;
+    color: #E4257D !important;
+    border-color: #E4257D !important;
+    outline: none !important;
+}
 
 /* ============================================
    11. FOOTER
    ============================================ */
 .footer {
-    background: #b98fd4;
-    padding: 30px 20px 28px;
+    background: #F6EBE3;
+    padding: 40px 20px 36px;
     text-align: center;
 }
 
 .footer-logo-title {
-    width: 150px;
+    width: 210px;
+    max-width: 85%;
+    height: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1);
-    margin: 0 auto 12px auto;
+    filter: none;
+    margin: 0 auto 18px auto;
     display: block;
 }
 
 .footer-copy {
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 16px;
+    font-size: 0.95rem;
+    color: #DF6418 !important;
+    font-weight: 600;
+    margin-bottom: 24px;
 }
 
 .footer-logos {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 22px;
+    gap: 32px;
 }
 
 .footer-logos img {
-    height: 28px;
+    height: 44px;
     object-fit: contain;
-    /* filter: brightness(0) invert(1); */
-}
-
-.section-how ol li {
-    text-align: center;
 }
 
 /* ============================================
@@ -618,14 +604,13 @@ input[type="checkbox"]:checked:hover {
         white-space: nowrap;
     }
 
-    /* Hero */
     .hero {
         height: 750px;
     }
 
     .hero-overlay {
-        justify-content: flex-start;
-        padding-bottom: 36px;
+        justify-content: center;
+        padding: 0;
     }
 
     .badge {
@@ -633,9 +618,8 @@ input[type="checkbox"]:checked:hover {
     }
 
     .hero-logo-title {
-        width: 280px !important;
-        margin-top: 30px !important;
-        margin-bottom: auto !important;
+        width: 325px !important;
+        margin: auto !important;
     }
 
     .hero-logos img {
@@ -646,7 +630,6 @@ input[type="checkbox"]:checked:hover {
         height: 60px !important;
     }
 
-    /* Huella izquierda pequeña */
     .hero::before {
         width: 15vw;
         height: 15vw;
@@ -654,22 +637,23 @@ input[type="checkbox"]:checked:hover {
         bottom: -2vw;
     }
 
-    /* Quitar huella derecha */
     .hero::after {
         display: none;
     }
 
-    /* Sección blanca */
     .section-white {
-        padding: 50px 40px;
+        padding: 60px 40px;
+        text-align: center;
     }
 
     .section-white p {
+        max-width: 680px;
         font-size: 1.1rem;
-        margin-bottom: 28px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
     }
 
-    /* Sección morada */
     .section-purple {
         padding: 50px 40px;
     }
@@ -678,14 +662,9 @@ input[type="checkbox"]:checked:hover {
         font-size: 1.05rem;
     }
 
-    .title-oportunidad br {
-        display: none;
-    }
-
-    /* Cards en fila */
     .cards-wrap {
         flex-direction: row;
-        padding: 28px 40px 32px;
+        padding: 28px 10% 32px !important;
         gap: 18px;
     }
 
@@ -694,7 +673,6 @@ input[type="checkbox"]:checked:hover {
         height: 260px;
     }
 
-    /* Cómo participar */
     .section-how {
         padding: 50px 40px;
     }
@@ -705,82 +683,33 @@ input[type="checkbox"]:checked:hover {
 
     .section-how ol li {
         font-size: 1.05rem;
-
-    }
-
-    /* Foto pareja */
-    /* .photo-pareja {
-        height: 380px;
-    } */
-
-    /* Sobre nosotros */
-    .section-about {
-        padding: 60px 40px;
-    }
-
-    .section-about p {
-        font-size: 1.05rem;
-    }
-
-    .section-about .cta {
-        font-size: 1.7rem;
-    }
-
-    /* Formulario */
-    .section-form {
-        padding: 50px 40px 60px;
-    }
-
-    .form-card {
-        padding: 36px 40px 40px;
-    }
-
-    /* Footer */
-    .footer {
-        padding: 50px 40px 44px;
-    }
-
-    .footer-logos img {
-        height: 38px;
-    }
-
-    .section-white {
-        padding: 60px 40px;
         text-align: center;
     }
 
-    .section-white p {
-        max-width: 400px;
-        /* ← ajusta hasta que quede en 3 líneas */
-        font-size: 1.1rem;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 32px;
-    }
-
     .section-how-inner {
-        max-width: 500px;
+        max-width: 580px;
         margin: 0 auto;
         text-align: center;
     }
 
-    .section-how ol {
-        display: inline-block;
-        text-align: left;
-        padding-left: 18px;
-        text-align: center;
+    .about-container {
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+        box-sizing: border-box;
     }
 
-    .section-how .note {
-        text-align: center;
+    .about-row {
+        flex-direction: row;
+        align-items: stretch;
+        border-radius: 14px;
+        overflow: hidden;
     }
 
     .photo-pareja {
-        height: 60dvh;
-        position: sticky;
-        top: 0;
-        z-index: 0;
-        overflow: hidden;
+        width: 50%;
+        height: auto;
+        min-height: 400px;
+        position: static;
     }
 
     .photo-pareja img {
@@ -792,33 +721,64 @@ input[type="checkbox"]:checked:hover {
     }
 
     .section-about {
-        position: relative;
-        z-index: 2;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 50px 48px;
+        position: static;
         margin-top: 0;
+        text-align: left !important;
+    }
+
+    .section-about p {
+        font-size: 1.22rem;
+        text-align: left !important;
+    }
+
+    .section-about .cta {
+        font-size: 1.95rem;
+        text-align: left !important;
     }
 
     .section-form {
-        position: relative;
-        z-index: 3;
+        padding: 50px 40px 60px;
     }
 
+    .form-card {
+        padding: 36px 40px 40px;
+    }
+
+    .footer {
+        padding: 50px 40px 44px;
+    }
+
+    .footer-logo-title {
+        width: 260px;
+    }
+
+    .footer-logos img {
+        height: 52px;
+    }
 }
 
 /* ══ DROPZONE PDF ═══════════════════════════════════════════════════ */
 .dropzone {
     position: relative;
-    border: 2px dashed #c9a8e0;
+    border: 2px dashed #E4257D;
     border-radius: 12px;
-    background: #faf5ff;
+    background: #fff5f8;
     transition: border-color 0.2s, background 0.2s;
     cursor: pointer;
     overflow: hidden;
 }
+
 .dropzone:hover,
 .dropzone.drag-over {
-    border-color: #7c4daf;
-    background: #f3e8ff;
+    border-color: #c21a67;
+    background: #ffe6ef;
 }
+
 .dropzone-input {
     position: absolute;
     inset: 0;
@@ -828,6 +788,7 @@ input[type="checkbox"]:checked:hover {
     cursor: pointer;
     z-index: 2;
 }
+
 .dropzone-idle {
     display: flex;
     flex-direction: column;
@@ -836,47 +797,54 @@ input[type="checkbox"]:checked:hover {
     padding: 28px 20px;
     pointer-events: none;
 }
+
 .dropzone-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 0.95rem;
-    color: #7c4daf;
+    color: #E4257D;
     margin: 0;
 }
+
 .dropzone-sub {
     font-size: 0.82rem;
     color: #999;
     margin: 0;
 }
+
 .dropzone-link {
-    color: #b98fd4;
+    color: #DE6219;
     text-decoration: underline;
 }
+
 .dropzone-selected {
     display: none;
     align-items: center;
     gap: 10px;
     padding: 16px 20px;
-    background: #f0e6f8;
+    background: #ffe6ef;
     pointer-events: none;
 }
+
 .dropzone-selected.active {
     display: flex;
 }
+
 .dropzone-filename {
     font-size: 0.88rem;
     font-weight: 600;
-    color: #7c4daf;
+    color: #E4257D;
     flex: 1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .dropzone-clear {
     pointer-events: all;
     background: none;
     border: none;
-    color: #b98fd4;
+    color: #E4257D;
     font-size: 1rem;
     cursor: pointer;
     padding: 2px 6px;
@@ -885,7 +853,8 @@ input[type="checkbox"]:checked:hover {
     z-index: 3;
     position: relative;
 }
+
 .dropzone-clear:hover {
-    background: #e8d5f5;
-    color: #7c4daf;
+    background: #ffd1e1;
+    color: #c21a67;
 }

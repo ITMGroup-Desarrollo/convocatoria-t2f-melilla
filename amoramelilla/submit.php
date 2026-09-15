@@ -183,6 +183,7 @@ try {
     // Remitente / destinatario
     $mail->setFrom(getenv('MAIL_FROM'), getenv('MAIL_FROM_NAME'));
     $mail->addAddress(getenv('MAIL_TO'));
+    if (getenv('MAIL_TO2')) $mail->addAddress(getenv('MAIL_TO2'));
     $mail->addReplyTo($email, $nombre);
 
     // Adjunto PDF

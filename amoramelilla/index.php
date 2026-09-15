@@ -34,11 +34,11 @@ $_SESSION['form_time'] = time();
     </script>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600;700;800&display=swap"
         rel="stylesheet" />
 
     <!-- Estilos propios -->
-    <link rel="stylesheet" href="./styles.css?v=2.0">
+    <link rel="stylesheet" href="./styles.css?v=3.0">
     <!-- reCAPTCHA v2 -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -49,70 +49,68 @@ $_SESSION['form_time'] = time();
 
         <!-- HERO -->
         <div class="hero">
-            <img src="../imagenes/melilla_principal.jpg" alt="Melilla" onerror="this.style.display='none'" />
+            <img src="imagenes/3.webp" alt="Melilla" onerror="this.style.display='none'" />
             <div class="hero-overlay">
                 <div class="hero-top">
                     <div class="badge">CONVOCATORIA ABIERTA</div>
                 </div>
-                <img src="../imagenes/logos/ComparteMelilla.svg" alt="Comparte Melilla" class="hero-logo-title" />
-                <div class="hero-logos">
-                    <img src="../imagenes/logos/TTF_Logo2.svg" alt="Ticket to Fun" class="logo-ttf" onerror="this.style.display='none'" />
-                    <img src="../imagenes/logos/GeneraLogo2.svg" alt="Fundación Genera ITM" onerror="this.style.display='none'" />
-                </div>
+                <img src="imagenes/comparte-melilla-amora-blanco.svg" alt="Comparte Melilla con AMORA" class="hero-logo-title" />
             </div>
         </div>
 
         <!-- SECCIÓN BLANCA -->
         <div class="section-white">
             <p>
-                Forma parte de la red de emprendedores que
-                comparten las experiencias turísticas, culturales y
-                gastronómicas que Melilla tiene&nbsp;para&nbsp;compartir.
+                Forma parte de <strong class="text-pink font-bold">Mercadillo AMORA</strong>: un espacio temporal de
+                venta directa que se instalará en el Parque Hernández durante
+                las llegadas de cruceros programadas los días <strong class="text-orange font-bold">7, 8 y 9 de octubre;
+                y, 5, 8, 11, 14, 19 y 23 noviembre.</strong>
             </p><br>
-            <a href="#formulario" class="btn-main">Registra tu proyecto</a>
+            <a href="#formulario" class="btn-main">¡Regístrate aquí!</a>
         </div>
 
-        <!-- SECCIÓN MORADA -->
+        <!-- SECCIÓN DURAZNO / PURPLE -->
         <div class="section-purple">
-            <p>¿Eres un guía turístico con experiencia o tienes una tour&nbsp;operadora&nbsp;en&nbsp;funcionamiento?</p>
-            <p>¿Te gustaría profesionalizar una actividad cultural, gastronómica,&nbsp;artesanal&nbsp;o&nbsp;de&nbsp;naturaleza?</p>
-            <p>¿Te gustaría causar un impacto positivo en la comunidad y compartir con cruceristas las&nbsp;maravillas&nbsp;de&nbsp;tu&nbsp;ciudad?</p>
-            <p class="title-oportunidad">¡Esta convocatoria <br>es tu oportunidad!</p>
+            <p>¿Eres artistas, persona artesana o emprendimiento&nbsp;local?</p>
+            <p>¿Te interesa mostrar y vender tus creaciones&nbsp;y&nbsp;productos?</p>
+            <p>¿Tus productos son elaborados con calidad y muestran la autenticidad&nbsp;de&nbsp;Melilla?</p>
+            <p class="title-oportunidad text-center font-bold">¡Esta convocatoria es para ti!</p>
             <a href="#formulario" class="btn-main">Participa</a>
         </div>
 
         <!-- CARDS -->
         <div class="cards-wrap">
             <div class="card">
-                <img src="../imagenes/footer/melilla_baile.jpg" alt="Comparte cultura" onerror="this.style.display='none'" />
-                <span class="card-label">Comparte cultura</span>
+                <img src="imagenes/5.webp" alt="Comparte tu talento" onerror="this.style.display='none'" />
+                <span class="card-label">Comparte tu talento</span>
             </div>
             <div class="card">
-                <img src="../imagenes/footer/te-moruno2.jpg" alt="Comparte comunidad" onerror="this.style.display='none'" />
-                <span class="card-label">Comparte comunidad</span>
+                <img src="imagenes/2.webp" alt="Comparte tu cultura" onerror="this.style.display='none'" />
+                <span class="card-label">Comparte tu cultura</span>
             </div>
             <div class="card">
-                <img src="../imagenes/footer/faro_melilla.jpg" alt="Comparte Melilla" onerror="this.style.display='none'" />
-                <span class="card-label">Comparte Melilla</span>
+                <img src="imagenes/1.webp" alt="Comparte Amora" onerror="this.style.display='none'" />
+                <span class="card-label">Comparte Amora</span>
             </div>
         </div>
 
         <!-- CÓMO PARTICIPAR -->
         <div class="section-how">
             <div class="section-how-inner">
-                <h2>Como participar</h2>
+                <h2 class="title-how">¿Cómo participar?</h2>
                 <ol class="list-none" style="list-style-type: none !important;">
-                    <li>1. Conoce el proyecto, descarga y lee atentamente&nbsp;la&nbsp;convocatoria.</li>
-                    <li>2. Regístrate e ingresa la información solicitada en el formulario&nbsp;correspondiente.</li>
+                    <li>1. ¡Conoce el proyecto! Te invitamos a descargar y leer atentamente la convocatoria</li>
+                    <li>2. ¡Regístrate! Es importante adjuntar un catálogo con tus productos para conocerlos.</li>
                 </ol>
                 <p class="note text-center">
-                    Ticket to Fun y Fundación Genera ITM, revisarán todas las propuestas. Si la tuya es
-                    preseleccionada, te contactaremos para conocernos mejor y profundizar en los detalles.
+                    Después de la recepción de aplicaciones, Fundación Genera ITM y Amora revisarán todas las propuestas.
+                    Posiblemente solicitaremos ver algunas muestras físicas en sitio para verificar que tus piezas
+                    cumplan con los lineamientos de calidad e identidad.
                 </p>
                 <div class="btn-wrap">
                     <a href="../convocatoriaComparteMelilla.pdf" class="btn-main" target="_blank" download>
                         Descarga la convocatoria
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#93d500" stroke-width="3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                         </svg>
                     </a>
@@ -120,25 +118,27 @@ $_SESSION['form_time'] = time();
             </div>
         </div>
 
-        <!-- FOTO PAREJA -->
-        <div class="photo-pareja">
-            <img src="../imagenes/imagen-12b.jpg" alt="Viajeros en Melilla" onerror="this.style.display='none'" />
-        </div>
+        <!-- FOTO PAREJA Y SOBRE NOSOTROS -->
+        <div class="about-container">
+            <div class="about-row">
+                <div class="photo-pareja">
+                    <img src="imagenes/4.webp" alt="Viajeros en Melilla" onerror="this.style.display='none'" />
+                </div>
 
-        <!-- SOBRE NOSOTROS -->
-        <div class="section-about">
-            <div class="section-about-inner">
-                <p>Somos <strong>Ticket to Fun</strong>, comercializadora de tours con más de 20 años diseñando y operando experiencias turísticas alrededor del mundo.</p>
-                <p>Nuestra misión es unir fuerzas con las experiencias locales y las autoridades para que el destino crezca de forma profesional y sostenible.</p>
-                <p>Esta convocatoria, es en colaboración con <strong>Fundación Genera ITM</strong>, una organización sin fines de lucro que busca el desarrollo del turismo sostenible a través de la prosperidad económica de la comunidad de Melilla.</p>
-                <p class="cta">¡No te quedes sin participar en esta iniciativa!</p>
+                <!-- SOBRE NOSOTROS -->
+                <div class="section-about">
+                    <div class="section-about-inner">
+                        <p>Somos <strong>Amora</strong>, iniciativa que opera en todos los puertos de cruceros de ITM Group, fomentando el comercio justo, reconoce el valor del trabajo artesanal y genera nuevas oportunidades para artistas, personas artesanas y emprendimientos locales.</p>
+                        <p class="cta">No te quedes sin&nbsp;participar <br> en esta iniciativa</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- FORMULARIO AMORA -->
         <div id="formulario" class="section-form">
             <div class="form-card">
-                <h3>Registro de persona proveedora AMORA</h3>
+                <h3>Registro de Aspirantes</h3>
                 <p class="form-subtitle">Completa el formulario para iniciar tu proceso de inscripción.</p>
 
                 <form id="amoraForm" method="POST" action="submit.php" enctype="multipart/form-data" class="space-y-6">
@@ -488,13 +488,11 @@ $_SESSION['form_time'] = time();
 
         <!-- FOOTER -->
         <div class="footer">
-            <img src="../imagenes/logos/ComparteMelilla.svg" alt="Comparte Melilla" class="footer-logo-title" />
-            <p class="footer-copy">© 2026 Amor a Melilla. Todos los derechos reservados.</p>
+            <img src="imagenes/comparte-melilla-amora-naranja.svg" alt="Comparte Melilla con AMORA" class="footer-logo-title" />
+            <p class="footer-copy">© 2026 Comparte Melilla con Amora. Todos los derechos reservados.</p>
             <div class="footer-logos">
-                <a href="https://www.instagram.com/tickettofun_" target="_blank">
-                    <img src="../imagenes/logos/TTF_Logo-blanco.svg" alt="Ticket to Fun" onerror="this.style.display='none'" />
-                </a>
-                <img src="../imagenes/logos/GeneraLogo2.svg" alt="Genera ITM" onerror="this.style.display='none'" />
+                <img src="imagenes/genera-naranja.svg" alt="Fundación ITM Genera" onerror="this.style.display='none'" />
+                <img src="imagenes/amora-naranja.svg" alt="AMORA Melilla" onerror="this.style.display='none'" />
             </div>
         </div>
 
