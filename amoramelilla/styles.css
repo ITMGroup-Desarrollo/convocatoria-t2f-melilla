@@ -46,8 +46,8 @@ ol {
     background: #E4257D;
     color: #F6EBE3;
     font-family: 'Poppins', sans-serif !important;
-    font-weight: 800;
-    font-size: 0.72rem;
+    font-weight: 600;
+    font-size: 18px;
     letter-spacing: 0.2em;
     text-align: center;
     padding: 8px 0;
@@ -184,7 +184,7 @@ ol {
     color: #1a1a1a;
     line-height: 1.6;
     margin-bottom: 10px;
-    max-width: 600px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     text-align: center !important;
@@ -196,7 +196,7 @@ ol {
     font-weight: 800 !important;
     font-size: 18px !important;
     color: #E4257D !important;
-    margin: 18px auto 20px auto !important;
+    margin: 18px auto 48px auto !important;
     line-height: 1.3 !important;
     text-align: center !important;
     width: 100% !important;
@@ -355,7 +355,7 @@ ol {
 
 .section-how .btn-wrap {
     text-align: center;
-    margin-top: 22px;
+    margin-top: 48px;
 }
 
 /* ============================================
@@ -648,7 +648,7 @@ ol {
         font-size: 24px !important;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 32px;
+        margin-bottom: 48px;
     }
 
     .section-purple {

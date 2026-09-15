@@ -65,7 +65,7 @@ $_SESSION['form_time'] = time();
                 venta directa que se instalará en el Parque Hernández durante
                 las llegadas de cruceros programadas los días <strong class="text-orange font-bold">7, 8 y 9 de octubre;
                 y, 5, 8, 11, 14, 19 y 23 noviembre.</strong>
-            </p><br>
+            </p>
             <a href="#formulario" class="btn-main">¡Regístrate aquí!</a>
         </div>
 
@@ -73,7 +73,7 @@ $_SESSION['form_time'] = time();
         <div class="section-purple">
             <p>¿Eres artistas, persona artesana o emprendimiento&nbsp;local?</p>
             <p>¿Te interesa mostrar y vender tus creaciones&nbsp;y&nbsp;productos?</p>
-            <p>¿Tus productos son elaborados con calidad y muestran la autenticidad&nbsp;de&nbsp;Melilla?</p>
+            <p>¿Tus productos son elaborados con calidad y muestran la&nbsp;autenticidad&nbsp;de&nbsp;Melilla?</p>
             <p class="title-oportunidad text-center font-bold">¡Esta convocatoria es para ti!</p>
             <a href="#formulario" class="btn-main">Participa</a>
         </div>
@@ -141,7 +141,7 @@ $_SESSION['form_time'] = time();
                 <h3>Registro de Aspirantes</h3>
                 <p class="form-subtitle">Completa el formulario para iniciar tu proceso de inscripción.</p>
 
-                <form id="amoraForm" method="POST" action="submit.php" enctype="multipart/form-data" class="space-y-6">
+                <form id="amoraForm" method="POST" action="submit.php" enctype="multipart/form-data" class="space-y-8">
 
                     <!-- ══ 1. DATOS GENERALES ══ -->
                     <div class="form-section-title">1. Datos generales de persona artesana</div>
