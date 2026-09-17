@@ -38,7 +38,7 @@ $_SESSION['form_time'] = time();
         rel="stylesheet" />
 
     <!-- Estilos propios -->
-    <link rel="stylesheet" href="./styles.css?v=4.0">
+    <link rel="stylesheet" href="./styles.css?v=4.1">
     <!-- reCAPTCHA v2 -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
