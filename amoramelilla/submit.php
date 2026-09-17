@@ -124,7 +124,7 @@ if (curl_errno($ch)) error_log('Brevo CURL ERROR: ' . curl_error($ch));
 curl_close($ch);
 
 // ── GOOGLE SHEETS ─────────────────────────────────────────────────────────────
-$webhook = 'https://script.google.com/macros/s/AKfycbzQdCAPOMu-dYFhrIeV_oJlmKKe7skovVJ4P-G_4o09PzxBsCtgilv5Or45uATESWoz/exec';
+$webhook = 'https://script.google.com/macros/s/AKfycbyGmTxranxD163DEUmihmPIJsBBQ0q6606epV0lwe8gBuGgo3Lw2Wcid6DyYiPAGicF/exec';
 $payload = array_merge(['EMAIL' => $email], $camposBrevo);
 $ch = curl_init($webhook);
 curl_setopt_array($ch, [

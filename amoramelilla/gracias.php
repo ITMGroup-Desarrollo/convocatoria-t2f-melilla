@@ -2,6 +2,15 @@
 <html lang="es">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2VZW040HN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z2VZW040HN');
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gracias — Amora Melilla</title>
@@ -141,7 +150,7 @@
             <!-- Subtítulo -->
             <p class="subtitle-gracias">
                 La información ya está en tu correo<br>
-                **No olvides revisar tu carpeta de spam o no deseados**<br>
+                *No olvides revisar tu carpeta de spam o no deseados*<br>
                 ¡Escucharás noticias de nosotros pronto!
             </p>
 
