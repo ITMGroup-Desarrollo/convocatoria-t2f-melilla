@@ -18,7 +18,10 @@ loadEnv(__DIR__ . '/.env');
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 function getPost($k) { return isset($_POST[$k]) ? trim($_POST[$k]) : ''; }
-function getArray($k) { return isset($_POST[$k]) ? implode(', ', $_POST[$k]) : ''; }
+function getArray($k) {
+    if (!isset($_POST[$k])) return '';
+    return is_array($_POST[$k]) ? implode(', ', $_POST[$k]) : trim($_POST[$k]);
+}
 
 // ── Anti-bot: honeypot ───────────────────────────────────────────────────────
 if (!empty($_POST['website_hp'])) { header('Location: index.php?error=bot'); exit; }
@@ -38,6 +41,7 @@ curl_setopt_array($verify, [
     CURLOPT_URL            => 'https://www.google.com/recaptcha/api/siteverify',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST           => true,
+    CURLOPT_SSL_VERIFYPEER => false,
     CURLOPT_POSTFIELDS     => http_build_query([
         'secret'   => $recaptchaSecret,
         'response' => $recaptchaToken,
@@ -184,10 +188,12 @@ try {
     $mail->setFrom(getenv('MAIL_FROM'), getenv('MAIL_FROM_NAME'));
     $mail->addAddress(getenv('MAIL_TO'));
     if (getenv('MAIL_TO2')) $mail->addAddress(getenv('MAIL_TO2'));
-    $mail->addReplyTo($email, $nombre);
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $mail->addReplyTo($email, $nombre);
+    }
 
-    // Adjunto PDF
-    if ($pdfAttached && $pdfPath) {
+    // Adjunto PDF Catálogo subido por usuario (si existe)
+    if ($pdfAttached && $pdfPath && file_exists($pdfPath)) {
         $mail->addAttachment($pdfPath, 'Catalogo_' . preg_replace('/[^a-z0-9]/i', '_', $nombre) . '.pdf');
     }
 

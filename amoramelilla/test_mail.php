@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 function loadEnv($path) {
     if (!file_exists($path)) { echo "ERROR: .env no encontrado\n"; return; }
     foreach (file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
@@ -42,11 +42,9 @@ $campos = [
     'FECHA_FIRMA' => date('d/m/Y'),
 ];
 
-$pdfPath = __DIR__ . '/Convocatoria Mercadillo Amora Melilla.pdf';
-$pdfAttached = file_exists($pdfPath);
-
 $mail = new PHPMailer(true);
 try {
+    $mail->SMTPDebug  = 0;
     $mail->isSMTP();
     $mail->Host       = getenv('SMTP_HOST');
     $mail->SMTPAuth   = true;
@@ -61,12 +59,7 @@ try {
     if (getenv('MAIL_TO2')) $mail->addAddress(getenv('MAIL_TO2'));
     $mail->addReplyTo($email, $nombre);
 
-    if ($pdfAttached) {
-        $mail->addAttachment($pdfPath, 'Convocatoria_Amora_Melilla.pdf');
-        echo "PDF encontrado y adjuntado.\n";
-    } else {
-        echo "ADVERTENCIA: PDF no encontrado en: $pdfPath\n";
-    }
+    $pdfAttached = false;
 
     $filas = '';
     foreach ($campos as $k => $v) {
