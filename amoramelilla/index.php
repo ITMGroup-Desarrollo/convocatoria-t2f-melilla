@@ -64,7 +64,7 @@ $_SESSION['form_time'] = time();
                 Forma parte de <strong class="text-pink font-bold">Mercadillo AMORA</strong>: un espacio temporal de
                 venta directa que se instalará en el Parque Hernández durante
                 las llegadas de cruceros programadas los días <strong class="text-orange font-bold">7, 8 y 9 de octubre;
-                y, 5, 8, 11, 14, 19 y 23 noviembre.</strong>
+                y, 5, 8, 11, 14, 19 y&nbsp;23&nbsp;de&nbsp;noviembre.</strong>
             </p>
             <a href="#formulario" class="btn-main">¡Regístrate aquí!</a>
         </div>
@@ -99,13 +99,13 @@ $_SESSION['form_time'] = time();
             <div class="section-how-inner">
                 <h2 class="title-how">¿Cómo participar?</h2>
                 <ol class="list-none" style="list-style-type: none !important;">
-                    <li>1. ¡Conoce el proyecto! Te invitamos a descargar y leer atentamente la convocatoria</li>
-                    <li>2. ¡Regístrate! Es importante adjuntar un catálogo con tus productos para conocerlos.</li>
+                    <li>1. <strong class="">¡Conoce el proyecto!</strong> Te invitamos a <strong class="">descargar y leer atentamente la convocatoria</strong>.</li>
+                    <li>2. <strong class="">¡Regístrate!</strong> Es importante <strong class="">adjuntar un catálogo con tus productos</strong> para conocerlos.</li>
                 </ol>
                 <p class="note text-center">
-                    Después de la recepción de aplicaciones, Fundación Genera ITM y Amora revisarán todas las propuestas.
-                    Posiblemente solicitaremos ver algunas muestras físicas en sitio para verificar que tus piezas
-                    cumplan con los lineamientos de calidad e identidad.
+                    Después de la recepción de aplicaciones, <strong class="text-pink">Fundación Genera ITM y Amora</strong> revisarán todas las propuestas.
+                    Posiblemente solicitaremos ver <strong class="">muestras físicas en sitio</strong> para verificar que tus piezas
+                    cumplan con los <strong class="">lineamientos de calidad e identidad</strong>.
                 </p>
                 <div class="btn-wrap">
                     <a href="../convocatoriaComparteMelilla.pdf" class="btn-main" target="_blank" download>
@@ -493,7 +493,7 @@ $_SESSION['form_time'] = time();
         <!-- FOOTER -->
         <div class="footer">
             <img src="imagenes/comparte-melilla-amora-naranja.svg" alt="Comparte Melilla con AMORA" class="footer-logo-title" />
-            <p class="footer-copy">© 2026 Comparte Melilla con Amora. Todos los derechos reservados.</p>
+            <p class="footer-copy">© 2026 Todos los derechos&nbsp;reservados.</p>
             <div class="footer-logos">
                 <img src="imagenes/genera-naranja.svg" alt="Fundación ITM Genera" onerror="this.style.display='none'" />
                 <img src="imagenes/amora-naranja.svg" alt="AMORA Melilla" onerror="this.style.display='none'" />
