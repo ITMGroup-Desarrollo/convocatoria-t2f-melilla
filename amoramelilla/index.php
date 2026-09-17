@@ -54,7 +54,7 @@ $_SESSION['form_time'] = time();
                 <div class="hero-top">
                     <div class="badge">CONVOCATORIA ABIERTA</div>
                 </div>
-                <img src="imagenes/comparte-melilla-amora-blanco.svg" alt="Comparte Melilla con AMORA" class="hero-logo-title" />
+                <img src="imagenes/comparte-melilla-amora-blanco-v2.svg" alt="Comparte Melilla con AMORA" class="hero-logo-title" />
             </div>
         </div>
 
