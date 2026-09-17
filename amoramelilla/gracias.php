@@ -7,8 +7,10 @@
     <title>Gracias — Amora Melilla</title>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Poppins:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
         rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles.css?v=4.1">
 
     <style>
         * {
@@ -18,10 +20,9 @@
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
-            background: #e8e8e8;
+            font-family: 'Lato', sans-serif;
+            background: #ffffff;
             min-height: 100vh;
-             
             display: flex;
             align-items: center;
             justify-content: center;
@@ -30,136 +31,94 @@
         .page-wrapper {
             width: 100%;
             min-height: 100vh;
-            background: #fff;
+            background: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
+            padding: 40px 24px;
         }
 
-        /* Textura de fondo */
-        .page-wrapper::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url('../imagenes/textura/TTF_textura.png');
-            background-repeat: repeat;
-            background-size: 100px;
-            opacity: 0.15;
-            z-index: 0;
-        }
-
-        .card {
-            position: relative;
-            z-index: 1;
+        .card-gracias {
             text-align: center;
-            padding: 60px 40px;
-            max-width: 420px;
-            width: 90%;
+            max-width: 480px;
+            width: 100%;
+            margin: 0 auto;
         }
 
-        /* Círculo morado con check */
-        .check-circle {
-            width: 90px;
-            height: 90px;
-            background: #b98fd4;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 32px auto;
-            animation: popIn 0.5s ease;
+        .logo-heart {
+            width: 130px;
+            height: auto;
+            margin: 0 auto 28px auto;
+            display: block;
         }
 
-        @keyframes popIn {
-            0% {
-                transform: scale(0);
-                opacity: 0;
-            }
-
-            70% {
-                transform: scale(1.1);
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .check-circle svg {
-            width: 44px;
-            height: 44px;
-        }
-
-        /* Título */
-        .title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: 2rem;
-            color: #1a1a1a;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        /* Subtítulo */
-        .subtitle {
-            font-size: 0.97rem;
-            color: #444;
-            line-height: 1.6;
-            margin-bottom: 36px;
-        }
-
-        /* Botón volver */
-        .btn-volver {
-            background: #1a1a1a;
-            color: #93d500;
-            font-family: 'Montserrat', sans-serif;
+        .title-gracias {
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            font-size: 1rem;
+            color: #E4257D;
+            line-height: 1.15;
+            margin-bottom: 28px;
+        }
+
+        .title-gracias .line-1,
+        .title-gracias .line-2 {
+            display: block;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .title-gracias .line-melilla {
+            display: block;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 900;
+            font-size: 44px;
+            margin-top: 2px;
+        }
+
+        .subtitle-gracias {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.5;
+            margin-bottom: 32px;
+        }
+
+        .btn-volver-pink {
+            background: #E4257D;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
             border-radius: 9999px;
-            padding: 14px 44px;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
+            padding: 12px 48px;
             display: inline-block;
-            transition: opacity 0.2s;
+            text-decoration: none;
+            transition: transform 0.15s ease, opacity 0.15s ease;
+            box-shadow: 0 4px 14px rgba(228, 37, 125, 0.25);
         }
 
-        .btn-volver:hover {
-            opacity: 0.82;
+        .btn-volver-pink:hover {
+            opacity: 0.92;
+            transform: translateY(-1px);
         }
 
-        .check-circle img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
-
-        /* Desktop */
         @media (min-width: 768px) {
-            .card {
-                padding: 80px 60px;
-                max-width: 500px;
+            .logo-heart {
+                width: 140px;
+                margin-bottom: 32px;
             }
 
-            .title {
-                font-size: 2.6rem;
+            .title-gracias .line-1,
+            .title-gracias .line-2 {
+                font-size: 32px;
             }
 
-            .subtitle {
-                font-size: 1.05rem;
+            .title-gracias .line-melilla {
+                font-size: 48px;
             }
 
-            .check-circle {
-                width: 110px;
-                height: 110px;
-            }
-
-            .check-circle svg {
-                width: 54px;
-                height: 54px;
+            .subtitle-gracias {
+                font-size: 17px;
             }
         }
     </style>
@@ -167,20 +126,27 @@
 
 <body>
     <div class="page-wrapper">
-        <div class="card">
+        <div class="card-gracias">
 
-            <!-- Círculo con check -->
-            <div class="check-circle">
-                <img src="../imagenes/check1.png" alt="Confirmación" />
-            </div>
+            <!-- Logo Corazón Naranja -->
+            <img src="imagenes/Logo Amora Melilla.svg" alt="Amora Melilla" class="logo-heart" />
 
-            <!-- Texto -->
-            <p class="title">Gracias<br>por compartir<br>Melilla</p>
-            <p class="subtitle">La información ya está en tu correo<br>*No olvides revisar tu carpeta de no&nbsp;deseados*</p>
-            <p class="subtitle">¡Escucharás noticias de nosotros pronto!</p>
+            <!-- Título -->
+            <h1 class="title-gracias">
+                <span class="line-1">Gracias</span>
+                <span class="line-2">por compartir</span>
+                <span class="line-melilla">Melilla</span>
+            </h1>
 
-            <!-- Botón volver -->
-            <a href="./index.php" class="btn-volver">Volver</a>
+            <!-- Subtítulo -->
+            <p class="subtitle-gracias">
+                La información ya está en tu correo<br>
+                **No olvides revisar tu carpeta de spam o no deseados**<br>
+                ¡Escucharás noticias de nosotros pronto!
+            </p>
+
+            <!-- Botón Volver -->
+            <a href="./index.php" class="btn-volver-pink">Volver</a>
 
         </div>
     </div>
