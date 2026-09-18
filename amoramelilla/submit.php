@@ -193,12 +193,12 @@ if (!empty($_FILES['catalogo_pdf']['name'])) {
         error_log('[AMORA] Error al subir PDF: ' . $errMsg . ' | Archivo: ' . ($_FILES['catalogo_pdf']['name'] ?? 'N/A') . ' | Tamaño declarado: ' . ($_FILES['catalogo_pdf']['size'] ?? 0) . ' bytes');
     } else {
         $file    = $_FILES['catalogo_pdf'];
-        $maxSize = 8 * 1024 * 1024; // 8 MB
+        $maxSize = 10 * 1024 * 1024; // 10 MB
         $finfo   = new finfo(FILEINFO_MIME_TYPE);
         $mime    = $finfo->file($file['tmp_name']);
 
         if ($file['size'] > $maxSize) {
-            error_log('[AMORA] PDF rechazado: tamaño ' . $file['size'] . ' bytes supera el límite de 8 MB.');
+            error_log('[AMORA] PDF rechazado: tamaño ' . $file['size'] . ' bytes supera el límite de 10 MB.');
         } elseif ($mime !== 'application/pdf') {
             error_log('[AMORA] PDF rechazado: tipo MIME no válido (' . $mime . ').');
         } else {

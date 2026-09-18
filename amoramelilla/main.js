@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!dropzone) return;
 
-  const MAX_MB   = 8;
+  const MAX_MB   = 10;
   const MAX_SIZE = MAX_MB * 1024 * 1024;
 
   function showFile(file) {
