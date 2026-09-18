@@ -168,24 +168,47 @@ if (curl_errno($ch)) error_log('Sheets CURL ERROR: ' . curl_error($ch));
 curl_close($ch);
 
 // ── ARCHIVO PDF ───────────────────────────────────────────────────────────────
-$pdfPath    = null;
+$pdfPath     = null;
 $pdfAttached = false;
 
-if (!empty($_FILES['catalogo_pdf']['name']) && $_FILES['catalogo_pdf']['error'] === UPLOAD_ERR_OK) {
-    $file    = $_FILES['catalogo_pdf'];
-    $maxSize = 8 * 1024 * 1024; // 8 MB
-    $finfo   = new finfo(FILEINFO_MIME_TYPE);
-    $mime    = $finfo->file($file['tmp_name']);
+if (!empty($_FILES['catalogo_pdf']['name'])) {
+    $uploadError = $_FILES['catalogo_pdf']['error'];
 
-    if ($file['size'] <= $maxSize && $mime === 'application/pdf') {
-        $uploadDir = __DIR__ . '/uploads/';
-        if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
+    if ($uploadError !== UPLOAD_ERR_OK) {
+        $uploadErrorMessages = [
+            UPLOAD_ERR_INI_SIZE   => 'El archivo supera upload_max_filesize del php.ini (' . ini_get('upload_max_filesize') . ')',
+            UPLOAD_ERR_FORM_SIZE  => 'El archivo supera MAX_FILE_SIZE del formulario HTML',
+            UPLOAD_ERR_PARTIAL    => 'El archivo solo se subió parcialmente',
+            UPLOAD_ERR_NO_FILE    => 'No se subió ningún archivo',
+            UPLOAD_ERR_NO_TMP_DIR => 'Falta carpeta temporal en el servidor',
+            UPLOAD_ERR_CANT_WRITE => 'No se pudo escribir el archivo en disco',
+            UPLOAD_ERR_EXTENSION  => 'Una extensión PHP detuvo la carga',
+        ];
+        $errMsg = $uploadErrorMessages[$uploadError] ?? "Error desconocido (código $uploadError)";
+        error_log('[AMORA] Error al subir PDF: ' . $errMsg . ' | Archivo: ' . ($_FILES['catalogo_pdf']['name'] ?? 'N/A') . ' | Tamaño declarado: ' . ($_FILES['catalogo_pdf']['size'] ?? 0) . ' bytes');
+    } else {
+        $file    = $_FILES['catalogo_pdf'];
+        $maxSize = 8 * 1024 * 1024; // 8 MB
+        $finfo   = new finfo(FILEINFO_MIME_TYPE);
+        $mime    = $finfo->file($file['tmp_name']);
 
-        $safeName = 'catalogo_' . time() . '_' . preg_replace('/[^a-z0-9._-]/i', '_', $file['name']);
-        $pdfPath  = $uploadDir . $safeName;
+        if ($file['size'] > $maxSize) {
+            error_log('[AMORA] PDF rechazado: tamaño ' . $file['size'] . ' bytes supera el límite de 8 MB.');
+        } elseif ($mime !== 'application/pdf') {
+            error_log('[AMORA] PDF rechazado: tipo MIME no válido (' . $mime . ').');
+        } else {
+            $uploadDir = __DIR__ . '/uploads/';
+            if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
 
-        if (move_uploaded_file($file['tmp_name'], $pdfPath)) {
-            $pdfAttached = true;
+            $safeName = 'catalogo_' . time() . '_' . preg_replace('/[^a-z0-9._-]/i', '_', $file['name']);
+            $pdfPath  = $uploadDir . $safeName;
+
+            if (move_uploaded_file($file['tmp_name'], $pdfPath)) {
+                $pdfAttached = true;
+                error_log('[AMORA] PDF guardado correctamente: ' . $pdfPath . ' (' . $file['size'] . ' bytes)');
+            } else {
+                error_log('[AMORA] Error: move_uploaded_file falló para ' . $file['tmp_name'] . ' → ' . $pdfPath);
+            }
         }
     }
 }

@@ -331,7 +331,7 @@ $_SESSION['form_time'] = time();
 
                     <!-- Catálogo PDF Upload -->
                     <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold">Catálogo en PDF <span class="text-slate-400 font-normal">(opcional · máx. 8 MB)</span></label>
+                        <label class="text-sm font-semibold">Catálogo en PDF <span class="text-slate-400 font-normal">(opcional · máx. 2 MB)</span></label>
                         <div class="dropzone" id="pdfDropzone">
                             <input type="file" name="catalogo_pdf" id="catalogoPdf" accept=".pdf,application/pdf" class="dropzone-input">
                             <div class="dropzone-idle" id="dropzoneIdle">
@@ -349,7 +349,7 @@ $_SESSION['form_time'] = time();
                                 <button type="button" class="dropzone-clear" id="dropzoneClear" title="Quitar archivo">✕</button>
                             </div>
                         </div>
-                        <p class="dropzone-error text-red-500 text-xs" id="dropzoneError" style="display:none">Solo se aceptan archivos PDF de hasta 8 MB.</p>
+                        <p class="dropzone-error text-red-500 text-xs" id="dropzoneError" style="display:none">Solo se aceptan archivos PDF de hasta 2 MB.</p>
                     </div>
 
                     <div class="flex flex-col gap-3">
