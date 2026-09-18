@@ -487,6 +487,45 @@ $_SESSION['form_time'] = time();
                         <span>Enviar registro</span>
                     </button>
                 </form>
+
+                <script>
+                // Auto-refresh del reCAPTCHA antes de que expire (2 min = 120s)
+                // Lo refrescamos cada 100s para que siempre haya token fresco
+                var _recaptchaRefreshTimer = null;
+                function _scheduleRecaptchaRefresh() {
+                    clearTimeout(_recaptchaRefreshTimer);
+                    _recaptchaRefreshTimer = setTimeout(function() {
+                        if (typeof grecaptcha !== 'undefined') {
+                            try { grecaptcha.reset(); } catch(e) {}
+                        }
+                    }, 100000); // 100 segundos
+                }
+
+                // Validar antes de enviar que el captcha esté completado
+                document.querySelector('form[action="submit.php"]') &&
+                document.querySelector('form[action="submit.php"]').addEventListener('submit', function(e) {
+                    var token = '';
+                    try { token = grecaptcha.getResponse(); } catch(ex) {}
+                    if (!token) {
+                        e.preventDefault();
+                        alert('Por favor, completa el captcha (haz clic en "No soy un robot") antes de enviar.');
+                        return false;
+                    }
+                });
+
+                // Iniciar refresh al cargar
+                document.addEventListener('DOMContentLoaded', function() {
+                    _scheduleRecaptchaRefresh();
+                    // Cada vez que el usuario interactúa con el captcha, reiniciar el timer
+                    var observer = new MutationObserver(function() {
+                        _scheduleRecaptchaRefresh();
+                    });
+                    var captchaDiv = document.querySelector('.g-recaptcha');
+                    if (captchaDiv) {
+                        observer.observe(captchaDiv, { childList: true, subtree: true, attributes: true });
+                    }
+                });
+                </script>
             </div>
         </div>
 

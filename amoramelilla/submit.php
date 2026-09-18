@@ -24,17 +24,29 @@ function getArray($k) {
 }
 
 // ── Anti-bot: honeypot ───────────────────────────────────────────────────────
-if (!empty($_POST['website_hp'])) { header('Location: index.php?error=bot'); exit; }
+if (!empty($_POST['website_hp'])) {
+    error_log('[AMORA] Bloqueado por honeypot. IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'N/A'));
+    header('Location: index.php?error=bot'); exit;
+}
 
 // ── Anti-bot: tiempo mínimo ──────────────────────────────────────────────────
-if (!isset($_SESSION['form_time'])) { header('Location: index.php'); exit; }
-if (time() - $_SESSION['form_time'] < 3) { header('Location: index.php?error=rapido'); exit; }
+if (!isset($_SESSION['form_time'])) {
+    error_log('[AMORA] Bloqueado: form_time no existe en sesión. SESSION: ' . json_encode($_SESSION));
+    header('Location: index.php'); exit;
+}
+if (time() - $_SESSION['form_time'] < 3) {
+    error_log('[AMORA] Bloqueado: formulario enviado muy rápido (' . (time() - $_SESSION['form_time']) . 's). IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'N/A'));
+    header('Location: index.php?error=rapido'); exit;
+}
 unset($_SESSION['form_time']);
 
 // ── reCAPTCHA ────────────────────────────────────────────────────────────────
 $recaptchaSecret = getenv('RECAPTCHA_SECRET_KEY');
 $recaptchaToken  = $_POST['g-recaptcha-response'] ?? '';
-if (empty($recaptchaToken)) { header('Location: index.php?error=captcha'); exit; }
+if (empty($recaptchaToken)) {
+    error_log('[AMORA] Bloqueado: token reCAPTCHA vacío. IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'N/A'));
+    header('Location: index.php?error=captcha'); exit;
+}
 
 $verify = curl_init();
 curl_setopt_array($verify, [
@@ -42,15 +54,28 @@ curl_setopt_array($verify, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST           => true,
     CURLOPT_SSL_VERIFYPEER => false,
+    CURLOPT_CONNECTTIMEOUT => 5,
+    CURLOPT_TIMEOUT        => 10,
     CURLOPT_POSTFIELDS     => http_build_query([
         'secret'   => $recaptchaSecret,
         'response' => $recaptchaToken,
         'remoteip' => $_SERVER['REMOTE_ADDR'] ?? ''
     ])
 ]);
-$verifyResponse = json_decode(curl_exec($verify), true);
+$rawVerify      = curl_exec($verify);
+$curlErrno      = curl_errno($verify);
+$curlError      = curl_error($verify);
 curl_close($verify);
-if (empty($verifyResponse['success'])) { header('Location: index.php?error=captcha'); exit; }
+$verifyResponse = json_decode($rawVerify, true);
+
+if ($curlErrno) {
+    // Si cURL falla (timeout, red), logueamos pero NO bloqueamos el registro
+    error_log('[AMORA] ADVERTENCIA: cURL reCAPTCHA falló (errno=' . $curlErrno . '): ' . $curlError . '. Se permite continuar.');
+} elseif (empty($verifyResponse['success'])) {
+    $errorCodes = implode(', ', $verifyResponse['error-codes'] ?? ['desconocido']);
+    error_log('[AMORA] Bloqueado: reCAPTCHA inválido. Códigos: ' . $errorCodes . '. IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'N/A'));
+    header('Location: index.php?error=captcha'); exit;
+}
 
 // ── Config ───────────────────────────────────────────────────────────────────
 $apiKey = getenv('BREVO_API_KEY');
@@ -244,7 +269,7 @@ try {
     $mail->send();
 
 } catch (Exception $e) {
-    error_log('PHPMailer Error: ' . $mail->ErrorInfo);
+    error_log('[AMORA] PHPMailer Error: ' . $mail->ErrorInfo . ' | Exception: ' . $e->getMessage());
 }
 
 // Limpia el archivo temporal tras enviar
