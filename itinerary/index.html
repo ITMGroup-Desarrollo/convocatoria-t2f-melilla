@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Itinerario Port Melilla</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2VZW040HN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z2VZW040HN');
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#0071C5",
+                        "on-surface": "#0071C5",
+                        "tertiary-container": "#0071C5",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Gabarito", "sans-serif"],
+                        body: ["Gabarito", "sans-serif"],
+                        label: ["Gabarito", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .social-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface selection:bg-primary/30">
+
+    <main class="min-h-screen flex flex-col md:flex-row overflow-hidden">
+        <!-- Left Side: Visual Anchor (Blue Background) -->
+        <section
+            class="w-full md:w-1/2 bg-[#0071C5] relative flex flex-col items-center justify-center min-h-[360px] md:min-h-screen p-8">
+            <!-- Desktop Logo -->
+            <div class="absolute top-10 md:top-20">
+                <img alt="Port Melilla Logo" class="h-24" src="logo.png" />
+            </div>
+            <!-- Hero Image (Arched with Seagulls) -->
+            <div
+                class="relative w-2/3 md:w-full max-w-xs absolute top-32 right-3 md:static md:top-auto md:right-auto md:max-w-md mt-8 md:mt-24">
+                <img alt="Melilla Vista" class="w-full h-auto" src="fotomelillagaviotas.png" />
+            </div>
+        </section>
+        <!-- Right Side: Content Canvas (White Background) -->
+        <section
+            class="w-full md:w-1/2 bg-white flex flex-col justify-center mt-24 md:mt-0 items-center p-8 md:p-16 lg:p-24 text-center">
+            <div class="max-w-md space-y-4 mb-10">
+                <h1 class="font-headline text-2xl lg:text-4xl font-bold text-[#0071C5] leading-tight">
+                    Got a couple of hours?
+                </h1>
+                <p class="font-body text-lg lg:text-2xl text-[#0071C5] font-medium px-2">
+                    Here are three ways you can explore and <span class="font-bold">enjoy Melilla to
+                        the&nbsp;fullest!</span>
+                </p>
+            </div>
+            <div class="flex flex-col w-full max-w-md space-y-4">
+                <!-- Action Buttons (Pill shaped, Centered) -->
+                <button data-video="3hr.mp4"
+                    class="itinerary-btn w-full py-3 px-8 rounded-full bg-[#D96500] text-white font-headline font-bold text-lg hover:brightness-110 transition-all shadow-md active:scale-[0.98] flex items-center justify-center">
+                    Discover (3-hour itinerary)
+                </button>
+
+                <button data-video="4hr.mp4"
+                    class="itinerary-btn w-full py-3 px-8 rounded-full bg-[#E50027] text-white font-headline font-bold text-lg hover:brightness-110 transition-all shadow-md active:scale-[0.98] flex items-center justify-center">
+                    Enjoy (4-hour itinerary)
+                </button>
+
+                <button data-video="5hr.mp4"
+                    class="itinerary-btn w-full py-3 px-8 rounded-full bg-[#0071C5] text-white font-headline font-bold text-lg hover:brightness-110 transition-all shadow-md active:scale-[0.98] flex items-center justify-center">
+                    Share (5-hour itinerary)
+                </button>
+            </div>
+            <div class="flex flex-col items-center space-y-6 pt-10 w-full max-w-md">
+                <span
+                    class="text-[#0071C5] font-medium text-lg transition-all font-headline font-bold text-lg inline-block">
+                    Check our stops here!
+                </span>
+                <a href="map-melilla-040926.pdf" target="_blank" class="w-full py-3 px-16 rounded-full border border-[#0071C5] text-[#0071C5] font-headline font-bold text-lg 
+    hover:bg-[#0071C5] hover:text-white 
+    active:bg-[#3692DD] active:text-[#004B88] active:border-[#004B88]
+    transition-all active:scale-[0.98] flex items-center justify-center gap-3">
+                    Melilla Map
+                </a>
+            </div>
+            <!-- Footer Section (Social Icons) -->
+            <footer class="pt-16 w-full max-w-md ">
+                <div class="flex justify-center items-center gap-6 text-[#0071C5]">
+                    <a class="hover:scale-110 transition-transform" href="https://www.instagram.com/portmelilla">
+                        <img class="h-8" src="insta.png" alt="insta logo">
+                    </a>
+                    <a class="hover:scale-110 transition-transform" href="https://www.facebook.com/share/1B7NxWJS9D/">
+                        <img class="h-8" src="facebook.png" alt="facebook logo">
+                    </a>
+                    <a class="hidden hover:scale-110 transition-transform" href="#">
+                        <img class="h-8" src="linkedin.png" alt="linkedin logo">
+                    </a>
+                    <a class="hidden hover:scale-110 transition-transform" href="https://itmgroup.mx/puertos/#melilla">
+                        <img class="h-8" src="sitio.png" alt="mundo logo">
+                    </a>
+                </div>
+            </footer>
+        </section>
+    </main>
+    <!-- Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+
+        <div class="relative bg-white rounded-xl shadow-xl w-[90%] max-w-2xl md:max-w-4xl p-4">
+
+            <!-- Botón cerrar -->
+            <button id="closeModal"
+                class="absolute top-2 right-2 text-white bg-[#0071C5] hover:bg-[#004B88] rounded-full w-8 h-8 flex items-center justify-center font-bold">
+                ✕
+            </button>
+
+            <!-- Video -->
+            <video id="modalVideo" class="w-full rounded-lg" controls>
+                <source src="" type="video/mp4">
+                Your browser can't open videos
+            </video>
+        </div>
+
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll('.itinerary-btn');
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('modalVideo');
+    const closeBtn = document.getElementById('closeModal');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const videoSrc = btn.getAttribute('data-video');
+
+            video.querySelector('source').src = videoSrc;
+            video.load();
+            video.play();
+
+            modal.classList.remove('hidden');
+        });
+    });
+
+    function closeModal() {
+        modal.classList.add('hidden');
+        video.pause();
+        video.currentTime = 0;
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+
+    // cerrar al hacer click fuera del modal
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+</script>
+
+</html>

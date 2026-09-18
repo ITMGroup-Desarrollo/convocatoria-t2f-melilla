@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2VZW040HN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z2VZW040HN');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Melilla – Port Melilla, City of Cultures · Spain</title>
+    <meta name="description"
+        content="Welcome to Melilla. Get ready to explore and have a day to remember. Download the city map and share your memories with @portmelilla.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&family=Work+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --blue: #0071ce;
+            --deep-blue: #004f90;
+            --orange: #d75f00;
+            --red: #c10022;
+            --white: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: "Work Sans", sans-serif;
+            background: var(--white);
+            color: var(--deep-blue);
+        }
+
+        /* ═══════════════════════════════════════════════════
+		   DESKTOP (> 900px) — fixed two-column layout
+		═══════════════════════════════════════════════════ */
+        .page {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            overflow: hidden;
+            background: #fcfcfc;
+        }
+
+        /* Photo — left 52vw, absolute */
+        .photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 52vw;
+            height: 100%;
+            background: url("dsc2506-1.webp") center top / cover no-repeat;
+        }
+
+        /* Blue gradient overlay */
+        .blue-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 52vw;
+            height: 100%;
+            background: radial-gradient(ellipse 50vw 60vh at bottom left,
+                    #0071ce 0%,
+                    #0071ce 15%,
+                    rgba(0, 113, 206, 0.85) 30%,
+                    rgba(0, 113, 206, 0.85) 50%,
+                    rgba(0, 113, 206, 0) 100%);
+        }
+
+        /* White wave divider — right edge of photo */
+        .wave-divider {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 54vw;
+            pointer-events: none;
+        }
+
+        .wave-divider img {
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+            display: block;
+        }
+
+        /* Seagull — top left */
+        .seagull {
+            position: absolute;
+            top: 5vh;
+            left: 3vw;
+            width: clamp(100px, 15vw, 235px);
+            height: auto;
+            transform: scaleX(-1);
+        }
+
+        /* Brand mark — bottom left */
+        .brand-mark {
+            position: absolute;
+            bottom: 22vh;
+            left: 23vw;
+            transform: translateX(-50%);
+            width: clamp(160px, 28vw, 380px);
+            height: auto;
+        }
+
+        /* Content panel — right 48vw */
+        .content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 48vw;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(12px, 2.5vh, 40px);
+            padding: clamp(16px, 3vw, 60px) clamp(16px, 2.5vw, 48px);
+            text-align: center;
+        }
+
+        /* Welcome SVG — desktop (colored) */
+        .welcome {
+            width: clamp(200px, 35vw, 533px);
+            height: auto;
+            display: block;
+        }
+
+        /* Subtitle */
+        .message {
+            color: var(--deep-blue);
+            font-size: clamp(14px, 1.8vw, 37px);
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        /* CTA button */
+        .map-link {
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 1.5vw, 30px);
+            background: linear-gradient(-5deg, #c10022 12.6%, #ea0029 96.1%);
+            border: .5px solid var(--white);
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(193, 0, 34, .3), inset 0 0 30px rgba(156, 73, 0, .2);
+            color: var(--white);
+            text-decoration: none;
+            padding: clamp(10px, 1.5vh, 22px) clamp(14px, 1.8vw, 28px);
+            width: clamp(220px, 32vw, 467px);
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .map-link:hover {
+            background: linear-gradient(-5deg, #004f90 12.6%, #0071ce 96.1%);
+            box-shadow: 0 8px 28px rgba(200, 90, 0, .5);
+            transform: translateY(-2px);
+        }
+
+        .map-link:focus-visible {
+            outline: 3px solid var(--blue);
+            outline-offset: 3px;
+            background: linear-gradient(-5deg, #c05a00 12.6%, #e87000 96.1%);
+            box-shadow: 0 0 0 4px rgba(0, 113, 206, .35);
+        }
+
+        .loc-icon {
+            width: clamp(28px, 3.5vw, 53px);
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .map-copy {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            text-align: left;
+            flex: 1;
+        }
+
+        .map-copy strong {
+            font-size: clamp(14px, 1.9vw, 35px);
+            font-weight: 700;
+            line-height: 1.1;
+            white-space: nowrap;
+        }
+
+        .map-copy span {
+            font-size: clamp(12px, 1.6vw, 30px);
+            font-weight: 500;
+            line-height: 1.1;
+            white-space: nowrap;
+        }
+
+        .arrow {
+            width: clamp(14px, 1.8vw, 32px);
+            height: auto;
+            transform: rotate(180deg);
+            flex-shrink: 0;
+        }
+
+        /* Social */
+        .social {
+            display: flex;
+            align-items: center;
+            gap: clamp(12px, 1.8vw, 30px);
+        }
+
+        .insta-icon {
+            width: clamp(34px, 4vw, 62px);
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .insta-link {
+            display: flex;
+            flex-shrink: 0;
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity .2s;
+        }
+
+        .insta-link:hover {
+            opacity: .8;
+        }
+
+        .social-rule {
+            width: 2px;
+            height: clamp(55px, 9vh, 118px);
+            background: var(--orange);
+            flex-shrink: 0;
+        }
+
+        .social-copy {
+            color: var(--blue);
+            text-align: left;
+        }
+
+        .social-copy p {
+            margin: 0;
+        }
+
+        .social-copy .intro {
+            font-size: clamp(12px, 1.5vw, 30px);
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .social-copy .handle {
+            color: var(--orange);
+            font-size: clamp(16px, 2.2vw, 40px);
+            font-weight: 800;
+            line-height: 1.2;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
+        }
+
+        .social-copy .handle:hover {
+            text-decoration: underline;
+        }
+
+        .social-copy .follow {
+            font-size: clamp(11px, 1.3vw, 28px);
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        /* Mobile-only elements */
+        .photo-section {
+            display: none;
+        }
+
+        .mobile-footer {
+            display: none;
+        }
+
+        /* ═══════════════════════════════════════════════════
+		   TABLET / iPAD (≤ 900px) — stacked layout
+		═══════════════════════════════════════════════════ */
+        @media (max-width: 900px) {
+
+            /* Page resets to normal flow */
+            .page {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background: var(--white);
+            }
+
+            /* Hide ALL desktop-specific absolute elements */
+            .photo,
+            .blue-shape,
+            .wave-divider,
+            .seagull,
+            .brand-mark {
+                display: none;
+            }
+
+            /* ─ Mobile photo section ─ */
+            .photo-section {
+                display: block;
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                height: 50vh;
+                min-height: 350px;
+                max-height: 540px;
+                background: var(--blue);
+            }
+
+            /* Actual photo <img> */
+            .photo-img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center 20%;
+                display: block;
+            }
+
+            /* Blue gradient over photo */
+            .photo-overlay {
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(ellipse 150% 80% at bottom left,
+                        #0071ce 0%,
+                        #0071ce 15%,
+                        rgba(0, 113, 206, .7) 35%,
+                        rgba(0, 113, 206, .7) 50%,
+                        rgba(0, 113, 206, .2) 65%,
+                        transparent 100%);
+            }
+
+            /* Seagull on photo */
+            .photo-seagull {
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                width: clamp(100px, 26vw, 200px);
+                height: auto;
+                transform: scaleX(-1);
+            }
+
+            /* White "Welcome to Melilla" text over photo */
+            .photo-welcome {
+                position: absolute;
+                bottom: 18%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: clamp(200px, 68vw, 460px);
+                height: auto;
+                filter: brightness(0) invert(1);
+            }
+
+            /* White wave at the bottom of photo section — inline SVG only */
+            .photo-wave {
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                height: 64px;
+                z-index: 2;
+            }
+
+            .photo-wave svg {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            /* Elements under wave must be below z-index:2 */
+            .photo-img,
+            .photo-overlay,
+            .photo-seagull {
+                z-index: 0;
+            }
+
+            .photo-welcome {
+                z-index: 1;
+            }
+
+            /* ─ Content ─ */
+            .content {
+                position: static;
+                width: 100%;
+                height: auto;
+                flex: 1;
+                padding: clamp(24px, 5vw, 52px) clamp(20px, 6vw, 52px) clamp(16px, 3vw, 28px);
+                gap: clamp(16px, 3vw, 30px);
+                justify-content: center;
+            }
+
+            /* Hide desktop welcome (colored), show nothing — the photo-welcome handles it */
+            .welcome {
+                display: none;
+            }
+
+            .message {
+                font-size: clamp(22px, 5.5vw, 38px);
+            }
+
+            .map-link {
+                width: fit-content;
+                max-width: 90%;
+                padding: clamp(12px, 2.2vw, 20px) clamp(18px, 3vw, 32px);
+                white-space: nowrap;
+            }
+
+            .map-copy strong {
+                font-size: clamp(17px, 3.2vw, 26px);
+            }
+
+            .map-copy span {
+                font-size: clamp(13px, 2.6vw, 20px);
+            }
+
+            .loc-icon {
+                width: clamp(36px, 6.5vw, 56px);
+            }
+
+            .arrow {
+                width: clamp(20px, 3.5vw, 32px);
+            }
+
+            .social {
+                gap: clamp(14px, 3vw, 26px);
+            }
+
+            .insta-icon {
+                width: clamp(48px, 9vw, 68px);
+            }
+
+            .social-rule {
+                height: clamp(68px, 14vw, 100px);
+            }
+
+            .social-copy .intro {
+                font-size: clamp(15px, 3.4vw, 26px);
+            }
+
+            .social-copy .handle {
+                font-size: clamp(22px, 5vw, 40px);
+            }
+
+            .social-copy .follow {
+                font-size: clamp(13px, 3vw, 22px);
+            }
+
+            /* ─ Blue footer ─ */
+            .mobile-footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                background: transparent;
+            }
+
+            .footer-wave {
+                width: 100%;
+                height: 64px;
+                display: block;
+                margin-top: -1px;
+            }
+
+            .footer-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                background: var(--blue);
+                height: 120px;
+                padding-bottom: clamp(16px, 3vw, 28px);
+            }
+
+            .footer-logo {
+                width: clamp(140px, 44vw, 300px);
+                height: auto;
+                margin-top: clamp(4px, 2vw, 16px);
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        /* ═══════════════════════════════════════════════════
+		   MOBILE (≤ 600px)
+		═══════════════════════════════════════════════════ */
+        @media (max-width: 600px) {
+            .photo-section {
+                height: 50vh;
+                min-height: 300px;
+            }
+
+            .footer-content {
+                height: 130px;
+                padding-bottom: clamp(20px, 5vw, 36px);
+            }
+
+            .footer-logo {
+                width: clamp(112px, 36vw, 200px);
+            }
+
+            .photo-seagull {
+                width: clamp(80px, 24vw, 150px);
+            }
+
+            .message {
+                font-size: clamp(22px, 6.5vw, 36px);
+            }
+
+            .map-link {
+                width: fit-content;
+                max-width: 88%;
+                white-space: nowrap;
+            }
+
+            .map-copy strong {
+                font-size: clamp(17px, 5vw, 26px);
+            }
+
+            .map-copy span {
+                font-size: clamp(13px, 3.8vw, 20px);
+            }
+
+            .social-copy .intro {
+                font-size: clamp(15px, 4vw, 24px);
+            }
+
+            .social-copy .handle {
+                font-size: clamp(22px, 6vw, 36px);
+            }
+
+            .social-copy .follow {
+                font-size: clamp(13px, 3.5vw, 20px);
+            }
+
+            .photo-welcome {
+                bottom: 22%;
+                width: clamp(200px, 80vw, 340px);
+            }
+
+            .content {
+                padding: clamp(20px, 5vw, 36px) 16px 12px;
+                gap: clamp(14px, 4vw, 22px);
+            }
+
+            .map-link {
+                width: clamp(220px, 68vw, 300px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+
+        <!-- ── DESKTOP ELEMENTS (absolute, hidden on mobile) ── -->
+        <div class="photo" aria-hidden="true"></div>
+        <div class="blue-shape" aria-hidden="true"></div>
+        <div class="wave-divider" aria-hidden="true"><img src="vector-1.svg" alt=""></div>
+        <img class="seagull" src="gaviota.png" alt="">
+        <img class="brand-mark" src="vector.svg" alt="Port Melilla – City of Cultures · Spain">
+
+        <!-- ── MOBILE PHOTO SECTION (hidden on desktop) ── -->
+        <div class="photo-section" aria-hidden="true">
+            <img class="photo-img" src="dsc2506-1.webp" alt="Melilla fortress" loading="eager" decoding="sync">
+            <div class="photo-overlay"></div>
+            <img class="photo-seagull" src="gaviota.png" alt="">
+            <img class="photo-welcome" src="welcome-to-melilla.svg" alt="Welcome to Melilla">
+            <!-- Inline wave: clean bottom transition, no overflow issues -->
+            <div class="photo-wave">
+                <svg viewBox="0 0 768 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,64 L0,32 Q192,0 384,32 Q576,64 768,48 L768,64 Z" fill="#fff" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- ── CONTENT (right panel desktop / center mobile) ── -->
+        <section class="content" aria-label="Melilla information">
+            <img class="welcome" src="welcome-to-melilla.svg" alt="Welcome to Melilla!">
+            <div class="message">
+                <p>Get ready to explore</p>
+                <p>and have a day to remember</p>
+            </div>
+            <a class="map-link" id="explore-city-btn" href="../itinerary/map-melilla-040926.pdf" target="_blank"
+                rel="noopener">
+                <img class="loc-icon" src="location-on.svg" alt="">
+                <span class="map-copy">
+                    <strong>Explore the city</strong>
+                    <span>Get the map!</span>
+                </span>
+                <img class="arrow" src="arrow-back-ios.svg" alt="">
+            </a>
+            <div class="social">
+                <a class="insta-link" href="https://www.instagram.com/portmelilla/" target="_blank" rel="noopener"
+                    aria-label="Port Melilla en Instagram">
+                    <img class="insta-icon" src="instainverso-1.svg" alt="Instagram">
+                </a>
+                <span class="social-rule" aria-hidden="true"></span>
+                <div class="social-copy">
+                    <p class="intro">Share your Melilla memories</p>
+                    <a class="handle" href="https://www.instagram.com/portmelilla/" target="_blank"
+                        rel="noopener">@portmelilla</a>
+                    <p class="follow">Follow and tag us to be featured!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── MOBILE FOOTER (blue wave + logo, hidden on desktop) ── -->
+        <div class="mobile-footer" aria-hidden="true">
+            <svg class="footer-wave" viewBox="0 0 768 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,64 L0,32 Q192,0 384,32 Q576,64 768,48 L768,64 Z" fill="#0071ce" />
+            </svg>
+            <div class="footer-content">
+                <img class="footer-logo" src="vector.svg" alt="Port Melilla – City of Cultures · Spain">
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

@@ -2,6 +2,15 @@
 <html lang="es">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2VZW040HN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z2VZW040HN');
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gracias — Comparte Melilla</title>
@@ -21,6 +30,7 @@
             font-family: 'Open Sans', sans-serif;
             background: #e8e8e8;
             min-height: 100vh;
+             
             display: flex;
             align-items: center;
             justify-content: center;
@@ -175,7 +185,8 @@
 
             <!-- Texto -->
             <p class="title">Gracias<br>por compartir<br>Melilla</p>
-            <p class="subtitle">La información ya está en tu correo<br>¡Escucharás noticias de nosotros pronto!</p>
+            <p class="subtitle">La información ya está en tu correo<br>*No olvides revisar tu carpeta de no&nbsp;deseados*</p>
+            <p class="subtitle">¡Escucharás noticias de nosotros pronto!</p>
 
             <!-- Botón volver -->
             <a href="./index.php" class="btn-volver">Volver</a>
