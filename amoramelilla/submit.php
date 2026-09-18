@@ -253,8 +253,8 @@ try {
     foreach ($camposBrevo as $k => $v) {
         if (empty($v)) continue;
         $filas .= "<tr>
-            <td style='padding:6px 12px;font-weight:600;color:#555;background:#f8f4fc;white-space:nowrap'>" . htmlspecialchars($k) . "</td>
-            <td style='padding:6px 12px;color:#333'>" . nl2br(htmlspecialchars($v)) . "</td>
+            <td style='padding:6px 12px;font-weight:600;color:#000;background:#f8f4fc;white-space:nowrap'>" . htmlspecialchars($k) . "</td>
+            <td style='padding:6px 12px;color:#000'>" . nl2br(htmlspecialchars($v)) . "</td>
         </tr>";
     }
 
@@ -267,21 +267,21 @@ try {
         <div style='max-width:680px;margin:0 auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.1)'>
             <div style='background:linear-gradient(135deg,#b98fd4,#7c4daf);padding:28px 32px'>
                 <h1 style='color:#fff;margin:0;font-size:22px'>Nuevo registro AMORA</h1>
-                <p style='color:#e8d6f7;margin:4px 0 0'>Persona proveedora artesana</p>
+                <p style='color:#fff;margin:4px 0 0'>Persona proveedora artesana</p>
             </div>
             <div style='padding:28px 32px'>
-                <p style='color:#444;font-size:15px'>Se ha recibido un nuevo registro con los siguientes datos:</p>
+                <p style='color:#000;font-size:15px'>Se ha recibido un nuevo registro con los siguientes datos:</p>
                 <table style='width:100%;border-collapse:collapse;margin-top:16px;font-size:14px'>
                     <tr>
-                        <td style='padding:6px 12px;font-weight:600;color:#555;background:#f0e6f8'>CORREO</td>
-                        <td style='padding:6px 12px;color:#333'>" . htmlspecialchars($email) . "</td>
+                        <td style='padding:6px 12px;font-weight:600;color:#000;background:#f0e6f8'>CORREO</td>
+                        <td style='padding:6px 12px;color:#000'>" . htmlspecialchars($email) . "</td>
                     </tr>
                     $filas
                 </table>
-                " . ($pdfAttached ? "<p style='margin-top:20px;color:#7c4daf;font-size:13px'>📎 Se adjunta el catálogo en PDF.</p>" : "") . "
+                " . ($pdfAttached ? "<p style='margin-top:20px;color:#000;font-size:13px'>📎 Se adjunta el catálogo en PDF.</p>" : "") . "
             </div>
             <div style='background:#f8f4fc;padding:16px 32px;text-align:center'>
-                <p style='color:#aaa;font-size:12px;margin:0'>AMORA · Registro automático · " . date('d/m/Y H:i') . "</p>
+                <p style='color:#000;font-size:12px;margin:0'>AMORA · Registro automático · " . date('d/m/Y H:i') . "</p>
             </div>
         </div>
     </body>
