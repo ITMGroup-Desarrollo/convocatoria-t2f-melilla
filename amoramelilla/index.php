@@ -141,6 +141,37 @@ $_SESSION['form_time'] = time();
                 <h3>Registro de Aspirantes</h3>
                 <p class="form-subtitle">Completa el formulario para iniciar tu proceso de inscripción.</p>
 
+                <?php
+                $errorParam = $_GET['error'] ?? '';
+                $errorMessages = [
+                    'expirado' => [
+                        'icon'  => '⏰',
+                        'title' => 'Tu sesión ha expirado',
+                        'text'  => 'El formulario estuvo inactivo por más de 10 minutos y el token de seguridad venció. Por favor, vuelve a completarlo desde el inicio.',
+                    ],
+                    'rapido' => [
+                        'icon'  => '🤖',
+                        'title' => 'Envío demasiado rápido',
+                        'text'  => 'El formulario fue enviado en muy poco tiempo. Por favor, inténtalo de nuevo.',
+                    ],
+                    'captcha' => [
+                        'icon'  => '🔒',
+                        'title' => 'Verificación fallida',
+                        'text'  => 'No se pudo verificar el reCAPTCHA. Por favor, recarga la página e inténtalo de nuevo.',
+                    ],
+                ];
+                if (isset($errorMessages[$errorParam])):
+                    $msg = $errorMessages[$errorParam];
+                ?>
+                <div class="flex items-start gap-3 rounded-xl border border-red-300 bg-red-50 px-5 py-4 mb-6" role="alert">
+                    <span class="text-2xl leading-none"><?= $msg['icon'] ?></span>
+                    <div>
+                        <p class="font-semibold text-red-700 mb-1"><?= $msg['title'] ?></p>
+                        <p class="text-sm text-red-600"><?= $msg['text'] ?></p>
+                    </div>
+                </div>
+                <?php endif; ?>
+
                 <form id="amoraForm" method="POST" action="submit.php" enctype="multipart/form-data" class="space-y-8">
 
                     <!-- ══ 1. DATOS GENERALES ══ -->

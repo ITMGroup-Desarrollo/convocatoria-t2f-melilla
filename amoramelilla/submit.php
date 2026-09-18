@@ -29,14 +29,19 @@ if (!empty($_POST['website_hp'])) {
     header('Location: index.php?error=bot'); exit;
 }
 
-// ── Anti-bot: tiempo mínimo ──────────────────────────────────────────────────
+// ── Anti-bot: tiempo mínimo y máximo ────────────────────────────────────────
 if (!isset($_SESSION['form_time'])) {
     error_log('[AMORA] Bloqueado: form_time no existe en sesión. SESSION: ' . json_encode($_SESSION));
     header('Location: index.php'); exit;
 }
-if (time() - $_SESSION['form_time'] < 3) {
-    error_log('[AMORA] Bloqueado: formulario enviado muy rápido (' . (time() - $_SESSION['form_time']) . 's). IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'N/A'));
+$elapsed = time() - $_SESSION['form_time'];
+if ($elapsed < 3) {
+    error_log('[AMORA] Bloqueado: formulario enviado muy rápido (' . $elapsed . 's). IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'N/A'));
     header('Location: index.php?error=rapido'); exit;
+}
+if ($elapsed > 600) { // 10 minutos máximo (el token reCAPTCHA expira)
+    error_log('[AMORA] Bloqueado: sesión de formulario expirada (' . $elapsed . 's). IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'N/A'));
+    header('Location: index.php?error=expirado'); exit;
 }
 unset($_SESSION['form_time']);
 
